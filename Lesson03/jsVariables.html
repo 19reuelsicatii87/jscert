@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
+
+
+</head>
+
+<body>
+
+
+    <!-- Header Section -->
+    <section id="header">
+        <a href="/JSCert/index.html" style="text-decoration: none;">
+            <div class="container-fluid bg-success py-4">
+                <div class="row">
+                    <div class="d-flex justify-content-center">
+                        <h1 class="text-white">Javascript Certification</h1>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </section>
+
+    <!-- Main Content: Table of Contents Section -->
+    <section id="script-location">
+        <div class="container my-5 vh-100">
+            <div class="row mb-5">
+                <h3 class="">Lesson: Javascript Variable</h3>
+            </div>
+            <div class="row mb-5">
+                <div class="col-lg-4 d-flex justify-content-center">
+                    <div class="card" style="width: 25rem;">
+                        <img src="/JSCert/Lesson03/var.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Var</h5>
+                            <p class="card-text"> Variables declared with var are function-scoped or globally scoped,
+                                meaning they are accessible throughout the function in which they are declared.</p>
+                            <p class="card-text">'var' allows redeclaration and reassignment of variables within the
+                                same scope.</p>
+                            <a onclick="myFunctionVar()" class="btn btn-primary">See Result</a>
+
+                            <div class="input-group mt-1">
+                                <span class="input-group-text">Result for x (block):</span>
+                                <input id="valueVarXBlock" type="text" class="form-control">
+                            </div>
+
+                            <div class="input-group mt-1">
+                                <span class="input-group-text">Result for y (block):</span>
+                                <input id="valueVarYBlock" type="text" class="form-control">
+                            </div>
+
+                            <div class="input-group mt-1">
+                                <span class="input-group-text">Result for x (func):</span>
+                                <input id="valueVarXFunc" type="text" class="form-control">
+                            </div>
+
+                            <div class="input-group mt-1">
+                                <span class="input-group-text">Result for y(func):</span>
+                                <input id="valueVarYFunc" type="text" class="form-control">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 d-flex justify-content-center">
+                    <div class="card" style="width: 25rem;">
+                        <img src="/JSCert/Lesson03/let.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Let</h5>
+                            <p class="card-text"> Variables declared with 'let' are block-scoped, meaning they are only
+                                accessible within the block (enclosed by curly braces) in which they are declared</p>
+                            <p class="card-text">'let' allows reassignment of variables, but not redeclaration within
+                                the same scope</p>
+                            <a onclick="myFunctionLet()" class="btn btn-primary">See Result</a>
+
+                            <div class="input-group mt-1">
+                                <span class="input-group-text">Result for x (block):</span>
+                                <input id="valueLetXBlock" type="text" class="form-control">
+                            </div>
+                            <div class="input-group mt-1">
+                                <span class="input-group-text">Result for y (block):</span>
+                                <input id="valueLetYBlock" type="text" class="form-control">
+                            </div>
+
+                            <div class="input-group mt-1">
+                                <span class="input-group-text">Result for x (func):</span>
+                                <input id="valueLetXFunc" type="text" class="form-control">
+                            </div>
+                            <div class="input-group mt-1">
+                                <span class="input-group-text">Result for y(func):</span>
+                                <input id="valueLetYFunc" type="text" class="form-control">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 d-flex justify-content-center">
+                    <div class="card" style="width: 25rem;">
+                        <img src="/JSCert/Lesson03/const.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Const</h5>
+                            <p class="card-text"> Variables declared with 'const' are block-scoped, just like variables
+                                declared with let.</p>
+                            <p class="card-text">'const' variables must be initialized with a value when declared, and
+                                their value cannot be changed or reassigned once initialized. However, the object or
+                                array they reference can still be modified.</p>
+                            <a onclick="myFunctionConst()" class="btn btn-primary">See Result</a>
+
+                            <div class="input-group mt-1">
+                                <span class="input-group-text">Result for x (block):</span>
+                                <input id="valueConstXBlock" type="text" class="form-control">
+                            </div>
+                            <div class="input-group mt-1">
+                                <span class="input-group-text">Result for y (block):</span>
+                                <input id="valueConstYBlock" type="text" class="form-control">
+                            </div>
+                            <div class="input-group mt-1">
+                                <span class="input-group-text">Result for x (func):</span>
+                                <input id="valueConstXFunc" type="text" class="form-control">
+                            </div>
+                            <div class="input-group  mt-1">
+                                <span class="input-group-text">Result for y(func):</span>
+                                <input id="valueConstYFunc" type="text" class="form-control">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+
+
+    <!-- Footer Section -->
+    <section id="footer">
+        <div class="container-fluid bg-success py-4">
+            <div class="row ">
+                <div class="d-flex justify-content-center">
+                    <h4 class="text-white mb-0">Created and Prepared By</h4>
+                </div>
+            </div>
+            <div class="row ">
+                <div class="d-flex justify-content-center">
+                    <p class="text-white">Reuel Sicat II</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- JavaScript: Javascript Output Body -->
+    <script>
+
+        function myFunctionVar() {
+            var x = 10;
+
+            if (true) {
+
+                var y = 20;
+
+
+                document.getElementById("valueVarXBlock").value = x;
+                document.getElementById("valueVarYBlock").value = y;
+
+                var x = y;
+            }
+
+            document.getElementById("valueVarXFunc").value = x;
+            document.getElementById("valueVarYFunc").value = y;
+
+        }
+
+        function myFunctionLet() {
+            let x = 10;
+
+            if (true) {
+
+                let y = 20;
+
+                // this throws an error - Cannot access 'x' before initialization
+                // document.getElementById("valueLetXBlock").value = x; 
+
+                document.getElementById("valueLetYBlock").value = y;
+
+                let x = y;
+            }
+
+            
+
+            // this throws an error - y is not defined
+            // document.getElementById("valueVarYFunc").value = y;
+
+            // You cannot redeclare
+            // let x = 10;
+
+            // You can re-assign
+            x = 30;
+
+            document.getElementById("valueLetXFunc").value = x;
+
+        }
+
+        function myFunctionConst() {
+            const x = 10;
+
+            if (true) {
+
+                const y = 20;
+                // this throws an error - Cannot access 'x' before initialization
+                // document.getElementById("valueLetXBlock").value = x;
+
+                document.getElementById("valueConstYBlock").value = y;
+                const x = y;
+            }            
+
+            // this throws an error - y is not defined
+            // document.getElementById("valueConstYFunc").value = y;
+
+            // You cannot redeclare
+            // const x = 30;
+
+            // You can re-assign
+            // this throws an error - Assignment to constant variable.
+            // x = 30;
+
+
+            document.getElementById("valueConstXFunc").value = x;
+
+        }
+
+    </script>
+
+
+
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
