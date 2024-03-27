@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Certification</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
+
+
+</head>
+
+<body>
+
+
+    <!-- Header Section -->
+    <section id="header">
+        <a href="/jscert/index.html" style="text-decoration: none;">
+            <div class="container-fluid bg-success py-4">
+                <div class="row">
+                    <div class="d-flex justify-content-center">
+                        <h1 class="text-white">Javascript Certification</h1>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </section>
+
+    <!-- Main Content: Table of Contents Section -->
+    <section id="script-location">
+        <div class="container my-5">
+
+            <div class="row">
+                <div class="col-lg min-vh-100">
+
+                    <div class="row mb-5">
+                        <h3 class="">Lesson: Javascript Object</h3>
+                    </div>
+                    <div class="row mb-5">
+                        <div class="row">
+                            <h4 class="">Declaring an Object</h4>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg- d-flex justify-content-center mb-2">
+                                <div class="card" style="width: 60rem;">
+                                    <img src="/jscert/Lesson06/declareBracket.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Declaring an Object using Bracket</h5>
+
+                                        <p class="card-text">The Object type represents one of JavaScript's data types.
+                                            It is used to store various keyed collections and more complex entities.</p>
+
+                                        <div class="text-danger">
+                                            <p class="card-text"><b>Syntax:</b> <i>JSON.stringify(value, replacer)</i>
+                                            </p>
+                                            <ul>
+                                                <li>
+                                                    value
+                                                    <ul>
+                                                        <li>
+                                                            The value to convert to a JSON string.
+                                                        </li>
+                                                    </ul>
+
+                                                </li>
+                                                <li>
+                                                    replacer <i>Optional</i>
+                                                    <ul>
+                                                        <li>
+                                                            A function that alters the behavior of the stringification
+                                                            process, or an array of strings and numbers that specifies
+                                                            properties of value to be included in the output. If
+                                                            replacer is
+                                                            an array, all elements in this array that are not strings or
+                                                            numbers (either primitives or wrapper objects), including
+                                                            Symbol
+                                                            values, are completely ignored. If replacer is anything
+                                                            other
+                                                            than a function or an array (e.g. null or not provided), all
+                                                            string-keyed properties of the object are included in the
+                                                            resulting JSON string.
+                                                        </li>
+                                                    </ul>
+
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <a onclick="myFunctionObjectDeclareBracket()" class="btn btn-primary">See
+                                            Result</a>
+
+                                        <div class="input-group mt-1">
+                                            <span class="input-group-text">Array Result:</span>
+                                            <textarea id="valueObjectDeclareBracket" type="text" class="form-control"
+                                                rows="5"></textarea>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-5">
+                        <div class="row">
+                            <h4 class="">Accessing an Array</h4>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 d-flex justify-content-center mb-2">
+                                <div class="card" style="width: 35rem;">
+                                    <img src="/jscert/Lesson04/accessBracket.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Accessing an Array using Bracket</h5>
+                                        <p class="card-text">You access an array element by referring to the index
+                                            number</p>
+                                        <a onclick="myFunctionArrayAccessBracket()" class="btn btn-primary">See
+                                            Result</a>
+
+                                        <div class="input-group mt-1">
+                                            <span class="input-group-text">Array Result:</span>
+                                            <input id="valueArrayAccessBracket" type="text" class="form-control">
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 d-flex justify-content-center mb-2">
+                                <div class="card" style="width: 35rem;">
+                                    <img src="/jscert/Lesson04/accessKeyword.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Accessing an Array using Keyword</h5>
+                                        <p class="card-text">You access an array element by referring to the index
+                                            number</p>
+                                        <a onclick="myFunctionArrayAccessKeyword()" class="btn btn-primary">See
+                                            Result</a>
+
+                                        <div class="input-group mt-1">
+                                            <span class="input-group-text">Array Result:</span>
+                                            <input id="valueArrayAccessKeyword" type="text" class="form-control">
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-5">
+                        <div class="row">
+                            <h4 class="">Updating an Array</h4>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 d-flex justify-content-center mb-2">
+                                <div class="card" style="width: 35rem;">
+                                    <img src="/jscert/Lesson04/UpdateElemBracket.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Updating an Array Element using Bracket</h5>
+                                        <p class="card-text">You access an array element by referring to the index
+                                            number</p>
+                                        <a onclick="myFunctionArrayUpdateElemBracket()" class="btn btn-primary">See
+                                            Result</a>
+
+                                        <div class="input-group mt-1">
+                                            <span class="input-group-text">Array Result:</span>
+                                            <input id="valueArrayUpdateElemBracket" type="text" class="form-control">
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 d-flex justify-content-center mb-2">
+                                <div class="card" style="width: 35rem;">
+                                    <img src="/jscert/Lesson04/UpdateElemKeyword.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Updating an Array using Keyword</h5>
+                                        <p class="card-text">You access an array element by referring to the index
+                                            number</p>
+                                        <p class="card-text">The splice() method of Array instances changes the contents
+                                            of an array by removing or replacing existing elements and/or adding new
+                                            elements in place</p>
+                                        <a onclick="myFunctionArrayUpdateElemKeyword()" class="btn btn-primary">See
+                                            Result</a>
+
+                                        <div class="input-group mt-1">
+                                            <span class="input-group-text">Array Result:</span>
+                                            <input id="valueArrayUpdateElemKeyword" type="text" class="form-control">
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 d-flex justify-content-center mb-2">
+                                <div class="card" style="width: 35rem;">
+                                    <img src="/jscert/Lesson04/AddElement.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Adding Element to Array</h5>
+                                        <p class="card-text">The push() method appends values to an array.</p>
+                                        <a onclick="myFunctionArrayAddElement()" class="btn btn-primary">See
+                                            Result</a>
+
+                                        <div class="input-group mt-1">
+                                            <span class="input-group-text">Array Result:</span>
+                                            <input id="valueArrayAddElement" type="text" class="form-control">
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 d-flex justify-content-center mb-2">
+                                <div class="card" style="width: 35rem;">
+                                    <img src="/jscert/Lesson04/RemoveElemKeyword.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Removing Element from Array</h5>
+                                        <p class="card-text">The pop() method of Array instances removes the last
+                                            element from an array and returns that element. This method changes the
+                                            length of the array.</p>
+                                        <a onclick="myFunctionArrayRemoveElement()" class="btn btn-primary">See
+                                            Result</a>
+
+                                        <div class="input-group mt-1">
+                                            <span class="input-group-text">Array Result:</span>
+                                            <input id="valueArrayRemoveElement" type="text" class="form-control">
+                                        </div>
+                                        <div class="input-group mt-1">
+                                            <span class="input-group-text">Array Result:</span>
+                                            <input id="valueArrayRemainingElements" type="text" class="form-control">
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <!-- Footer Section -->
+    <section id="footer">
+        <div class="container-fluid bg-success py-4">
+            <div class="row ">
+                <div class="d-flex justify-content-center">
+                    <h4 class="text-white mb-0">Created and Prepared By</h4>
+                </div>
+            </div>
+            <div class="row ">
+                <div class="d-flex justify-content-center">
+                    <p class="text-white">Reuel Sicat II</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- JavaScript: Javascript Output Body -->
+    <script>
+
+        function myFunctionObjectDeclareBracket() {
+
+            const x = {
+                firstName: "John",
+                lastName: "Doe",
+                id: 5566,
+                fullNameRegular: function () { return x.firstName + " " + x.lastName; },
+                fullNameArrow: () => { return x.firstName + " " + x.lastName; }
+            }
+
+            // calling Object Element
+            console.log(x.firstName);
+
+            // calling Object Function
+            console.log(x.fullNameRegular());
+
+            // Convert the object to a JSON string with custom replacer function
+            // stringify method have x as Object parameter          
+            // stringify method have function as Function parameter
+            const jsonString = JSON.stringify(x, function (key, value) {
+
+                // If the value is a function, convert it to a string
+                if (typeof value === 'function') {
+                    return value();
+                }
+                return value;
+            });
+            console.log(jsonString);
+
+            document.getElementById("valueObjectDeclareBracket").value = jsonString;
+
+        }
+
+
+
+
+        function myFunctionObjectDeclareKeyword() {
+
+            const x = {
+                firstName: "John",
+                lastName: "Doe",
+                id: 5566,
+                fullNameRegular: function () { return x.firstName + " " + x.lastName; },
+                fullNameArrow: () => { return x.firstName + " " + x.lastName; }
+            }
+
+            // creating ang Object
+            const person = Object.create(x);
+
+            // calling Object Element
+            console.log(person.firstName);
+
+            // calling Object Function
+            console.log(person.fullNameRegular());
+
+            // Convert the object to a JSON string with custom replacer function
+            // stringify method have x as Object parameter          
+            // stringify method have function as Function parameter
+            const jsonString = JSON.stringify(person, function (key, value) {
+
+                // If the value is a function, convert it to a string
+                if (typeof value === 'function') {
+                    return value();
+                }
+                return value;
+            });
+            console.log(jsonString);
+
+            document.getElementById("valueObjectDeclareKeyword").value = JSON.stringify(person);
+
+        }
+
+
+
+
+
+    </script>
+
+
+
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -320,6 +320,14 @@
                                     <img src="/jscert/Lesson04/SearchFind.jpg" class="card-img-top" alt="...">
                                     <div class="card-body">
                                         <h5 class="card-title">JavaScript Array find()</h5>
+                                        <p class="card-text">The find() method is an iterative method. It calls a
+                                            provided callbackFn
+                                            function once for each element in an array in ascending-index order, until
+                                            callbackFn returns a truthy value. find() then returns that element and
+                                            stops
+                                            iterating through the array. If callbackFn never returns a truthy value,
+                                            find()
+                                            returns undefined.</p>
                                         <p class="card-text">The find() method of Array instances returns the first
                                             element in the provided array that satisfies the provided testing function.
                                             If no values satisfy the testing function, undefined is returned.</p>
@@ -500,7 +508,7 @@
                 return fruit.name === "cherries";
             }
 
-            // takes the array itself as the argument
+            // takes the function itself as the argument
             document.getElementById("valueArraySearchFind1").value = x.find(isCherries).name + " -- " + x.find(isCherries).quantity;
 
             // takes the array itself as the argument
