@@ -13,9 +13,37 @@
 
     <!-- JavaScript: Location Header -->
     <script>
-        function myFunctionHeader() {
-            document.getElementById("js-content-header").innerHTML = "This is now the new content from HEADER after you click the button";
+
+        // Syntax - Regular Function
+        function regularFunction(parameter) {
+
+            // declaration here
+            var x = "";
+
+            //code block here
+            if (true) {
+                x = "This is from ";
+            }
+
+            return x + parameter;
         }
+
+
+        // Syntax - Arrow Function
+        arrowFunction = (parameter) => {
+
+            // declaration here
+            var x = "";
+
+            //code block here
+            if (true) {
+                x = "This is from ";
+            }
+
+            return x + parameter;
+        }
+
+
     </script>
 
 </head>
@@ -42,33 +70,38 @@
             <div class="row">
                 <div class="col-lg min-vh-100">
                     <div class="row mb-5">
-                        <h3 class="">Lesson: Script Tag Location</h3>
+                        <h3 class="">Lesson: Javascript Function</h3>
                     </div>
                     <div class="row">
                         <div class="col-lg-6 d-flex justify-content-center mb-2">
-                            <div class="card" style="width: 20rem;">
-                                <img src="/jscert/Lesson01/js.jpg" class="card-img-top" alt="...">
+                            <div class="card" style="width: 50rem;">
+                                <img src="/jscert/function/RegularFunction.jpg" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                    <h5 class="card-title">Script Tag Location - Header</h5>
-                                    <p id="js-content-header" class="card-text">Some quick example text to build on the
-                                        card
-                                        title
-                                        and make up the bulk
-                                        of the card's content.</p>
-                                    <a onclick="myFunctionHeader()" class="btn btn-primary">Change Content</a>
+                                    <h5 class="card-title">Regular Function</h5>
+                                    <p id="js-content-header" class="card-text">Below is the return of the function.
+                                        Please note that function must be define before being called from
+                                        <b>document.write()</b> else it would throw an error.
+                                    </p>
+
+                                    <p class="border border-primary border-4 p-3">
+                                        <script>document.write(regularFunction("Regular Function"))</script>
+                                    </p>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-6 d-flex justify-content-center">
-                            <div class="card" style="width: 20rem;">
-                                <img src="/jscert/Lesson01/js.jpg" class="card-img-top" alt="...">
+                            <div class="card" style="width: 50rem;">
+                                <img src="/jscert/function/ArrowFunction.jpg" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                    <h5 class="card-title">Script Tag Location - Body</h5>
-                                    <p id="js-content-body" class="card-text">Some quick example text to build on the
-                                        card title
-                                        and make up the bulk
-                                        of the card's content.</p>
-                                    <a onclick="myFunctionBody()" class="btn btn-primary">Change Content</a>
+                                    <h5 class="card-title">Arrow Function</h5>
+                                    <p id="js-content-header" class="card-text">Below is the return of the function.
+                                        Please note that function must be define before being called from
+                                        <b>document.write()</b> else it would throw an error.
+                                    </p>
+
+                                    <p class="border border-primary border-4 p-3">
+                                        <script>document.write(arrowFunction("Arrow Function"))</script>
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -102,9 +135,8 @@
 
     <!-- JavaScript: Location Body -->
     <script>
-        function myFunctionBody() {
-            document.getElementById("js-content-body").innerHTML = "This is now the new content from BODY after you click the button";
-        }
+
+
     </script>
 
 

@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Certification</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
+
+
+</head>
+
+<body>
+
+
+    <!-- Header Section -->
+    <section id="header">
+        <a href="/jscert/index.html" style="text-decoration: none;">
+            <div class="container-fluid bg-success py-4">
+                <div class="row">
+                    <div class="d-flex justify-content-center">
+                        <h1 class="text-white">Javascript Certification</h1>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </section>
+
+    <!-- Main Content: Table of Contents Section -->
+    <section id="script-location">
+        <div class="container my-5">
+
+            <div class="row">
+                <div class="col-lg min-vh-100">
+
+                    <div class="row mb-5">
+                        <h3 class="">Lesson: Javascript Object</h3>
+                    </div>
+                    <div class="row mb-5">
+                        <div class="row">
+                            <h4 class="">Creating an Object</h4>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-4 d-flex justify-content-center mb-2">
+                                <div class="card" style="width: 60rem;">
+                                    <img src="/jscert/object/declareBracket.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Creating an Object using Bracket</h5>
+                                        <p class="card-text">The Object type represents one of JavaScript's data types.
+                                            It is used to store various keyed collections and more complex entities.</p>
+                                        <div class="text-danger">
+                                            <p class="card-text"><b>Syntax:</b> <i>JSON.stringify(value, replacer)</i>
+                                            </p>
+                                            <ul>
+                                                <li>
+                                                    value
+                                                    <ul>
+                                                        <li>
+                                                            The value to convert to a JSON string.
+                                                        </li>
+                                                    </ul>
+
+                                                </li>
+                                                <li>
+                                                    replacer <i>Optional</i>
+                                                    <ul>
+                                                        <li>
+                                                            A function that alters the behavior of the stringification
+                                                            process, or an array of strings and numbers that specifies
+                                                            properties of value to be included in the output. If
+                                                            replacer is
+                                                            an array, all elements in this array that are not strings or
+                                                            numbers (either primitives or wrapper objects), including
+                                                            Symbol
+                                                            values, are completely ignored. If replacer is anything
+                                                            other
+                                                            than a function or an array (e.g. null or not provided), all
+                                                            string-keyed properties of the object are included in the
+                                                            resulting JSON string.
+                                                        </li>
+                                                    </ul>
+
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal"
+                                            onclick="showModal('/jscert/object/declareBracket.jpg')">
+                                            Code Snippet
+                                        </button>
+                                        <a onclick="myFunctionObjectDeclareBracket()" class="btn btn-primary">See
+                                            Result</a>
+
+                                        <div class="input-group mt-1">
+                                            <span class="input-group-text">Object Result:</span>
+                                            <textarea id="valueObjectDeclareBracket" type="text" class="form-control"
+                                                rows="6"></textarea>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 d-flex justify-content-center mb-2">
+                                <div class="card" style="width: 60rem;">
+                                    <img src="/jscert/object/declareKeyword.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Creating an Object using Keyword</h5>
+
+                                        <p class="card-text">The Object type represents one of JavaScript's data types.
+                                            It is used to store various keyed collections and more complex entities.</p>
+
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal"
+                                            onclick="showModal('/jscert/object/declareKeyword.jpg')">
+                                            Code Snippet
+                                        </button>
+
+                                        <a onclick="myFunctionObjectDeclareKeyword()" class="btn btn-primary">See
+                                            Result</a>
+
+                                        <div class="input-group mt-1">
+                                            <span class="input-group-text">Object Result:</span>
+                                            <textarea id="valueObjectDeclareKeyword" type="text" class="form-control"
+                                                rows="6"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 d-flex justify-content-center mb-2">
+                                <div class="card" style="width: 60rem;">
+                                    <img src="/jscert/object/declareConstructor.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Creating an Object using Bracket</h5>
+
+                                        <p class="card-text">The Object type represents one of JavaScript's data types.
+                                            It is used to store various keyed collections and more complex entities.</p>
+
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal"
+                                            onclick="showModal('/jscert/object/declareConstructor.jpg')">
+                                            Code Snippet
+                                        </button>
+
+                                        <a onclick="myFunctionObjectDeclareConstructor()" class="btn btn-primary">See
+                                            Result</a>
+
+                                        <div class="input-group mt-1">
+                                            <span class="input-group-text">Object Result:</span>
+                                            <textarea id="valueObjectDeclareConstructor" type="text"
+                                                class="form-control" rows="6"></textarea>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-5">
+                        <div class="row">
+                            <h4 class="">Accessing and Updating an Object</h4>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 d-flex justify-content-center mb-2">
+                                <div class="card" style="width: 35rem;">
+                                    <img src="/jscert/object/accessBracket.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Accessing an Object</h5>
+                                        <p class="card-text">You access an array element by referring to the property
+                                            name</p>
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal"
+                                            onclick="showModal('/jscert/object/accessBracket.jpg')">
+                                            Code Snippet
+                                        </button>
+                                        <a onclick="myFunctionObjectAccessBracket()" class="btn btn-primary">See
+                                            Result</a>
+
+                                        <div class="input-group mt-1">
+                                            <span class="input-group-text">Object Result:</span>
+                                            <input id="valueObjectAccessBracket1" type="text" class="form-control">
+                                        </div>
+                                        <div class="input-group mt-1">
+                                            <span class="input-group-text">Object Result:</span>
+                                            <input id="valueObjectAccessBracket2" type="text" class="form-control">
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 d-flex justify-content-center mb-2">
+                                <div class="card" style="width: 35rem;">
+                                    <img src="/jscert/object/accessKeyword.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Updating an Object</h5>
+                                        <p class="card-text">You access an object element by referring to the property
+                                            name</p>
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal"
+                                            onclick="showModal('/jscert/object/accessKeyword.jpg')">
+                                            Code Snippet
+                                        </button>
+                                        <a onclick="myFunctionObjectAccessKeyword()" class="btn btn-primary">See
+                                            Result</a>
+
+                                        <div class="input-group mt-1">
+                                            <span class="input-group-text">Object Result:</span>
+                                            <input id="valueObjectAccessKeyword1" type="text" class="form-control">
+                                        </div>
+                                        <div class="input-group mt-1">
+                                            <span class="input-group-text">Object Result:</span>
+                                            <input id="valueObjectAccessKeyword2" type="text" class="form-control">
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-5">
+                        <div class="row">
+                            <h4 class="">Inserting and Removing Element from Object</h4>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 d-flex justify-content-center mb-2">
+                                <div class="card" style="width: 35rem;">
+                                    <img src="/jscert/object/ObjectInsertElem.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Inserting Element from Object</h5>
+                                        <p class="card-text">You access an array element by referring to the object
+                                            properties</p>
+
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal"
+                                            onclick="showModal('/jscert/object/ObjectInsertElem.jpg')">
+                                            Code Snippet
+                                        </button>
+                                        <a onclick="myFunctionObjectInsertElem()" class="btn btn-primary">See
+                                            Result</a>
+
+                                        <div class="input-group mt-1">
+                                            <span class="input-group-text">Object Result:</span>
+                                            <input id="valueObjectInsertElem1" type="text" class="form-control">
+                                        </div>
+
+                                        <div class="input-group mt-1">
+                                            <span class="input-group-text">Object Result:</span>
+                                            <input id="valueObjectInsertElem2" type="text" class="form-control">
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 d-flex justify-content-center mb-2">
+                                <div class="card" style="width: 35rem;">
+                                    <img src="/jscert/object/ObjectRemoveElem.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Removing Element from Object</h5>
+                                        <p class="card-text">You access an array element by referring to the object
+                                            properties</p>
+
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal"
+                                            onclick="showModal('/jscert/object/ObjectRemoveElem.jpg')">
+                                            Code Snippet
+                                        </button>
+                                        <a onclick="myFunctionObjectRemoveElem()" class="btn btn-primary">See
+                                            Result</a>
+
+                                        <div class="input-group mt-1">
+                                            <span class="input-group-text">Object Result:</span>
+                                            <textarea id="valueObjectRemoveElem" type="text" class="form-control"
+                                                rows="6"></textarea>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <!-- Footer Section -->
+    <section id="footer">
+        <div class="container-fluid bg-success py-4">
+            <div class="row ">
+                <div class="d-flex justify-content-center">
+                    <h4 class="text-white mb-0">Created and Prepared By</h4>
+                </div>
+            </div>
+            <div class="row ">
+                <div class="d-flex justify-content-center">
+                    <p class="text-white">Reuel Sicat II</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Code Snippet</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div id="modalBody" class="modal-body">
+                    <img id="modalBodyImage" src="" class="img-fluid mx-auto d-block" alt="Responsive image">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- JavaScript: Javascript Output Body -->
+    <script>
+
+        function showModal(imgSrc) {
+
+            // update image source
+            document.getElementById('modalBodyImage').src = imgSrc;
+
+        }
+
+        function myFunctionObjectDeclareBracket() {
+
+            const x = {
+                firstName: "John",
+                lastName: "Doe",
+                id: 5566,
+                fullNameRegular: function () { return x.firstName + " " + x.lastName; },
+                fullNameArrow: () => { return x.firstName + " " + x.lastName; }
+            }
+
+            // calling Object Element
+            console.log(x.firstName);
+
+            // calling Object Function
+            console.log(x.fullNameRegular());
+
+            // Convert the object to a JSON string with custom replacer function
+            // stringify method have x as Object parameter          
+            // stringify method have function as Function parameter
+            const jsonString = JSON.stringify(x, function (key, value) {
+
+                // If the value is a function, convert it to a string
+                if (typeof value === 'function') {
+                    return value();
+                }
+                return value;
+            });
+            console.log(jsonString);
+
+            document.getElementById("valueObjectDeclareBracket").value = jsonString;
+
+        }
+
+        function myFunctionObjectDeclareKeyword() {
+
+            const person = new Object();
+            person.firstName = "John";
+            person.lastName = "Doe";
+            person.id = 5566;
+            person.fullNameRegular = function () { return person.firstName + " " + person.lastName; };
+            person.fullNameArrow = () => { return person.firstName + " " + person.lastName; };
+
+            // calling Object Element
+            console.log(person.firstName);
+
+            // calling Object Function
+            console.log(person.fullNameRegular());
+
+            // Convert the object to a JSON string with custom replacer function
+            // stringify method have x as Object parameter          
+            // stringify method have function as Function parameter
+            const jsonString = JSON.stringify(person, function (key, value) {
+
+                // If the value is a function, convert it to a string
+                if (typeof value === 'function') {
+                    return value();
+                }
+
+                return value;
+            });
+            console.log(jsonString);
+
+            document.getElementById("valueObjectDeclareKeyword").value = jsonString;
+
+        }
+
+        function myFunctionObjectDeclareConstructor() {
+
+            function person(firstName, lastName, id, fullNameRegular, fullNameArrow) {
+                this.firstName = firstName;
+                this.lastName = lastName;
+                this.id = id;
+                this.fullNameRegular = fullNameRegular;
+                this.fullNameArrow = fullNameArrow;
+            }
+
+            var person1 = new person("John", "Doe", 123,
+                function () { return person1.firstName + " " + person1.lastName; },
+                () => { return person1.firstName + " " + person1.lastName; });
+
+
+            // calling Object Element
+            console.log(person1.firstName);
+
+            // calling Object Function
+            console.log(person1.fullNameRegular());
+
+            // Convert the object to a JSON string with custom replacer function
+            // stringify method have x as Object parameter          
+            // stringify method have function as Function parameter
+            const jsonString = JSON.stringify(person1, function (key, value) {
+
+                // If the value is a function, convert it to a string
+                if (typeof value === 'function') {
+                    return value();
+                }
+
+                return value;
+            });
+            console.log(jsonString);
+
+            document.getElementById("valueObjectDeclareConstructor").value = jsonString;
+
+        }
+
+        function myFunctionObjectAccessBracket() {
+
+            const x = {
+                firstName: "John",
+                lastName: "Doe",
+                id: 5566,
+                fullNameRegular: function () { return x.firstName + " " + x.lastName; },
+                fullNameArrow: () => { return x.firstName + " " + x.lastName; }
+            }
+
+            // access through bracket notation
+            console.log(x["firstName"])
+            document.getElementById("valueObjectAccessBracket1").value = x["firstName"];
+
+            // access through dot notation
+            document.getElementById("valueObjectAccessBracket2").value = x.fullNameRegular();
+
+        }
+
+        function myFunctionObjectAccessKeyword() {
+            const x = {
+                firstName: "John",
+                lastName: "Doe",
+                id: 5566,
+                fullNameRegular: function () { return x.firstName + " " + x.lastName; },
+                fullNameArrow: () => { return x.firstName + " " + x.lastName; },
+                setFullName: function (first, last) {
+                    this.firstName = first;
+                    this.lastName = last;
+                }
+            }
+
+            // override firstName and lastName
+            x.setFullName("Jane", "Smith");
+
+            // access through bracket notation
+            console.log(x["firstName"])
+            document.getElementById("valueObjectAccessKeyword1").value = x["firstName"];
+
+            // access through dot notation
+            document.getElementById("valueObjectAccessKeyword2").value = x.lastName;
+
+        }
+
+        function myFunctionObjectInsertElem() {
+            const x = {
+                firstName: "John",
+                lastName: "Doe",
+                id: 5566,
+                fullNameRegular: function () { return x.firstName + " " + x.lastName; },
+                fullNameArrow: () => { return x.firstName + " " + x.lastName; },
+                setFullName: function (first, last) {
+                    this.firstName = first;
+                    this.lastName = last;
+                }
+            }
+
+            // Inserting using dot notation
+            x.address = "234 Jupiter St Makati City";
+
+            // Inserting using bracket notation
+            x["country"] = "Philippines";
+
+            // access through dot notation
+            document.getElementById("valueObjectInsertElem1").value = x.address;
+
+            // access through bracket notation
+            document.getElementById("valueObjectInsertElem2").value = x["country"];
+
+        }
+
+        function myFunctionObjectRemoveElem() {
+
+            const x = {
+                firstName: "John",
+                lastName: "Doe",
+                id: 5566,
+                fullNameRegular: function () { return x.firstName + " " + x.lastName; },
+                fullNameArrow: () => { return x.firstName + " " + x.lastName; }
+            }
+
+            // removing object element
+            delete x.id;
+
+            // calling Object Element
+            console.log(x.firstName);
+
+            // calling Object Function
+            console.log(x.fullNameRegular());
+
+            // Convert the object to a JSON string with custom replacer function
+            // stringify method have x as Object parameter          
+            // stringify method have function as Function parameter
+            const jsonString = JSON.stringify(x, function (key, value) {
+
+                // If the value is a function, convert it to a string
+                if (typeof value === 'function') {
+                    return value();
+                }
+                return value;
+            });
+            console.log(jsonString);
+
+            document.getElementById("valueObjectRemoveElem").value = jsonString;
+
+        }
+
+    </script>
+
+
+
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
