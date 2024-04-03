@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Certification</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
+
+
+</head>
+
+<body>
+
+
+    <!-- Header Section -->
+    <section id="header">
+        <a href="/jscert/index.html" style="text-decoration: none;">
+            <div class="container-fluid bg-success py-4">
+                <div class="row">
+                    <div class="d-flex justify-content-center">
+                        <h1 class="text-white">Javascript Certification</h1>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </section>
+
+    <!-- Main Content: Table of Contents Section -->
+    <section id="script-location">
+        <div class="container my-5">
+
+            <div class="row">
+                <div class="col-lg min-vh-100">
+
+                    <div class="row mb-5">
+                        <h3 class="">Lesson: Javascript String</h3>
+                    </div>
+                    <div class="row mb-5">
+                        <div class="row">
+                            <h4 class="">Creating an String</h4>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 d-flex justify-content-center mb-2">
+                                <div class="card" style="width: 60rem;">
+                                    <img src="/jscert/string/declareLiteral.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Creating an String using Literals</h5>
+                                        <p class="card-text">The string literal is created using double quotes. The
+                                            syntax of creating string using string literal is given below:</p>
+                                        <p><b>Syntax: </b><i>var stringname="string value"; </i></p>
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal"
+                                            onclick="showModal('/jscert/string/declareLiteral.jpg')">
+                                            Code Snippet
+                                        </button>
+                                        <a onclick="myFunctionStringDeclareLiteral()" class="btn btn-primary">See
+                                            Result</a>
+
+                                        <div class="input-group mt-1">
+                                            <span class="input-group-text">Object Result:</span>
+                                            <input id="valueStringDeclareLiteral" type="text"
+                                                class="form-control"></input>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 d-flex justify-content-center mb-2">
+                                <div class="card" style="width: 60rem;">
+                                    <img src="/jscert/string/declareKeyword.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Creating an String using Keyword</h5>
+                                        <p class="card-text">Here, new keyword is used to create instance of string. The
+                                            syntax of creating string object using new keyword is given below::</p>
+                                        <p><b>Syntax: </b><i>var stringname=new String("string literal"); </i></p>
+
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal"
+                                            onclick="showModal('/jscert/string/declareKeyword.jpg')">
+                                            Code Snippet
+                                        </button>
+
+                                        <a onclick="myFunctionStringDeclareKeyword()" class="btn btn-primary">See
+                                            Result</a>
+
+                                        <div class="input-group mt-1">
+                                            <span class="input-group-text">Object Result:</span>
+                                            <input id="valueStringDeclareKeyword" type="text"
+                                                class="form-control"></input>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="row mb-5">
+                        <div class="row">
+                            <h4 class="">Common Number Method</h4>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 d-flex justify-content-center mb-2">
+                                <div class="card" style="width: 35rem;">
+                                    <img src="/jscert/string/searchMethod.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">search()</h5>
+                                        <p class="card-text">The following example searches a string with two different
+                                            regex objects to show a successful search (positive value) vs. an
+                                            unsuccessful search (-1).</p>
+                                        <p class="mb-0"><b>Syntax: </b><i>string.search(regexp)</i></p>
+
+                                        <p><b>More Details: </b> <a
+                                                href="https://www.w3schools.com/jsref/jsref_obj_regexp.asp">JavaScript
+                                                RegExp Reference</a></p>
+
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal"
+                                            onclick="showModal('/jscert/string/searchMethod.jpg')">
+                                            Code Snippet
+                                        </button>
+                                        <a onclick="myFunctionStringSearchMethod()" class="btn btn-primary">See
+                                            Result</a>
+
+                                        <div class="input-group mt-1">
+                                            <span class="input-group-text">Object Result:</span>
+                                            <input id="valueStringSearchMethod1" type="text" class="form-control">
+                                        </div>
+                                        <div class="input-group mt-1">
+                                            <span class="input-group-text">Object Result:</span>
+                                            <input id="valueStringSearchMethod2" type="text" class="form-control">
+                                        </div>
+                                        <div class="input-group mt-1">
+                                            <span class="input-group-text">Object Result:</span>
+                                            <input id="valueStringSearchMethod3" type="text" class="form-control">
+                                        </div>
+                                        <div class="input-group mt-1">
+                                            <span class="input-group-text">Object Result:</span>
+                                            <input id="valueStringSearchMethod4" type="text" class="form-control">
+                                        </div>
+                                        <div class="input-group mt-1">
+                                            <span class="input-group-text">Object Result:</span>
+                                            <input id="valueStringSearchMethod5" type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 d-flex justify-content-center mb-2">
+                                <div class="card" style="width: 35rem;">
+                                    <img src="/jscert/string/matchMethod.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">match()</h5>
+                                        <p class="card-text">The match() method of String values retrieves the result of
+                                            matching this string against a regular expression.</p>
+                                        <p class="mb-0"><b>Syntax: </b><i>string.match(regexp)</i></p>
+
+                                        <p><b>More Details: </b> <a
+                                                href="https://www.w3schools.com/jsref/jsref_obj_regexp.asp">JavaScript
+                                                RegExp Reference</a></p>
+
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal"
+                                            onclick="showModal('/jscert/string/matchMethod.jpg')">
+                                            Code Snippet
+                                        </button>
+                                        <a onclick="myFunctionStringMatchMethod()" class="btn btn-primary">See
+                                            Result</a>
+
+                                        <div class="input-group mt-1">
+                                            <span class="input-group-text">Object Result:</span>
+                                            <input id="valueStringMatchMethod1" type="text" class="form-control">
+                                        </div>
+                                        <div class="input-group mt-1">
+                                            <span class="input-group-text">Object Result:</span>
+                                            <input id="valueStringMatchMethod2" type="text" class="form-control">
+                                        </div>
+                                        <div class="input-group mt-1">
+                                            <span class="input-group-text">Object Result:</span>
+                                            <input id="valueStringMatchMethod3" type="text" class="form-control">
+                                        </div>
+                                        <div class="input-group mt-1">
+                                            <span class="input-group-text">Object Result:</span>
+                                            <input id="valueStringMatchMethod4" type="text" class="form-control">
+                                        </div>
+                                        <div class="input-group mt-1">
+                                            <span class="input-group-text">Object Result:</span>
+                                            <input id="valueStringMatchMethod5" type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <!-- Footer Section -->
+    <section id="footer">
+        <div class="container-fluid bg-success py-4">
+            <div class="row ">
+                <div class="d-flex justify-content-center">
+                    <h4 class="text-white mb-0">Created and Prepared By</h4>
+                </div>
+            </div>
+            <div class="row ">
+                <div class="d-flex justify-content-center">
+                    <p class="text-white">Reuel Sicat II</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Code Snippet</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div id="modalBody" class="modal-body">
+                    <img id="modalBodyImage" src="" class="img-fluid mx-auto d-block" alt="Responsive image">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- JavaScript: Javascript Output Body -->
+    <script>
+
+        function showModal(imgSrc) {
+
+            // update image source
+            document.getElementById('modalBodyImage').src = imgSrc;
+
+        }
+
+        function myFunctionStringDeclareLiteral() {
+
+            var x = "This is a String from Literal";
+            var element = document.getElementsByClassName("form-control")[0];
+
+            // this is to ensure that element exist
+            if (element) {
+                element.value = x;
+            } else {
+                console.error("Element with class 'input-group-text' not found.");
+            }
+
+        }
+
+        function myFunctionStringDeclareKeyword() {
+
+            var x = new String("This is a String from Keyword");
+
+            document.getElementsByClassName("form-control")[1].value = x;
+
+        }
+
+
+        function myFunctionStringSearchMethod() {
+
+            var x = new String("This is a search p that SEARCH a search for string . 123 456 789 256 845. Dog File Fox Jump");
+
+            // case-sensitive
+            document.getElementById("valueStringSearchMethod1").value = x.search(/SEARCH/);
+
+            // ignore case-sensitive
+            document.getElementById("valueStringSearchMethod2").value = x.search(/SEARCH/i);
+
+            // find numeric
+            document.getElementById("valueStringSearchMethod3").value = x.search([8]);
+
+            // find quantifiers
+            document.getElementById("valueStringSearchMethod4").value = x.search(/p/);
+            document.getElementById("valueStringSearchMethod5").value = x.search(/p$/);
+
+
+        }
+
+        function myFunctionStringMatchMethod() {
+
+            var x = new String("This is a search p that SEARCH a search for string. 123 456 789 256 845. Dog File Fox Jump.");
+            x.concat("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz.")
+            x.concat("For more information, see Chapter 3.4.5.1.");
+
+            // case-sensitive
+            document.getElementById("valueStringMatchMethod1").value = x.match(/SEARCH/);
+
+            // ignore case-sensitive
+            document.getElementById("valueStringMatchMethod2").value = x.match(/SEARCH/i);
+
+            // find numeric
+            document.getElementById("valueStringMatchMethod3").value = x.match(/[0-5]/g) + " -- " + x.match(/[0-5]/g)[2];
+
+            // find quantifiers
+            document.getElementById("valueStringMatchMethod4").value = x.match(/[A-E]/gi);
+            document.getElementById("valueStringMatchMethod5").value = x.match(/[a-z]/g);
+
+        }
+
+    </script>
+
+
+
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

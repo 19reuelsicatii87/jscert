@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Certification</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
+
+
+</head>
+
+<body>
+
+
+    <!-- Header Section -->
+    <section id="header">
+        <a href="/jscert/index.html" style="text-decoration: none;">
+            <div class="container-fluid bg-success py-4">
+                <div class="row">
+                    <div class="d-flex justify-content-center">
+                        <h1 class="text-white">Javascript Certification</h1>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </section>
+
+    <!-- Main Content: Table of Contents Section -->
+    <section id="script-location">
+        <div class="container my-5">
+
+            <div class="row">
+                <div class="col-lg min-vh-100">
+
+                    <div class="row mb-5">
+                        <h3 class="">Lesson: Javascript Number</h3>
+                    </div>
+                    <div class="row mb-5">
+                        <div class="row">
+                            <h4 class="">Creating an String</h4>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 d-flex justify-content-center mb-2">
+                                <div class="card" style="width: 60rem;">
+
+                                    <div class="card-body">
+                                        <h5 class="card-title">Creating an Number using Literals</h5>
+                                        <p class="card-text">The JavaScript number object enables you to represent a
+                                            numeric value. It may be integer or floating-point. JavaScript number object
+                                            follows IEEE standard to represent the floating-point numbers.</p>
+                                        <p>
+                                            <b>Syntax: </b>
+                                        </p>
+                                        <ul>
+                                            <li><i>var x=102; //integer value </i></li>
+                                            <li><i>var y=102.7;//floating point value </i></li>
+                                            <li><i>var z=13e4;//exponent value, output: 130000 </i></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 d-flex justify-content-center mb-2">
+                                <div class="card" style="width: 60rem;">
+
+                                    <div class="card-body">
+                                        <h5 class="card-title">Creating an Number using Keyword</h5>
+                                        <p class="card-text">The JavaScript number object enables you to represent a
+                                            numeric value. It may be integer or floating-point. JavaScript number object
+                                            follows IEEE standard to represent the floating-point numbers.</p>
+                                        <p>
+                                            <b>Syntax: </b>
+                                        </p>
+                                        <ul>
+                                            <li><i>var n=new Number(16); //integer value by number object </i></li>
+                                            <li><i>var n=new Number(16.7); //floating point value by number object </i>
+                                            </li>
+                                            <li><i>var z=new Number(13e4); //exponent value, output: 130000 </i></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="row mb-5">
+                        <div class="row">
+                            <h4 class="">Common Number Method</h4>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 d-flex justify-content-center mb-2">
+                                <div class="card" style="width: 35rem;">
+                                    <img src="/jscert/number/isIntegerMethod.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">isInteger()</h5>
+                                        <p class="card-text">The Number.isInteger() static method determines whether the
+                                            passed value is an integer.</p>
+                                        <p class=""><b>Syntax: </b><i>Number.isInteger(value)</i></p>
+
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal"
+                                            onclick="showModal('/jscert/number/isIntegerMethod.jpg')">
+                                            Code Snippet
+                                        </button>
+                                        <a onclick="myFunctionNumberIsIntegerMethod()" class="btn btn-primary">See
+                                            Result</a>
+
+                                        <div class="input-group mt-1">
+                                            <span class="input-group-text">Object Result:</span>
+                                            <input id="valueNumberIsIntegerMethod1" type="text" class="form-control">
+                                        </div>
+                                        <div class="input-group mt-1">
+                                            <span class="input-group-text">Object Result:</span>
+                                            <input id="valueNumberIsIntegerMethod2" type="text" class="form-control">
+                                        </div>
+                                        <div class="input-group mt-1">
+                                            <span class="input-group-text">Object Result:</span>
+                                            <input id="valueNumberIsIntegerMethod3" type="text" class="form-control">
+                                        </div>
+                                        <div class="input-group mt-1">
+                                            <span class="input-group-text">Object Result:</span>
+                                            <input id="valueNumberIsIntegerMethod4" type="text" class="form-control">
+                                        </div>
+                                        <div class="input-group mt-1">
+                                            <span class="input-group-text">Object Result:</span>
+                                            <input id="valueNumberIsIntegerMethod5" type="text" class="form-control">
+                                        </div>
+                                        <div class="input-group mt-1">
+                                            <span class="input-group-text">Object Result:</span>
+                                            <input id="valueNumberIsIntegerMethod6" type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 d-flex justify-content-center mb-2">
+                                <div class="card" style="width: 35rem;">
+                                    <img src="/jscert/number/formatMethod.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">format()</h5>
+                                        <p class="card-text">The format() method of Intl.NumberFormat instances formats
+                                            a number according to the locale and formatting options of this
+                                            Intl.NumberFormat object.</p>
+                                        <p class=""><b>Syntax: </b><i>new Intl.NumberFormat("en-US", { style:
+                                                "currency", currency: "USD" }).format(x)</i></p>
+
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal"
+                                            onclick="showModal('/jscert/number/formatMethod.jpg')">
+                                            Code Snippet
+                                        </button>
+                                        <a onclick="myFunctionNumberFormatMethod()" class="btn btn-primary">See
+                                            Result</a>
+
+                                        <div class="input-group mt-1">
+                                            <span class="input-group-text">Object Result:</span>
+                                            <input id="valueNumberFormatMethod1" type="text" class="form-control">
+                                        </div>
+                                        <div class="input-group mt-1">
+                                            <span class="input-group-text">Object Result:</span>
+                                            <input id="valueNumberFormatMethod2" type="text" class="form-control">
+                                        </div>
+                                        <div class="input-group mt-1">
+                                            <span class="input-group-text">Object Result:</span>
+                                            <input id="valueNumberFormatMethod3" type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <!-- Footer Section -->
+    <section id="footer">
+        <div class="container-fluid bg-success py-4">
+            <div class="row ">
+                <div class="d-flex justify-content-center">
+                    <h4 class="text-white mb-0">Created and Prepared By</h4>
+                </div>
+            </div>
+            <div class="row ">
+                <div class="d-flex justify-content-center">
+                    <p class="text-white">Reuel Sicat II</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Code Snippet</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div id="modalBody" class="modal-body">
+                    <img id="modalBodyImage" src="" class="img-fluid mx-auto d-block" alt="Responsive image">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- JavaScript: Javascript Output Body -->
+    <script>
+
+        function showModal(imgSrc) {
+
+            // update image source
+            document.getElementById('modalBodyImage').src = imgSrc;
+
+        }
+
+        function myFunctionNumberIsIntegerMethod() {
+
+            var a = 16;
+            var b = 16.7
+            var c = 13e4;
+            var d = new Number(17);
+            var e = new Number(17.7);
+            var f = new Number(13e4);
+
+            console.log(Number.isInteger(a));
+
+            // determine number isInteger
+            document.getElementById("valueNumberIsIntegerMethod1").value = a + " -- " + Number.isInteger(a);
+            document.getElementById("valueNumberIsIntegerMethod2").value = b + " -- " + Number.isInteger(b);
+            document.getElementById("valueNumberIsIntegerMethod3").value = c + " -- " + Number.isInteger(c);
+
+            /* d is an instance of the Number object, not a primitive number type (e.g., 17). Even though its value is 17, 
+            it's still an object. Therefore, Number.isInteger(d) returns false because it's checking the type of the object, 
+            not just its value.To check whether d holds an integer value, you should first convert it to a primitive number 
+            using either the valueOf() or Number() method. */
+            document.getElementById("valueNumberIsIntegerMethod4").value = d + " -- " + Number.isInteger(d);
+
+            document.getElementById("valueNumberIsIntegerMethod5").value = e + " -- " + Number.isInteger(e);
+
+            /* e is an instance of the Number object, not a primitive number type (e.g., 17). Even though its value is 17, 
+            it's still an object. Therefore, Number.isInteger(e) returns false because it's checking the type of the object, 
+            not just its value.To check whether e holds an integer value, you should first convert it to a primitive number 
+            using either the valueOf() or Number() method. */
+            document.getElementById("valueNumberIsIntegerMethod6").value = f + " -- " + Number.isInteger(f);
+
+
+        }
+
+        function myFunctionNumberFormatMethod() {
+
+            const x = 65432312312321.987;
+
+            // Format to en-US Number
+            document.getElementById("valueNumberFormatMethod1").value = new Intl.NumberFormat("en-US").format(x);
+            // Format to en-US CurrencFormat
+            document.getElementById("valueNumberFormatMethod2").value = new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" }).format(x);
+            // Format to en-US Currency(PhiFormat
+            document.getElementById("valueNumberFormatMethod3").value = new Intl.NumberFormat("en-US", { style: "currency", currency: "PHP" }).format(x);
+
+
+
+        }
+
+
+
+    </script>
+
+
+
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
