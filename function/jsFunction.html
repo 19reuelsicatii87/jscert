@@ -43,6 +43,26 @@
             return x + parameter;
         }
 
+        // Syntax - Anonymous  Function
+        const x = function (parameter) { return "This is from " + parameter };
+
+
+        // Function
+        function constbObject(argString, argNumber, argArray) {
+            this.argString = argString;
+            this.argNumber = argNumber;
+            this.argArray = argArray;
+        }
+
+        // Parameters
+        var parString = "This is a String";
+        var parNumber = 10.85
+        var parArray = ["This is a String too", 11.85]
+        var parObject = new constbObject(parString, parNumber, parArray);
+
+        // Callback - Array
+        const parArrayCallback = [4, 1, -20, -7, 5, 9, -6];
+
 
     </script>
 
@@ -72,36 +92,305 @@
                     <div class="row mb-5">
                         <h3 class="">Lesson: Javascript Function</h3>
                     </div>
-                    <div class="row">
-                        <div class="col-lg-6 d-flex justify-content-center mb-2">
-                            <div class="card" style="width: 50rem;">
-                                <img src="/jscert/function/RegularFunction.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Regular Function</h5>
-                                    <p id="js-content-header" class="card-text">Below is the return of the function.
-                                        Please note that function must be define before being called from
-                                        <b>document.write()</b> else it would throw an error.
-                                    </p>
+                    <div class="row mb-5">
+                        <div class="row">
+                            <h4 class="">Declaring a Function</h4>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-4 d-flex justify-content-center mb-2">
+                                <div class="card" style="width: 50rem;">
+                                    <img src="/jscert/function/RegularFunction.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Regular Function</h5>
+                                        <p id="js-content-header" class="card-text">Below is the return of the function.
+                                            Please note that function must be define before being called from
+                                            <b>document.write()</b> else it would throw an error.
+                                        </p>
 
-                                    <p class="border border-primary border-4 p-3">
-                                        <script>document.write(regularFunction("Regular Function"))</script>
-                                    </p>
+                                        <p class="border border-primary border-4 p-3">
+                                            <script>document.write(regularFunction("Regular Function"))</script>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 d-flex justify-content-center">
+                                <div class="card" style="width: 50rem;">
+                                    <img src="/jscert/function/ArrowFunction.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Arrow Function</h5>
+                                        <p id="js-content-header" class="card-text">Below is the return of the function.
+                                            Please note that function must be define before being called from
+                                            <b>document.write()</b> else it would throw an error.
+                                        </p>
+
+                                        <p class="border border-primary border-4 p-3">
+                                            <script>document.write(arrowFunction("Arrow Function"))</script>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 d-flex justify-content-center">
+                                <div class="card" style="width: 50rem;">
+                                    <img src="/jscert/function/AnonymousFunction.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Anonymous Function</h5>
+                                        <p id="js-content-header" class="card-text">Below is the return of the function.
+                                            Please note that function must be define before being called from
+                                            <b>document.write()</b> else it would throw an error.
+                                        </p>
+
+                                        <p class="border border-primary border-4 p-3">
+                                            <script>document.write(x("Anonymous Function"))</script>
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-6 d-flex justify-content-center">
-                            <div class="card" style="width: 50rem;">
-                                <img src="/jscert/function/ArrowFunction.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Arrow Function</h5>
-                                    <p id="js-content-header" class="card-text">Below is the return of the function.
-                                        Please note that function must be define before being called from
-                                        <b>document.write()</b> else it would throw an error.
-                                    </p>
+                    </div>
+                    <div class="row mb-5">
+                        <div class="row">
+                            <h4 class="">Arguments in a Function</h4>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg- d-flex justify-content-center mb-2">
+                                <div class="card" style="width: 50rem;">
+                                    <img src="/jscert/function/ArgObj.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Parameter: Arguments(String, Number, Array) vs
+                                            Object(Function)</h5>
+                                        <div class="mb-5">
+                                            <p id="js-content-header" class="card-text">
+                                                <b>Arguments are Passed by Value</b>
+                                            </p>
+                                            <ul>
+                                                <li>The parameters, in a function call, are the function's arguments.
+                                                </li>
+                                                <li>JavaScript arguments are passed by value: The function only gets to
+                                                    know the values, not the argument's locations.</li>
+                                                <li>If a function changes an argument's value, it does not change the
+                                                    parameter's original value.</li>
+                                                <li>Changes to arguments are not visible (reflected) outside the
+                                                    function.</li>
+                                            </ul>
 
-                                    <p class="border border-primary border-4 p-3">
-                                        <script>document.write(arrowFunction("Arrow Function"))</script>
-                                    </p>
+                                            <p id="js-content-header" class="card-text">
+                                                <b>Objects are Passed by Reference</b>
+                                            </p>
+                                            <ul>
+                                                <li>In JavaScript, object references are values.
+                                                </li>
+                                                <li>Because of this, objects will behave like they are passed by
+                                                    reference:</li>
+                                                <li>If a function changes an object property, it changes the original
+                                                    value.</li>
+                                                <li>Changes to object properties are visible (reflected) outside the
+                                                    function.</li>
+                                            </ul>
+
+                                        </div>
+
+
+
+                                        <div>
+                                            <h5>Before</h5>
+                                            <p class="border border-primary border-1 px-2">
+                                                <b>String: </b>
+                                                <script>document.write(parString)</script>
+                                            </p>
+                                            <p class="border border-primary border-1 px-2">
+                                                <b>Number: </b>
+                                                <script>document.write(parNumber)</script>
+                                            </p>
+                                            <p class="border border-primary border-1 px-2">
+                                                <b>Array: </b>
+                                                <script>document.write(parArray)</script>
+                                            </p>
+                                            <p class="border border-primary border-1 px-2">
+                                                <b>Object: </b>
+                                                <script>document.write(JSON.stringify(parObject))</script>
+                                            </p>
+
+                                        </div>
+
+
+                                        <a onclick="myFunctionArgument(parString, parNumber, parArray)"
+                                            class="btn btn-primary">See
+                                            Result - Argument (After)</a>
+                                        <a onclick="myFunctionObject(parObject)" class="btn btn-primary">See
+                                            Result - Object (After)</a>
+
+                                        <div class="input-group mt-1">
+                                            <span class="input-group-text">Object Result:</span>
+                                            <textarea id="valueFunctionArgObj" type="text" class="form-control"
+                                                rows="6"></textarea>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="row mb-5">
+                        <div class="row">
+                            <h4 class="">Callback Function</h4>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 d-flex justify-content-center mb-2">
+                                <div class="card" style="width: 50rem;">
+                                    <img src="/jscert/function/Callback01.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Callback Function: Passing Callback as Reference</h5>
+                                        <div class="mb-5">
+                                            <p id="js-content-header" class="card-text">
+                                                A callback is a function passed as an argument to another function.
+                                                Please note that
+                                            </p>
+                                            <ul>
+                                                <li>A callback is a function passed as an argument to another function.
+                                                </li>
+                                                <li><b>Right: </b> myFunctionCallback1(
+                                                    <script>document.write(parNumber)</script>,
+                                                    <script>document.write(parNumber)</script>, myDisplayer);
+                                                </li>
+                                                <li><b>Wrong: </b> <s> myFunctionCallback1(
+                                                        <script>document.write(parNumber)</script>,
+                                                        <script>document.write(parNumber)</script>, myDisplayer());
+                                                    </s>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal"
+                                            onclick="showModal('/jscert/function/Callback01.jpg')">
+                                            Code Snippet
+                                        </button>
+                                        <a onclick="myFunctionCallback1(parNumber, parNumber, myDisplayer)"
+                                            class="btn btn-primary">See Result</a>
+
+                                        <div class="input-group mt-1">
+                                            <span class="input-group-text">Object Result:</span>
+                                            <textarea id="valueCallback1" type="text" class="form-control"
+                                                rows="6"></textarea>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 d-flex justify-content-center mb-2">
+                                <div class="card" style="width: 50rem;">
+                                    <img src="/jscert/function/Callback02.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Callback Function: Passing Callback as Function</h5>
+                                        <div class="mb-5">
+                                            <p id="js-content-header" class="card-text">
+                                                A callback is a function passed as an argument to another function.
+                                                Please note that
+                                            </p>
+                                            <ul>
+                                                <li>A callback is a function passed as an argument to another function.
+                                                </li>
+                                                <li><b>Right: </b> removeNeg(parArrayCallback, (x) => x >= 0)</li>
+                                                <li><b>Wrong: </b> <s> removeNeg(parArrayCallback, (x) => { x >=
+                                                        0;})</s></li>
+                                                <li><b>Right: </b> removeNeg(parArrayCallback, (x) => { return x >= 0;})
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal"
+                                            onclick="showModal('/jscert/function/Callback02.jpg')">
+                                            Code Snippet
+                                        </button>
+                                        <a onclick="myFunctionCallback2(parArrayCallback)" class="btn btn-primary">See
+                                            Result</a>
+
+                                        <div class="input-group mt-1">
+                                            <span class="input-group-text">Object Result:</span>
+                                            <textarea id="valueCallback2" type="text" class="form-control"
+                                                rows="6"></textarea>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-5">
+                        <div class="row">
+                            <h4 class="">Asynchronous Callback Function</h4>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 d-flex justify-content-center mb-2">
+                                <div class="card" style="width: 50rem;">
+                                    <img src="/jscert/function/AsyncCallbackSetTimeOut.jpg" class="card-img-top"
+                                        alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Callback Function: setTimeOut()</h5>
+                                        <div class="mb-5">
+                                            <p id="js-content-header" class="card-text">
+                                                A callback is a function passed as an argument to another function.
+                                                Please note that
+                                            </p>
+                                            <ul>
+                                                <li>A callback is a function passed as an argument to another function.
+                                                </li>
+                                                <li><b>Syntax: </b> setTimeout(myrenderer, timeOutValue, elementId,
+                                                    content);</li>
+                                                <li><b>Syntax: </b> setTimeout(function () { myrenderer(elementId,
+                                                    content); }, timeOutValue);</li>
+                                            </ul>
+                                        </div>
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal"
+                                            onclick="showModal('/jscert/function/AsyncCallbackSetTimeOut.jpg')">
+                                            Code Snippet
+                                        </button>
+                                        <a onclick="myFunctionAsyncCallback1(3000, 'valueAsyncCallback1', 'This is rendered 3 seconds after click')"
+                                            class="btn btn-primary">See Result in 3 seconds</a>
+
+                                        <div class="input-group mt-1">
+                                            <span class="input-group-text">Object Result:</span>
+                                            <input id="valueAsyncCallback1" type="text" class="form-control"></input>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 d-flex justify-content-center mb-2">
+                                <div class="card" style="width: 50rem;">
+                                    <img src="/jscert/function/AsyncCallbackSetInterval.jpg" class="card-img-top"
+                                        alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Callback Function: setInterval()</h5>
+                                        <div class="mb-5">
+                                            <p id="js-content-header" class="card-text">
+                                                A callback is a function passed as an argument to another function.
+                                                Please note that
+                                            </p>
+                                            <ul>
+                                                <li>A callback is a function passed as an argument to another function.
+                                                </li>
+                                                <li><b>Syntax: </b> setInterval(myrenderer, timeOutValue, elementId,
+                                                    content);</li>
+                                                <li><b>Syntax: </b> setInterval(function () { myrenderer(elementId,
+                                                    content); }, timeOutValue);</li>
+                                            </ul>
+                                        </div>
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal"
+                                            onclick="showModal('/jscert/function/AsyncCallbackSetInterval.jpg')">
+                                            Code Snippet
+                                        </button>
+                                        <a onclick="myFunctionAsyncCallback2(3000, 'valueAsyncCallback2', 'Timestamp now() is : ')"
+                                            class="btn btn-primary">See Result every 3 seconds</a>
+
+                                        <div class="input-group mt-1">
+                                            <span class="input-group-text">Object Result:</span>
+                                            <input id="valueAsyncCallback2" type="text" class="form-control"></input>
+                                        </div>
+
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -111,9 +400,6 @@
 
         </div>
     </section>
-
-
-
 
 
     <!-- Footer Section -->
@@ -132,9 +418,120 @@
         </div>
     </section>
 
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Code Snippet</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div id="modalBody" class="modal-body">
+                    <img id="modalBodyImage" src="" class="img-fluid mx-auto d-block" alt="Responsive image">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <!-- JavaScript: Location Body -->
     <script>
+
+        function showModal(imgSrc) {
+
+            // update image source
+            document.getElementById('modalBodyImage').src = imgSrc;
+
+        }
+
+        function myFunctionArgument(parString, parNumber, parArray) {
+            parString = parString + " -- updated from function";
+            parNumber = parNumber + 100000000000000;
+            parArray.push("additional array element", 1256.65);
+
+            document.getElementById("valueFunctionArgObj").value = parString + '\n' + parNumber + '\n' + parArray;
+
+        }
+
+        function myFunctionObject(parObject) {
+            parObject.argString = " -- updated from function";
+            parObject.argNumber = 100000000000000;
+            parObject.argArray.length = 0;
+            parObject.argArray.push("replace all array element");
+
+            document.getElementById("valueFunctionArgObj").value = JSON.stringify(parObject);
+
+        }
+
+        function myDisplayer(sum) {
+            document.getElementById("valueCallback1").innerHTML = sum;
+        }
+
+        function myFunctionCallback1(num1, num2, myDisplayer) {
+
+            myDisplayer(num1 + num2);
+        }
+
+
+        function myDisplayer(some) {
+            document.getElementById("valueCallback1").innerHTML = some;
+        }
+
+
+        // Keep only positive numbers
+        function removeNeg(numbers, callback) {
+
+            const myArray = [];
+
+            for (const x of numbers) {
+
+                if (callback(x)) {
+
+                    myArray.push(x);
+
+                }
+            }
+
+            return myArray;
+        }
+
+        function myFunctionCallback2(parArrayCallback) {
+
+            document.getElementById("valueCallback2").innerHTML = removeNeg(parArrayCallback, (x) => { return x >= 0; });
+        }
+
+
+        function myrenderer(elementId, content) {
+
+            console.log(content);
+            document.getElementById(elementId).value = content;
+
+        }
+
+        function myFunctionAsyncCallback1(timeOutValue, elementId, content) {
+
+            console.log(timeOutValue, elementId, content);
+
+            // WORKING - direct passing of argument to a function
+            setTimeout(myrenderer, timeOutValue, elementId, content);
+
+            // WORKING - Callback function calling a function
+            // setTimeout(function () { myrenderer(elementId, content); }, timeOutValue);
+        }
+
+        function myFunctionAsyncCallback2(timeOutValue, elementId, content) {
+
+            console.log(timeOutValue, elementId, content);
+
+            // WORKING - direct passing of argument to a function
+            // setInterval(myrenderer, timeOutValue, elementId, content + new Date());
+
+            // WORKING - Callback function calling a function
+            setInterval(function () { myrenderer(elementId, content + new Date()); }, timeOutValue);
+        }
 
 
     </script>
