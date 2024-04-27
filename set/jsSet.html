@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Certification</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
+    <!-- JavaScript: Location Header -->
+    <script>
+
+        // Code Here
+
+    </script>
+
+</head>
+
+<body>
+
+
+    <!-- Header Section -->
+    <section id="header">
+        <a href="/jscert/index.html" style="text-decoration: none;">
+            <div class="container-fluid bg-success py-4">
+                <div class="row">
+                    <div class="d-flex justify-content-center">
+                        <h1 class="text-white">Javascript Certification</h1>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </section>
+
+    <!-- Main Content: Table of Contents Section -->
+    <section id="script-location">
+        <div class="container my-5">
+            <div class="row">
+                <div class="col-lg min-vh-100">
+                    <div class="row">
+                        <h3 class="">Lesson: Javascript Set</h3>
+                    </div>
+                    <div class="row mb-5">
+                        <p>In JavaScript, both arrays and sets are used to store collections of data,
+                            but they have some
+                            key differences:</p>
+                        <p>
+                        <ol>
+                            <li>
+                                Order: Arrays maintain the order of elements as they are inserted, while sets do
+                                not guarantee any specific order of elements. Elements in a set are stored in an
+                                unordered manner.
+                            </li>
+                            <li>
+                                Duplicate Elements: Arrays can contain duplicate elements, while sets do not
+                                allow duplicate elements. If you try to add a duplicate element to a set, it will simply
+                                be ignored.
+                            </li>
+                            <li>
+                                Accessing Elements: In arrays, you access elements by their index, whereas sets
+                                do not have indexes. Instead, you use the `forEach()` method or the `for...of` loop to
+                                iterate over the elements of a set.
+                            </li>
+                            <li>
+                                Methods and Properties: Arrays have various built-in methods and properties, such
+                                as `push()`, `pop()`, `length`, etc., for manipulating and accessing elements. Sets
+                                have their own set of methods, such as `add()`, `delete()`, `has()`, etc., which are
+                                used to
+                                manipulate and access elements.
+                            </li>
+                            <li>
+                                Performance: Sets are generally faster for checking the presence of an element
+                                (`has()` operation) compared to arrays. However, arrays are faster for accessing
+                                elements by
+                                index (`[]` operation).
+                            </li>
+                        </ol>
+                        </p>
+
+                        <p>In summary, arrays are ordered collections that allow duplicate elements and
+                            provide
+                            index-based access, while sets are unordered collections that do not allow duplicate
+                            elements and provide faster element lookup. The choice between arrays and sets depends on
+                            the specific requirements of your application.</p>
+                    </div>
+                    <div class="row mb-5">
+                        <div class="row">
+                            <h4 class="">Declaring a Set</h4>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 d-flex justify-content-center mb-2">
+                                <div class="card" style="width: 50rem;">
+                                    <img src="/jscert/set/DeclareConstructor.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Declare through Constructor</h5>
+                                        <div class="mb-5">
+                                            <p id="js-content-header" class="card-text">
+                                                The Set object lets you store unique values of any type, whether
+                                                primitive values or object references. Pass an Array to the new Set()
+                                                constructor
+                                            </p>
+                                            <ul>
+                                                <li><b>Syntax: </b> const a = new Set([1, 2, 3]);</li>
+                                            </ul>
+                                        </div>
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal"
+                                            onclick="showModal('/jscert/set/DeclareConstructor.jpg')">
+                                            Code Snippet
+                                        </button>
+                                        <a onclick="myFunctionDeclareConstructor('valueDeclareConstructor')"
+                                            class="btn btn-primary">See Result </a>
+                                        <div class="input-group mt-1">
+                                            <span class="input-group-text">Object Result:</span>
+                                            <input id="valueDeclareConstructor" type="text"
+                                                class="form-control"></input>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 d-flex justify-content-center mb-2">
+                                <div class="card" style="width: 50rem;">
+                                    <img src="/jscert/set/DeclareMethod.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Declare through Constructor</h5>
+                                        <div class="mb-5">
+                                            <p id="js-content-header" class="card-text">
+                                                The Set object lets you store unique values of any type, whether
+                                                primitive values or object references. Pass an Array to the new Set()
+                                                constructor
+                                            </p>
+                                            <ul>
+                                                <li><b>Syntax: </b> const a = new Set([1, 2, 3]);</li>
+                                                <li><b>Syntax: </b> a.add("string");</li>
+                                            </ul>
+                                        </div>
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal"
+                                            onclick="showModal('/jscert/set/DeclareMethod.jpg')">
+                                            Code Snippet
+                                        </button>
+                                        <a onclick="myFunctionDeclareMethod('valueDeclareMethod')"
+                                            class="btn btn-primary">See Result </a>
+                                        <div class="input-group mt-1">
+                                            <span class="input-group-text">Object Result:</span>
+                                            <input id="valueDeclareMethod" type="text" class="form-control"></input>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-5">
+                        <div class="row">
+                            <h4 class="">Accessing a Set</h4>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 d-flex justify-content-center mb-2">
+                                <div class="card" style="width: 50rem;">
+                                    <img src="/jscert/set/AccessForEach.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Access: forEach()</h5>
+                                        <div class="mb-5">
+                                            <p id="js-content-header" class="card-text">
+                                                The Set object lets you store unique values of any type, whether
+                                                primitive values or object references. Pass an Array to the new Set()
+                                                constructor
+                                            </p>
+                                            <ul>
+                                                <li><b>Syntax: </b> const a = new Set([1, 2, 3]);</li>
+                                                <li><b>Syntax: </b> a.forEach(() => {// code here});</li>
+                                            </ul>
+                                        </div>
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal"
+                                            onclick="showModal('/jscert/set/AccessForEach.jpg')">
+                                            Code Snippet
+                                        </button>
+                                        <a onclick="myFunctionAccessForEach('valueAccessForEach')"
+                                            class="btn btn-primary">See Result </a>
+                                        <div class="input-group mt-1">
+                                            <span class="input-group-text">Object Result:</span>
+                                            <input id="valueAccessForEach" type="text" class="form-control"></input>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 d-flex justify-content-center mb-2">
+                                <div class="card" style="width: 50rem;">
+                                    <img src="/jscert/set/AccessForOf.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Access: For-Of</h5>
+                                        <div class="mb-5">
+                                            <p id="js-content-header" class="card-text">
+                                                The Set object lets you store unique values of any type, whether
+                                                primitive values or object references. Pass an Array to the new Set()
+                                                constructor
+                                            </p>
+                                            <ul>
+                                                <li><b>Syntax: </b> const a = new Set([1, 2, 3]);</li>
+                                                <li><b>Syntax: </b> for(value of a)</li>
+                                            </ul>
+                                        </div>
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal"
+                                            onclick="showModal('/jscert/set/AccessForOf.jpg')">
+                                            Code Snippet
+                                        </button>
+                                        <a onclick="myFunctionAccessForOf('valueAccessAccessForOf')"
+                                            class="btn btn-primary">See Result </a>
+                                        <div class="input-group mt-1">
+                                            <span class="input-group-text">Object Result:</span>
+                                            <input id="valueAccessAccessForOf" type="text" class="form-control"></input>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-5">
+                        <div class="row">
+                            <h4 class="">Updating a Set</h4>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 d-flex justify-content-center mb-2">
+                                <div class="card" style="width: 50rem;">
+                                    <img src="/jscert/set/UpdateObject.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Update: Object</h5>
+                                        <div class="mb-5">
+                                            <p id="js-content-header" class="card-text">
+                                                The Set object lets you store unique values of any type, whether
+                                                primitive values or object references. Pass an Array to the new Set()
+                                                constructor
+                                            </p>
+                                            <ul>
+                                                <li><b>Syntax: </b> const a = new Set([1, 2, 3]);</li>
+                                                <li><b>Syntax: </b> a.forEach(() => {// code here});</li>
+                                            </ul>
+                                        </div>
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal"
+                                            onclick="showModal('/jscert/set/UpdateObject.jpg')">
+                                            Code Snippet
+                                        </button>
+                                        <a onclick="myFunctionUpdateObject('valueUpdateObject')"
+                                            class="btn btn-primary">See Result </a>
+                                        <div class="input-group mt-1">
+                                            <span class="input-group-text">Object Result:</span>
+                                            <input id="valueUpdateObject" type="text" class="form-control"></input>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Footer Section -->
+    <section id="footer">
+        <div class="container-fluid bg-success py-4">
+            <div class="row ">
+                <div class="d-flex justify-content-center">
+                    <h4 class="text-white mb-0">Created and Prepared By</h4>
+                </div>
+            </div>
+            <div class="row ">
+                <div class="d-flex justify-content-center">
+                    <p class="text-white">Reuel Sicat II</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Code Snippet</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div id="modalBody" class="modal-body">
+                    <img id="modalBodyImage" src="" class="img-fluid mx-auto d-block" alt="Responsive image">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- JavaScript: Location Body -->
+    <script>
+
+        function showModal(imgSrc) {
+
+            // update image source
+            document.getElementById('modalBodyImage').src = imgSrc;
+
+        }
+
+        function myrenderer(elementId, content) {
+
+            console.log("myrenderer: " + content + " -- " + new Date());
+            document.getElementById(elementId).value = content;
+
+        }
+
+        function myFunctionDeclareConstructor(elementId) {
+
+            const setDeclareConstructor = new Set([1, "string", true, { 1: "one", 2: 22 }]);
+
+            // Array.from() method convert SET --> ARRAY
+            // Since you have Object within ARRAY we use JSON.stringify()
+            setTimeout(myrenderer, 3000, elementId, Array.from(setDeclareConstructor));
+            setTimeout(myrenderer, 6000, elementId, JSON.stringify(Array.from(setDeclareConstructor)));
+
+        }
+
+        function myFunctionDeclareMethod(elementId) {
+
+            var setDeclareMethod = new Set();
+
+            setDeclareMethod.add(1);
+            setDeclareMethod.add("string");
+            setDeclareMethod.add(false);
+            setDeclareMethod.add({ 1: "one", 2: 22 });
+
+            // Array.from() method convert SET --> ARRAY
+            // Since you have Object within ARRAY we use JSON.stringify()
+            setTimeout(myrenderer, 3000, elementId, Array.from(setDeclareMethod));
+            setTimeout(myrenderer, 6000, elementId, JSON.stringify(Array.from(setDeclareMethod)));
+
+        }
+
+
+        function myFunctionAccessForEach(elementId) {
+
+            const setDeclareConstructor = new Set([1, "string", true, { 1: "one", 2: 22 }, new Date()]);
+
+
+            setDeclareConstructor.forEach((value) => {
+
+
+                console.log(value);
+
+                // check if value is object
+                if (value instanceof Object && !(value instanceof Date)) {
+
+                    setTimeout(myrenderer, 2000, elementId, "JSON: " + JSON.stringify(value));
+                }
+
+                else if (value instanceof Date) {
+                    setTimeout(myrenderer, 10000, elementId, "DATE: " + value);
+                }
+
+                // Strict Comparison (Value + Type)
+                else if (value === 1) {
+                    setTimeout(myrenderer, 15000, elementId, "Integer: " + value);
+                }
+
+                else {
+                    myrenderer(elementId, "Nothing to display");
+                }
+
+            });
+
+        }
+
+
+        function myFunctionAccessForOf(elementId) {
+
+            const setDeclareConstructor = new Set([1, "string", true, { 1: "one", 2: 22 }, new Date()]);
+
+            for (value of setDeclareConstructor) {
+
+                console.log(value);
+
+                // check if value is object
+                if (value instanceof Object && !(value instanceof Date)) {
+
+                    setTimeout(myrenderer, 2000, elementId, "JSON: " + JSON.stringify(value));
+                }
+
+                else if (value instanceof Date) {
+                    setTimeout(myrenderer, 10000, elementId, "DATE: " + value);
+                }
+
+                // Strict Comparison (Value + Type)
+                else if (value === 1) {
+                    setTimeout(myrenderer, 15000, elementId, "Integer: " + value);
+                }
+
+                else {
+                    myrenderer(elementId, "Nothing to display");
+                }
+
+            }
+        }
+
+
+        function myFunctionUpdateObject(elementId) {
+
+            const setDeclareConstructor = new Set([1, "string", true, { 1: "one", two: 22 }, new Date()]);
+
+            for (value of setDeclareConstructor) {
+
+
+                console.log(value);
+
+                // check if value is object
+                if (value instanceof Object && !(value instanceof Date)) {
+
+                    // object properties cannot be accessed using dot notation if the 
+                    // property name starts with a number or contains special characters
+                    // To access properties with names that start with a number or contain 
+                    // special characters, you need to use bracket notation ([]) instead of dot notation
+                    value["1"] = "change to one";
+                    value.two = "changing to 22";
+                    setTimeout(myrenderer, 2000, elementId, "JSON: " + JSON.stringify(value));
+                }
+
+                if (value instanceof Date) {
+                    setTimeout(myrenderer, 10000, elementId, "DATE: " + value);
+                }
+
+                // Strict Comparison (Value + Type)
+                else if (value === 1) {
+
+                    value = "changing integer to string";
+                    setTimeout(myrenderer, 15000, elementId, "Integer: " + value);
+                }
+
+                else {
+                    myrenderer(elementId, "Nothing to display");
+                }
+
+            }
+        }
+
+    </script>
+
+
+
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

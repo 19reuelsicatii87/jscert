@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Certification</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
+    <!-- JavaScript: Location Header -->
+    <script>
+
+        // Code Here
+
+    </script>
+
+</head>
+
+<body>
+
+
+    <!-- Header Section -->
+    <section id="header">
+        <a href="/jscert/index.html" style="text-decoration: none;">
+            <div class="container-fluid bg-success py-4">
+                <div class="row">
+                    <div class="d-flex justify-content-center">
+                        <h1 class="text-white">Javascript Certification</h1>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </section>
+
+    <!-- Main Content: Table of Contents Section -->
+    <section id="script-location">
+        <div class="container my-5">
+            <div class="row">
+                <div class="col-lg min-vh-100">
+                    <div class="row">
+                        <h3 class="">Lesson: Javascript Map</h3>
+                    </div>
+                    <div class="row mb-5">
+                        <p>In JavaScript, both objects and maps are used to store collections of key-value pairs, but
+                            they have different characteristics and use cases</p>
+                        <p>
+                        <ol>
+                            <li>
+                                A Map is a built-in data structure introduced in ES6 (ECMAScript 2015) that also allows
+                                you to store key-value pairs, but with some key differences from objects.
+                            </li>
+                            <li>
+                                Keys in a Map can be of any data type, including objects, functions, and primitive
+                                values, providing more flexibility compared to objects.
+                            </li>
+                            <li>
+                                Unlike objects, a Map maintains the insertion order of its elements, making it suitable
+                                for scenarios where the order of keys is significant.
+                            </li>
+                            <li>
+                                Maps offer additional methods for manipulating key-value pairs, such as set(), get(),
+                                has(), delete(), and clear().
+                            </li>
+                            <li>
+                                Maps are particularly useful when you need to associate additional data with each value,
+                                preserve the insertion order of elements, or use keys of various types.
+                            </li>
+                        </ol>
+                        </p>
+
+                        <p>In summary, use an object when you need a simple data structure with string or symbol keys
+                            and versatile access methods, and use a Map when you need more flexibility in key types,
+                            preservation of insertion order, or additional methods for managing key-value pairs.</p>
+                    </div>
+                    <div class="row mb-5">
+                        <div class="row">
+                            <h4 class="">Declaring a Map</h4>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 d-flex justify-content-center mb-2">
+                                <div class="card" style="width: 50rem;">
+                                    <img src="/jscert/map/DeclareConstructor.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Declare through Constructor</h5>
+                                        <div class="mb-5">
+                                            <p id="js-content-header" class="card-text">
+                                                The Map object holds key-value pairs and remembers the original
+                                                insertion order of the keys. Any value (both objects and primitive
+                                                values) may be used as either a key or a value.
+                                            </p>
+                                            <ul>
+                                                <li><b>Syntax: </b> const map1 = new Map();</li>
+                                            </ul>
+                                        </div>
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal"
+                                            onclick="showModal('/jscert/map/DeclareConstructor.jpg')">
+                                            Code Snippet
+                                        </button>
+                                        <a onclick="myFunctionDeclareConstructor('valueDeclareConstructor')"
+                                            class="btn btn-primary">See Result </a>
+                                        <div class="input-group mt-1">
+                                            <span class="input-group-text">Object Result:</span>
+                                            <textarea id="valueDeclareConstructor" type="text" class="form-control"
+                                                rows="6"></textarea>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 d-flex justify-content-center mb-2">
+                                <div class="card" style="width: 50rem;">
+                                    <img src="/jscert/map/DeclareMethod.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Declare through Method</h5>
+                                        <div class="mb-5">
+                                            <p id="js-content-header" class="card-text">
+                                                The Map object holds key-value pairs and remembers the original
+                                                insertion order of the keys. Any value (both objects and primitive
+                                                values) may be used as either a key or a value.
+                                            </p>
+                                            <ul>
+                                                <li><b>Syntax: </b> const a = new Map();</li>
+                                                <li><b>Syntax: </b>a.set("integer", 1);</li>
+                                            </ul>
+                                        </div>
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal"
+                                            onclick="showModal('/jscert/map/DeclareMethod.jpg')">
+                                            Code Snippet
+                                        </button>
+                                        <a onclick="myFunctionDeclareMethod('valueDeclareMethod')"
+                                            class="btn btn-primary">See Result </a>
+                                        <div class="input-group mt-1">
+                                            <span class="input-group-text">Object Result:</span>
+                                            <textarea id="valueDeclareMethod" type="text" class="form-control"
+                                                rows="6"></textarea>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-5">
+                        <div class="row">
+                            <h4 class="">Accessing a Set</h4>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 d-flex justify-content-center mb-2">
+                                <div class="card" style="width: 50rem;">
+                                    <img src="/jscert/map/AccessForEach.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Access: forEach()</h5>
+                                        <div class="mb-5">
+                                            <p id="js-content-header" class="card-text">
+                                                The Map object holds key-value pairs and remembers the original
+                                                insertion order of the keys. Any value (both objects and primitive
+                                                values) may be used as either a key or a value.
+                                            </p>
+                                            <ul>
+                                                <li><b>Syntax: </b> const a = new Map();</li>
+                                                <li><b>Syntax: </b>a.set("integer", 1);</li>
+                                            </ul>
+                                        </div>
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal"
+                                            onclick="showModal('/jscert/map/AccessForEach.jpg')">
+                                            Code Snippet
+                                        </button>
+                                        <a onclick="myFunctionAccessForEach('valueAccessForEach')"
+                                            class="btn btn-primary">See Result </a>
+                                        <div class="input-group mt-1">
+                                            <span class="input-group-text">Object Result:</span>
+                                            <input id="valueAccessForEach" type="text" class="form-control"></input>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 d-flex justify-content-center mb-2">
+                                <div class="card" style="width: 50rem;">
+                                    <img src="/jscert/map/AccessGet.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Access: Get()</h5>
+                                        <div class="mb-5">
+                                            <p id="js-content-header" class="card-text">
+                                                The Map object holds key-value pairs and remembers the original
+                                                insertion order of the keys. Any value (both objects and primitive
+                                                values) may be used as either a key or a value.
+                                            </p>
+                                            <ul>
+                                                <li><b>Syntax: </b> const a = new Map();</li>
+                                                <li><b>Syntax: </b>a.set("integer", 1);</li>
+                                            </ul>
+                                        </div>
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal"
+                                            onclick="showModal('/jscert/map/AccessGet.jpg')">
+                                            Code Snippet
+                                        </button>
+                                        <a onclick="myFunctionAccessGet('valueAccessGet')" class="btn btn-primary">See
+                                            Result </a>
+                                        <div class="input-group mt-1">
+                                            <span class="input-group-text">Object Result:</span>
+                                            <input id="valueAccessGet" type="text" class="form-control"></input>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-5">
+                        <div class="row">
+                            <h4 class="">Updating a Set</h4>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 d-flex justify-content-center mb-2">
+                                <div class="card" style="width: 50rem;">
+                                    <img src="/jscert/map/UpdateObject.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Update: Object</h5>
+                                        <div class="mb-5">
+                                            <p id="js-content-header" class="card-text">
+                                                The Map object holds key-value pairs and remembers the original
+                                                insertion order of the keys. Any value (both objects and primitive
+                                                values) may be used as either a key or a value.
+                                            </p>
+                                            <ul>
+                                                <li><b>Syntax: </b> const a = new Map();</li>
+                                                <li><b>Syntax: </b>a.set("integer", 1);</li>
+                                            </ul>
+                                        </div>
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal"
+                                            onclick="showModal('/jscert/map/UpdateObject.jpg')">
+                                            Code Snippet
+                                        </button>
+                                        <a onclick="myFunctionUpdateObject('valueUpdateObject')"
+                                            class="btn btn-primary">See Result </a>
+                                        <div class="input-group mt-1">
+                                            <span class="input-group-text">Object Result:</span>
+                                            <input id="valueUpdateObject" type="text" class="form-control"></input>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Footer Section -->
+    <section id="footer">
+        <div class="container-fluid bg-success py-4">
+            <div class="row ">
+                <div class="d-flex justify-content-center">
+                    <h4 class="text-white mb-0">Created and Prepared By</h4>
+                </div>
+            </div>
+            <div class="row ">
+                <div class="d-flex justify-content-center">
+                    <p class="text-white">Reuel Sicat II</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Code Snippet</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div id="modalBody" class="modal-body">
+                    <img id="modalBodyImage" src="" class="img-fluid mx-auto d-block" alt="Responsive image">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- JavaScript: Location Body -->
+    <script>
+
+        function showModal(imgSrc) {
+
+            // update image source
+            document.getElementById('modalBodyImage').src = imgSrc;
+
+        }
+
+        function myrenderer(elementId, content) {
+
+            console.log("myrenderer: " + content + " -- " + new Date());
+            document.getElementById(elementId).value = content;
+
+        }
+
+        function myFunctionDeclareConstructor(elementId) {
+
+            const arr = new Array(100, 200, 300);
+            const obj = new Object({ 10: "ten", eleven: 11 });
+            const set = new Set([1, "string", true, { 1: "one", 2: 22 }]);
+
+            const mapDeclareConstructor = new Map([
+                ["integer", 1],
+                ["string", "this is string"],
+                ["boolean", true],
+                ["array", arr],
+                ["object", obj],
+                ["set", Array.from(set)]
+            ]);
+
+            myrenderer(elementId, JSON.stringify(Array.from(mapDeclareConstructor)));
+
+        }
+
+        function myFunctionDeclareMethod(elementId) {
+
+            const arr = new Array(100, 200, 300);
+            var obj = new Object({ 10: "ten", eleven: 11 });
+            var set = new Set([1, "string", true, { 1: "one", 2: 22 }]);
+            var mapDeclareMethod = new Map();
+
+            mapDeclareMethod.set("integer", 1);
+            mapDeclareMethod.set("string", "this is string");
+            mapDeclareMethod.set("boolean", true);
+            mapDeclareMethod.set("array", arr);
+            mapDeclareMethod.set("object", obj);
+            mapDeclareMethod.set("set", Array.from(set));
+
+            myrenderer(elementId, JSON.stringify(Array.from(mapDeclareMethod)));
+
+        }
+
+
+        function myFunctionAccessForEach(elementId) {
+
+            const arr = new Array(100, 200, 300);
+            const obj = new Object({ 10: "ten", eleven: 11 });
+            const set = new Set([1, "string", true, { 1: "one", 2: 22 }]);
+
+            const mapDeclareConstructor = new Map([
+                ["integer", 1],
+                ["string", "this is string"],
+                ["boolean", true],
+                ["array", arr],
+                ["object", obj],
+                ["set", Array.from(set)]
+            ]);
+
+            mapDeclareConstructor.forEach((value) => {
+
+                console.log(value);
+
+                // check if value is Array
+                if (value instanceof Array && !(value instanceof Object) && !(value instanceof Set)) {
+
+                    setTimeout(myrenderer, 1000, elementId, "ARRAY: " + value);
+                }
+                // check if value is Onject
+                else if (value instanceof Object && !(value instanceof Set)) {
+                    setTimeout(myrenderer, 10000, elementId, "OBJECT: " + JSON.stringify(value));
+                }
+                // check if value is Set
+                if (value instanceof Set) {
+                    setTimeout(myrenderer, 15000, elementId, "SET: " + JSON.stringify(Array.from(value)));
+                }
+                // Strict Comparison (Value + Type)
+                else if (value === 1) {
+                    setTimeout(myrenderer, 20000, elementId, "INTEGER: " + value);
+                }
+                else {
+                    myrenderer(elementId, "Nothing to display");
+                }
+
+            });
+
+        }
+
+
+        function myFunctionAccessGet(elementId) {
+
+            const arr = new Array(100, 200, 300);
+            const obj = new Object({ 10: "ten", eleven: 11 });
+            const set = new Set([1, "string", true, { 1: "one", 2: 22 }]);
+
+            const mapDeclareConstructor = new Map([
+                ["integer", 1],
+                ["string", "this is string"],
+                ["boolean", true],
+                ["array", arr],
+                ["object", obj],
+                ["set", Array.from(set)]
+            ]);
+
+            setTimeout(myrenderer, 3000, elementId, "integer: " + mapDeclareConstructor.get("integer"));
+            setTimeout(myrenderer, 6000, elementId, "string: " + mapDeclareConstructor.get("string"));
+            setTimeout(myrenderer, 9000, elementId, "boolean: " + mapDeclareConstructor.get("boolean"));
+            setTimeout(myrenderer, 12000, elementId, "array: " + mapDeclareConstructor.get("array"));
+            setTimeout(myrenderer, 15000, elementId, "object: " + JSON.stringify(mapDeclareConstructor.get("object")));
+            setTimeout(myrenderer, 18000, elementId, "set: " + JSON.stringify(mapDeclareConstructor.get("set")));
+
+        }
+
+
+        function myFunctionUpdateObject(elementId) {
+
+            const arr = new Array(100, 200, 300);
+            const obj = new Object({ 10: "ten", eleven: 11 });
+            const set = new Set([1, "string", true, { 1: "one", 2: 22 }]);
+
+            const mapDeclareConstructor = new Map([
+                ["integer", 1],
+                ["string", "this is string"],
+                ["boolean", true],
+                ["array", arr],
+                ["object", obj],
+                ["set", set]
+            ]);
+
+
+            setTimeout(myrenderer, 1000, elementId, "integer: " + mapDeclareConstructor.get("integer"));
+            setTimeout(myrenderer, 5000, elementId, "string: " + mapDeclareConstructor.get("string"));
+            setTimeout(myrenderer, 10000, elementId, "boolean: " + mapDeclareConstructor.get("boolean"));
+
+            // accessing and updating array
+            mapDeclareConstructor.get("array")[0] = 1000;
+            mapDeclareConstructor.get("array").push(4000);
+            setTimeout(myrenderer, 15000, elementId, "array: " + JSON.stringify(mapDeclareConstructor.get("array")));
+
+
+            // accessing and updating object
+            mapDeclareConstructor.get("object")["10"] = "ten ten";
+            mapDeclareConstructor.get("object").eleven = 1111;
+            setTimeout(myrenderer, 20000, elementId, "object: " + JSON.stringify(mapDeclareConstructor.get("object")));
+
+
+            // accessing and updating set
+            mapDeclareConstructor.get("set").forEach((value) => {
+
+                console.log("Set Object Loop - Before: " + typeof value + " -- " + value);
+
+                if (value instanceof Object && !(value instanceof Date)) {
+                    // Update object values
+                    value["1"] = "This is change from 1 to one";
+                } else if (typeof value == 'number' && value == 1) {
+                    // For numbers and strings, you need to remove the existing value 
+                    // from the set and add the updated value. 
+                    // You cannot update primitive values directly inside the set.
+                    mapDeclareConstructor.get("set").delete(value);
+                    mapDeclareConstructor.get("set").add(111111);
+                } else if (typeof value == 'string' && value == "string") {
+                    // For numbers and strings, you need to remove the existing value 
+                    // from the set and add the updated value. 
+                    // You cannot update primitive values directly inside the set.
+                    mapDeclareConstructor.get("set").delete(value);
+                    mapDeclareConstructor.get("set").add("this is string but updated");
+                }
+                else {
+                    // Add other values unchanged
+                    mapDeclareConstructor.get("set").add("this is new");
+                }
+
+                console.log("Set Object Loop - After: " + typeof value + " -- " + value);
+                //console.log("value: "+ value);
+
+            });
+
+            setTimeout(myrenderer, 25000, elementId, "set: " + JSON.stringify(Array.from(mapDeclareConstructor.get("set"))));
+
+        }
+
+    </script>
+
+
+
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

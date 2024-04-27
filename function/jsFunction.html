@@ -395,6 +395,171 @@
                             </div>
                         </div>
                     </div>
+                    <div class="row mb-5">
+                        <div class="row">
+                            <h4 class="">Promise Callback Function</h4>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 d-flex justify-content-center mb-2">
+                                <div class="card" style="width: 50rem;">
+                                    <img src="/jscert/function/PromiseCallbackThen.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Callback Function: then()</h5>
+                                        <div class="mb-5">
+                                            <p id="js-content-header" class="card-text">
+                                                The then() method of Promise instances takes up to two arguments:
+                                                callback functions for the fulfilled and rejected cases of the Promise.
+                                                It immediately returns an equivalent Promise object, allowing you to
+                                                chain calls to other promise methods.
+                                            </p>
+
+                                        </div>
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal"
+                                            onclick="showModal('/jscert/function/PromiseCallbackThen.jpg')">
+                                            Code Snippet
+                                        </button>
+                                        <a onclick="myFunctionPromiseCallbackThen(true, 'valuePromiseCallbackThen', 'This Promise is Resolved')"
+                                            class="btn btn-primary">See Result for TRUE</a>
+                                        <a onclick="myFunctionPromiseCallbackThen(false, 'valuePromiseCallbackThen', 'This Promise is Rejected')"
+                                            class="btn btn-primary mt-1">See Result for FALSE</a>
+
+                                        <div class="input-group mt-1">
+                                            <span class="input-group-text">Object Result:</span>
+                                            <input id="valuePromiseCallbackThen" type="text"
+                                                class="form-control"></input>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 d-flex justify-content-center mb-2">
+                                <div class="card" style="width: 50rem;">
+                                    <img src="/jscert/function/PromiseCallbackXMLHttpRequest.jpg" class="card-img-top"
+                                        alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Callback Function: Sync vs Async XMLHttpRequest</h5>
+                                        <div class="mb-5">
+                                            <p id="js-content-header" class="card-text">
+                                                XMLHttpRequest (XHR) objects are used to interact with servers. You can
+                                                retrieve data from a URL without having to do a full page refresh. This
+                                                enables a Web page to update just part of a page without disrupting what
+                                                the user is doing.
+                                            </p>
+                                            <p>Sync vs Async Request</p>
+                                            <li>
+                                                <ul>With a synchronous request, the code execution is halted until the
+                                                    request is completed and the response is received.</ul>
+                                                <ul>With an asynchronous request, the code execution continues while the
+                                                    request is being sent and the response is being received.</ul>
+                                            </li>
+
+                                        </div>
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal"
+                                            onclick="showModal('/jscert/function/PromiseCallbackXMLHttpRequest.jpg')">
+                                            Code Snippet
+                                        </button>
+                                        <a onclick="myFunctionPromiseCallbackSyncXMLHttpRequest('https://reqres.in/api/users/2?delay=10', 'valuePromiseCallbackXMLHttpRequest', 'This is from SYNC 200 - code execution is halted')"
+                                            class="btn btn-primary">Sync 200</a>
+                                        <a onclick="myFunctionPromiseCallbackSyncXMLHttpRequest('https://reqres.in/api/users/23', 'valuePromiseCallbackXMLHttpRequest', 'This is from SYNC 404 - code execution is halted')"
+                                            class="btn btn-primary">Sync 404</a>
+
+                                        <a onclick="myFunctionPromiseCallbackAsyncXMLHttpRequest('https://reqres.in/api/users/2?delay=10', 'valuePromiseCallbackXMLHttpRequest', 'This is from ASYNC 200 - code execution is NOT halted')"
+                                            class="btn btn-primary mt-1">Async 200</a>
+                                        <a onclick="myFunctionPromiseCallbackAsyncXMLHttpRequest('https://reqres.in/api/users/23', 'valuePromiseCallbackXMLHttpRequest', 'This is from ASYNC 404 - code execution is NOT halted')"
+                                            class="btn btn-primary mt-1">Async 404</a>
+
+                                        <div class="input-group mt-1">
+                                            <span class="input-group-text">Object Result:</span>
+                                            <textarea id="valuePromiseCallbackXMLHttpRequest" type="text"
+                                                class="form-control" rows="7"></textarea>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-5">
+                        <div class="row">
+                            <h4 class="">Async / Await Callback Function</h4>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 d-flex justify-content-center mb-2">
+                                <div class="card" style="width: 50rem;">
+                                    <img src="/jscert/function/AsyncFunction.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Async</h5>
+                                        <div class="mb-5">
+                                            <p id="js-content-header" class="card-text">
+                                                AsyncFunction object is a short way of creating promise.
+                                                <br><br>
+                                                It can be obtained with the following code:
+                                            </p>
+                                            <ul>
+                                                <li><b>Syntax: </b> async function myFunction() {
+                                                    // code here
+                                                    }</li>
+                                                <li><b>Syntax: </b> async function myFunction(param0,param1) {
+                                                    // code here
+                                                    }</li>
+                                            </ul>
+                                        </div>
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal"
+                                            onclick="showModal('/jscert/function/AsyncFunction.jpg')">
+                                            Code Snippet
+                                        </button>
+                                        <a onclick="myFunctionAsyncFunction(true, 'valueAsyncFunction', 'TRUE --- asynchronous function - shorthand for a promise')"
+                                            class="btn btn-primary">See Result for TRUE</a>
+                                        <a onclick="myFunctionAsyncFunction(false, 'valueAsyncFunction', 'FALSE --- asynchronous function - shorthand for a promise')"
+                                            class="btn btn-primary">See Result for FALSE</a>
+
+                                        <div class="input-group mt-1">
+                                            <span class="input-group-text">Object Result:</span>
+                                            <input id="valueAsyncFunction" type="text" class="form-control"></input>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 d-flex justify-content-center mb-2">
+                                <div class="card" style="width: 50rem;">
+                                    <img src="/jscert/function/AwaitFunction.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">await</h5>
+                                        <div class="mb-5">
+                                            <p id="js-content-header" class="card-text">
+                                                Await is like a synchronous callback that pauses the execution and wait
+                                                for a resolved promise before it continues.
+                                                <br><br>
+                                                It can be obtained with the following code:
+                                            </p>
+                                            <ul>
+                                                <li><b>Syntax: </b> let value = await promise;</li>
+                                            </ul>
+                                        </div>
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal"
+                                            onclick="showModal('/jscert/function/AwaitFunction.jpg')">
+                                            Code Snippet
+                                        </button>
+                                        <a onclick="myFunctionAwaitFunction(true, 5000, 'valueAwaitFunction', 'TRUE --- await function - wait for a promise')"
+                                            class="btn btn-primary">See Result for TRUE in 5sec</a>
+                                        <a onclick="myFunctionAwaitFunction(false, 3000, 'valueAwaitFunction', 'FALSE --- await function - wait for a promise')"
+                                            class="btn btn-primary">See Result for FALSE in 3sec</a>
+
+                                        <div class="input-group mt-1">
+                                            <span class="input-group-text">Object Result:</span>
+                                            <input id="valueAwaitFunction" type="text" class="form-control"></input>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -506,8 +671,18 @@
 
         function myrenderer(elementId, content) {
 
-            console.log(content);
+            console.log("myrenderer: " + content + " -- " + new Date());
             document.getElementById(elementId).value = content;
+
+            /*
+            if (content) {
+                document.getElementById(elementId).value = content;
+            }
+            else {
+                document.getElementById(elementId).value = "Content not FoundF: " + new Date();
+            }
+            */
+
 
         }
 
@@ -532,6 +707,169 @@
             // WORKING - Callback function calling a function
             setInterval(function () { myrenderer(elementId, content + new Date()); }, timeOutValue);
         }
+
+
+        function myFunctionPromiseCallbackThen(parBoolean, elementId, content) {
+
+            console.log(parBoolean, elementId, content);
+
+
+            // A Promise receives a function
+            // Depending on result you call either resolved or rejected
+            // Ensure to wrap multiple values into an object when passing more than one value
+            let myPromise = new Promise(function (myResolve, myReject) {
+
+                if (parBoolean == true) {
+                    myResolve({ elementId: elementId, content: content });
+                } else {
+                    myReject({ elementId: elementId, content: content });
+                }
+            });
+
+            // Ensure to wrap multiple values into an object when passing more than one value
+            myPromise.then(
+                function (result) { myrenderer(result.elementId, result.content); },
+                function (result) { myrenderer(result.elementId, result.content); }
+            );
+        }
+
+
+        function myFunctionPromiseCallbackSyncXMLHttpRequest(url, elementId, content) {
+
+            // This is a Sync Request
+            var xhr = new XMLHttpRequest();
+
+
+            // false indicates a synchronous request
+            console.log("Performning Synchronous Task -- " + new Date());
+            xhr.open('GET', url, false);
+            console.log("readystatechange  -- " + xhr.readyState + " -- " + new Date());
+            xhr.send();
+
+            // Performing other task
+            console.log("Performning other Task -- " + new Date());
+            myrenderer(elementId, "Performning other Task -- " + new Date());
+
+
+            //Declaring a Promise
+            var myPromise = new Promise(function (myResolve, myReject) {
+
+                if (xhr.status == 200) {
+                    myResolve({ elementId: elementId, content: content });
+                } else {
+                    myReject({ elementId: elementId, content: content });
+                }
+            });
+
+            // Ensure to wrap multiple values into an object when passing more than one value
+            myPromise.then(
+                function (result) { myrenderer(result.elementId, result.content + '\n\n' + xhr.response); },
+                function (result) { myrenderer(result.elementId, result.content); }
+            );
+
+        }
+
+        function myFunctionPromiseCallbackAsyncXMLHttpRequest(url, elementId, content) {
+
+            // This is a Async Request
+            var xhr = new XMLHttpRequest();
+
+            // false indicates a synchronous request
+            console.log("Performning Asynchronous Task -- " + new Date());
+            xhr.open('GET', url, true);
+
+
+            xhr.onreadystatechange = function () {
+
+                console.log("readystatechange  -- " + xhr.readyState + " -- " + new Date());
+
+                //Declaring a Promise
+                var myPromise = new Promise(function (myResolve, myReject) {
+
+                    if (xhr.readyState == XMLHttpRequest.DONE && xhr.status == 200) {
+                        myResolve({ elementId: elementId, content: content });
+                    } else {
+                        myReject({ elementId: elementId, content: content });
+                    }
+                });
+
+                // Ensure to wrap multiple values into an object when passing more than one value
+                myPromise.then(
+                    function (result) { myrenderer(result.elementId, result.content + '\n\n' + xhr.response); },
+                    function (result) { myrenderer(result.elementId, result.content + " -- No Response Yet -- "); }
+                );
+
+            }
+
+            xhr.send();
+
+
+
+            // Performing other task
+            console.log("Performning other Task -- " + new Date());
+            myrenderer(elementId, "Performning other Task -- ");
+
+
+        }
+
+
+        function myFunctionAsyncFunction(parBoolean, elementId, content) {
+
+            console.log(parBoolean, elementId, content);
+
+            // An Async function
+            // Depending on result you call either resolved or rejected
+            // Ensure to wrap multiple values into an object when passing more than one value
+            async function myAsync() {
+
+                if (parBoolean == true) {
+                    return { elementId: elementId, content: content };
+                } else {
+                    return { elementId: elementId, content: content };
+                }
+
+            }
+
+            // Ensure to wrap multiple values into an object when passing more than one value
+            myAsync().then(
+                function (result) { myrenderer(result.elementId, result.content); },
+                function (result) { myrenderer(result.elementId, result.content); }
+            );
+        }
+
+        async function myFunctionAwaitFunction(parBoolean, delay, elementId, content) {
+
+            console.log(parBoolean, delay, elementId, content);
+
+            // An Async function
+            // Depending on result you call either resolved or rejected
+            // Ensure to wrap multiple values into an object when passing more than one value
+            let myPromise = new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    if (parBoolean == true) {
+                        resolve({ elementId: elementId, content: content });
+                    } else {
+                        resolve({ elementId: elementId, content: content });
+                    }
+                }, delay);
+            });
+
+
+            // Ensure to wrap multiple values into an object when passing more than one value
+            await myPromise.then(
+                function (result) { myrenderer(result.elementId, result.content); },
+                function (result) { myrenderer(result.elementId, result.content); }
+            );
+
+
+        }
+
+
+
+
+
+
+
 
 
     </script>

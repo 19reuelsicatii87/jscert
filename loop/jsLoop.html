@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Certification</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
+    <!-- JavaScript: Location Header -->
+    <script>
+
+        // Code Here
+
+    </script>
+
+</head>
+
+<body>
+
+
+    <!-- Header Section -->
+    <section id="header">
+        <a href="/jscert/index.html" style="text-decoration: none;">
+            <div class="container-fluid bg-success py-4">
+                <div class="row">
+                    <div class="d-flex justify-content-center">
+                        <h1 class="text-white">Javascript Certification</h1>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </section>
+
+    <!-- Main Content: Table of Contents Section -->
+    <section id="script-location">
+        <div class="container my-5">
+            <div class="row">
+                <div class="col-lg min-vh-100">
+                    <div class="row mb-5">
+                        <h3 class="">Lesson: Javascript Loop</h3>
+                    </div>
+                    <div class="row mb-5">
+                        <div class="row">
+                            <h4 class="">Loop Statement</h4>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 d-flex justify-content-center mb-2">
+                                <div class="card" style="width: 50rem;">
+                                    <img src="/jscert/loop/ForLoop.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">For Loop</h5>
+                                        <div class="mb-5">
+                                            <p id="js-content-header" class="card-text">
+                                                iterates the elements for the fixed number of times. It should be used
+                                                if number of iteration is known
+                                            </p>
+                                            <ul>
+                                                <li><b>Syntax: </b> <br>
+                                                    for (initialization; condition; increment) <br>
+                                                    &emsp;{<br>
+                                                    &emsp;&emsp;code to be executed; <br>
+                                                    &emsp;}<br>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal"
+                                            onclick="showModal('/jscert/loop/ForLoop.jpg')">
+                                            Code Snippet
+                                        </button>
+                                        <a onclick="myFunctionForLoop('valueForLoop',3, 500)" class="btn btn-primary">
+                                            Insert 3 Random Numbers</a>
+                                        <a onclick="myFunctionForLoop('valueForLoop',4, 100)" class="btn btn-primary">
+                                            Insert 4 Random Numbers</a>
+                                        <a onclick="myFunctionForLoop('valueForLoop',5, 1000)"
+                                            class="btn btn-primary mt-1">
+                                            Insert 5 Random Numbers</a>
+                                        <a onclick="clearLoop('valueForLoop')" class="btn btn-primary mt-1">
+                                            Clear Result</a>
+
+                                        <div class="input-group mt-1">
+                                            <span class="input-group-text">Result Here:</span>
+                                            <input id="valueForLoop" type="text" class="form-control"></input>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 d-flex justify-content-center mb-2">
+                                <div class="card" style="width: 50rem;">
+                                    <img src="/jscert/loop/WhileLoop.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">While Loop</h5>
+                                        <div class="mb-5">
+                                            <p id="js-content-header" class="card-text">
+                                                iterates the elements for the infinite number of times until condition
+                                                is FALSE
+                                            </p>
+                                            <ul>
+                                                <li><b>Syntax: </b> <br>
+                                                    white (condition) <br>
+                                                    &emsp;{<br>
+                                                    &emsp;&emsp;code to be executed; <br>
+                                                    &emsp;}<br>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal"
+                                            onclick="showModal('/jscert/loop/WhileLoop.jpg')">
+                                            Code Snippet
+                                        </button>
+                                        <a onclick="myFunctionForWhile('valueForWhile',3, 500)" class="btn btn-primary">
+                                            Insert 3 Random Numbers</a>
+                                        <a onclick="myFunctionForWhile('valueForWhile',4, 100)" class="btn btn-primary">
+                                            Insert 4 Random Numbers</a>
+                                        <a onclick="myFunctionForWhile('valueForWhile',5, 1000)"
+                                            class="btn btn-primary mt-1">
+                                            Insert 5 Random Numbers</a>
+                                        <a onclick="clearLoop('valueForWhile')" class="btn btn-primary mt-1">
+                                            Clear Result</a>
+
+                                        <div class="input-group mt-1">
+                                            <span class="input-group-text">Result Here:</span>
+                                            <input id="valueForWhile" type="text" class="form-control"></input>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 d-flex justify-content-center mb-2">
+                                <div class="card" style="width: 50rem;">
+                                    <img src="/jscert/loop/DoWhileLoop.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Do-While Loop</h5>
+                                        <div class="mb-5">
+                                            <p id="js-content-header" class="card-text">
+                                                iterates the elements for the infinite number of times until condition
+                                                is FALSE
+                                            </p>
+                                            <ul>
+                                                <li><b>Syntax: </b> <br>
+                                                    do { <br>
+                                                    &emsp;&emsp;code to be executed; <br>
+                                                    &emsp;} while (condition) <br>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal"
+                                            onclick="showModal('/jscert/loop/DoWhileLoop.jpg')">
+                                            Code Snippet
+                                        </button>
+                                        <a onclick="myFunctionDoWhile('valueDoWhile',3, 500)" class="btn btn-primary">
+                                            Insert 3 Random Numbers</a>
+                                        <a onclick="myFunctionDoWhile('valueDoWhile',4, 100)" class="btn btn-primary">
+                                            Insert 4 Random Numbers</a>
+                                        <a onclick="myFunctionDoWhile('valueDoWhile',5, 1000)"
+                                            class="btn btn-primary mt-1">
+                                            Insert 5 Random Numbers</a>
+                                        <a onclick="clearLoop('valueDoWhile')" class="btn btn-primary mt-1">
+                                            Clear Result</a>
+
+                                        <div class="input-group mt-1">
+                                            <span class="input-group-text">Result Here:</span>
+                                            <input id="valueDoWhile" type="text" class="form-control"></input>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 d-flex justify-content-center mb-2">
+                                <div class="card" style="width: 50rem;">
+                                    <img src="/jscert/loop/ForInLoop.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">For-In Loop</h5>
+                                        <div class="mb-5">
+                                            <p id="js-content-header" class="card-text">
+                                                iterates the elements for the infinite number of times until condition
+                                                is FALSE
+                                            </p>
+                                            <ul>
+                                                <li><b>Syntax: </b> <br>
+                                                    for (key in object/array) { <br>
+                                                    &emsp;&emsp;code to be executed; <br>
+                                                    &emsp;} <br>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal"
+                                            onclick="showModal('/jscert/loop/ForInLoop.jpg')">
+                                            Code Snippet
+                                        </button>
+                                        <a onclick="myFunctionDoWhile('valueForInLoop',5, 1000)"
+                                            class="btn btn-primary mt-1">Insert 5 Random Numbers</a>
+                                        <a onclick="myFunctionForInLoop('valueForInLoop')" class="btn btn-primary">
+                                            See Result (For In)</a>
+                                        <a onclick="clearLoop('valueForInLoop')" class="btn btn-primary mt-1">
+                                            Clear Result</a>
+
+                                        <div class="input-group mt-1">
+                                            <span class="input-group-text">Result Here:</span>
+                                            <input id="valueForInLoop" type="text" class="form-control"></input>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Footer Section -->
+    <section id="footer">
+        <div class="container-fluid bg-success py-4">
+            <div class="row ">
+                <div class="d-flex justify-content-center">
+                    <h4 class="text-white mb-0">Created and Prepared By</h4>
+                </div>
+            </div>
+            <div class="row ">
+                <div class="d-flex justify-content-center">
+                    <p class="text-white">Reuel Sicat II</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Code Snippet</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div id="modalBody" class="modal-body">
+                    <img id="modalBodyImage" src="" class="img-fluid mx-auto d-block" alt="Responsive image">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- JavaScript: Location Body -->
+    <script>
+
+        function showModal(imgSrc) {
+
+            // update image source
+            document.getElementById('modalBodyImage').src = imgSrc;
+
+        }
+
+        function myrenderer(elementId, content) {
+
+            console.log("myrenderer: " + content + " -- " + new Date());
+            document.getElementById(elementId).value = content;
+
+
+        }
+
+
+        // Declaring array outside of the function 
+        // retains its value everytime the function is called
+        // unless the page is refreshed
+        const loop = [];
+
+        function clearLoop(elementId) {
+
+            loop.length = 0;
+            myrenderer(elementId, loop);
+
+
+        }
+
+        function myFunctionForLoop(elementId, length, max) {
+
+            for (let i = 0; i < length; i++) {
+
+                loop.push(Math.floor(Math.random() * max));
+
+            }
+
+            console.log(loop);
+            myrenderer(elementId, loop);
+
+        }
+
+        function myFunctionForWhile(elementId, length, max) {
+
+            var i = 0;
+
+            while (i < length) {
+
+                loop.push(Math.floor(Math.random() * max));
+                i++
+
+            }
+
+            console.log(loop);
+            myrenderer(elementId, loop);
+
+        }
+
+        function myFunctionDoWhile(elementId, length, max) {
+
+            var i = 0;
+
+            do {
+
+                loop.push(Math.floor(Math.random() * max));
+                i++
+
+            } while (i < length)
+
+            console.log(loop);
+            myrenderer(elementId, loop);
+
+        }
+
+        function myFunctionForInLoop(elementId) {
+
+            for (key in loop) {
+
+                setTimeout(myrenderer, key * 3000, elementId, loop[key])
+            }
+
+
+        }
+
+    </script>
+
+
+
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
