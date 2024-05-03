@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Certification</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
+    <!-- JavaScript: Location Header -->
+    <script>
+
+        // Code Here
+
+    </script>
+
+</head>
+
+<body>
+
+
+    <!-- Header Section -->
+    <section id="header">
+        <a href="/jscert/index.html" style="text-decoration: none;">
+            <div class="container-fluid bg-success py-4">
+                <div class="row">
+                    <div class="d-flex justify-content-center">
+                        <h1 class="text-white">Javascript Certification</h1>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </section>
+
+    <!-- Main Content: Table of Contents Section -->
+    <section id="script-location">
+        <div class="container my-5">
+            <div class="row">
+                <div class="col-lg min-vh-100">
+                    <div class="row mb-5">
+                        <h3 class="">Lesson: Javascript Class</h3>
+                    </div>
+                    <div class="row mb-5">
+                        <div class="row">
+                            <h4 class="">Creation and Initialization</h4>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 d-flex justify-content-center mb-2">
+                                <div class="card" style="width: 50rem;">
+                                    <img src="/jscert/class/wOConstructor.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Without Constructor</h5>
+                                        <div class="mb-5">
+                                            <p id="js-content-header" class="card-text">
+                                                A JavaScript class is not an object. It is a template for JavaScript
+                                                objects. Classes serve as blueprints for creaing objects with predefined
+                                                properties and methods.
+                                            </p>
+                                            <ul>
+                                                <li><b>Syntax: </b>
+                                                    <br>class className {
+                                                    <br>&emsp;prop1;
+                                                    <br>&emsp;prop2;
+                                                    <br>&emsp;method_1() {
+                                                    <br>&emsp;&emsp; //code here
+                                                    <br>&emsp;}
+                                                    <br> }
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal"
+                                            onclick="showModal('/jscert/class/wOConstructor.jpg')">
+                                            Code Snippet
+                                        </button>
+                                        <a onclick="myFunctionwOConstructor('valuewOConstructor', 'Toyota', '1995')"
+                                            class="btn btn-primary">Create Toyota 1995</a>
+                                        <a onclick="myFunctionwOConstructor('valuewOConstructor', 'Toyota', '2005')"
+                                            class="btn btn-primary">Create Honda 2005</a>
+
+                                        <div class="input-group mt-1">
+                                            <span class="input-group-text">Object Result:</span>
+                                            <textarea id="valuewOConstructor" type="text" class="form-control"
+                                                rows="3"></textarea>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 d-flex justify-content-center mb-2">
+                                <div class="card" style="width: 50rem;">
+                                    <img src="/jscert/class/wConstructor.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">With Constructor</h5>
+                                        <div class="mb-5">
+                                            <p id="js-content-header" class="card-text">
+                                                A JavaScript class is not an object. It is a template for JavaScript
+                                                objects. Classes serve as blueprints for creaing objects with predefined
+                                                properties and methods.
+                                            </p>
+                                            <ul>
+                                                <li><b>Syntax: </b>
+                                                    <br>class className {
+                                                    <br>&emsp; constructor(param1, param2) {
+                                                    <br>&emsp;&emsp;this.param1 = param1;
+                                                    <br>&emsp;&emsp;this.param1 = param1;
+                                                    <br>&emsp;}
+                                                    <br>&emsp;method_1() {
+                                                    <br>&emsp;&emsp; //code here
+                                                    <br>&emsp;}
+                                                    <br> }
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal"
+                                            onclick="showModal('/jscert/class/wConstructor.jpg')">
+                                            Code Snippet
+                                        </button>
+                                        <a onclick="myFunctionwConstructor('valuewConstructor', 'Toyota', '1995')"
+                                            class="btn btn-primary">Create Toyota 1995</a>
+                                        <a onclick="myFunctionwConstructor('valuewConstructor', 'Toyota', '2005')"
+                                            class="btn btn-primary">Create Honda 2005</a>
+
+                                        <div class="input-group mt-1">
+                                            <span class="input-group-text">Object Result:</span>
+                                            <textarea id="valuewConstructor" type="text" class="form-control"
+                                                rows="3"></textarea>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Footer Section -->
+    <section id="footer">
+        <div class="container-fluid bg-success py-4">
+            <div class="row ">
+                <div class="d-flex justify-content-center">
+                    <h4 class="text-white mb-0">Created and Prepared By</h4>
+                </div>
+            </div>
+            <div class="row ">
+                <div class="d-flex justify-content-center">
+                    <p class="text-white">Reuel Sicat II</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Code Snippet</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div id="modalBody" class="modal-body">
+                    <img id="modalBodyImage" src="" class="img-fluid mx-auto d-block" alt="Responsive image">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- JavaScript: Location Body -->
+    <script>
+
+        function showModal(imgSrc) {
+
+            // update image source
+            document.getElementById('modalBodyImage').src = imgSrc;
+
+        }
+
+        function myrenderer(elementId, content) {
+
+            console.log("myrenderer: " + content + " -- " + new Date());
+            document.getElementById(elementId).value = content;
+
+
+        }
+
+        function myFunctionwOConstructor(elementId, name, year) {
+
+            class Car {
+                name;
+                year;
+
+                age() {
+                    const date = new Date();
+                    return date.getFullYear() - this.year;
+                }
+
+            }
+
+            const mycar = new Car();
+            mycar.name = name;
+            mycar.year = year;
+
+            myrenderer(elementId, "My Car is " + mycar.name
+                + " that is build last " + mycar.year
+                + " whose age is " + mycar.age());
+
+        }
+
+        function myFunctionwConstructor(elementId, name, year) {
+
+            class Car {
+
+                constructor(name, year) {
+                    this.name = name;
+                    this.year = year;
+                }
+
+                age() {
+                    const date = new Date();
+                    return date.getFullYear() - this.year;
+                }
+
+            }
+
+            const mycar = new Car(name, year);
+
+            myrenderer(elementId, "My Car is " + mycar.name
+                + " that is build last " + mycar.year
+                + " whose age is " + mycar.age());
+
+        }
+
+    </script>
+
+
+
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

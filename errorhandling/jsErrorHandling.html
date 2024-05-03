@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Certification</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
+    <!-- JavaScript: Location Header -->
+    <script>
+
+        // Code Here
+
+    </script>
+
+</head>
+
+<body>
+
+
+    <!-- Header Section -->
+    <section id="header">
+        <a href="/jscert/index.html" style="text-decoration: none;">
+            <div class="container-fluid bg-success py-4">
+                <div class="row">
+                    <div class="d-flex justify-content-center">
+                        <h1 class="text-white">Javascript Certification</h1>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </section>
+
+    <!-- Main Content: Table of Contents Section -->
+    <section id="script-location">
+        <div class="container my-5">
+            <div class="row">
+                <div class="col-lg min-vh-100">
+                    <div class="row mb-5">
+                        <h3 class="">Lesson: Javascript Error Handling</h3>
+                    </div>
+                    <div class="row mb-5">
+                        <div class="row">
+                            <h4 class="">Error Handling</h4>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 d-flex justify-content-center mb-2">
+                                <div class="card" style="width: 50rem;">
+                                    <img src="/jscert/errorhandling/TryCatch.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Try Catch Block</h5>
+                                        <div class="mb-5">
+                                            <p id="js-content-header" class="card-text">
+                                                The try...catch statement is comprised of a try block and either a catch
+                                                block, a finally block, or both. The code in the try block is executed
+                                                first, and if it throws an exception, the code in the catch block will
+                                                be executed. The code in the finally block will always be executed
+                                                before control flow exits the entire construct.
+                                            </p>
+                                            <ul>
+                                                <li><b>Syntax: </b>
+                                                    <br>try {
+                                                    <br>&emsp;nonExistentFunction();
+                                                    <br>} catch (error) {
+                                                    <br>&emsp;console.error(error);
+                                                    <br>&emsp;// Expected output: ReferenceError: nonExistentFunction is
+                                                    not defined
+                                                    <br>&emsp;// (Note: the exact output may be browser-dependent)
+                                                    <br>}
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal"
+                                            onclick="showModal('/jscert/errorhandling/TryCatch.jpg')">
+                                            Code Snippet
+                                        </button>
+                                        <a onclick="myFunctionTryCatch('errorMessageTryCatch')"
+                                            class="btn btn-primary">Validate</a>
+                                        <div class="input-group mt-1">
+                                            <span class="input-group-text">Provide Input Here (between 5-10):</span>
+                                            <input id="inputTryCatch" type="text" class="form-control"></input>
+                                        </div>
+                                        <p class="text-danger ms-3 my-0"><small id="errorMessageTryCatch"></small></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 d-flex justify-content-center mb-2">
+                                <div class="card" style="width: 50rem;">
+                                    <img src="/jscert/errorhandling/Throw.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Throw</h5>
+                                        <div class="mb-5">
+                                            <p id="js-content-header" class="card-text">
+                                                The throw statement throws a user-defined exception. Execution of the
+                                                current function will stop (the statements after throw won't be
+                                                executed), and control will be passed to the first catch block in the
+                                                call stack. If no catch block exists among caller functions, the program
+                                                will terminate.
+                                            </p>
+                                            <ul>
+                                                <li><b>Syntax: </b>throw expression; </li>
+                                            </ul>
+                                        </div>
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal"
+                                            onclick="showModal('/jscert/errorhandling/Throw.jpg')">
+                                            Code Snippet
+                                        </button>
+                                        <a onclick="myFunctionThrow('errorMessageThrow')"
+                                            class="btn btn-primary">Validate</a>
+                                        <div class="input-group mt-1">
+                                            <span class="input-group-text">Provide Input Here (between 5-10):</span>
+                                            <input id="inputThrow" type="text" class="form-control"></input>
+                                        </div>
+                                        <p class="text-danger ms-3 my-0"><small id="errorMessageThrow"></small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Footer Section -->
+    <section id="footer">
+        <div class="container-fluid bg-success py-4">
+            <div class="row ">
+                <div class="d-flex justify-content-center">
+                    <h4 class="text-white mb-0">Created and Prepared By</h4>
+                </div>
+            </div>
+            <div class="row ">
+                <div class="d-flex justify-content-center">
+                    <p class="text-white">Reuel Sicat II</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Code Snippet</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div id="modalBody" class="modal-body">
+                    <img id="modalBodyImage" src="" class="img-fluid mx-auto d-block" alt="Responsive image">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- JavaScript: Location Body -->
+    <script>
+
+        function showModal(imgSrc) {
+
+            // update image source
+            document.getElementById('modalBodyImage').src = imgSrc;
+
+        }
+
+        function myrenderer(elementId, content) {
+
+            console.log("myrenderer: " + content + " -- " + new Date());
+            document.getElementById(elementId).value = content;
+
+
+        }
+
+        function myFunctionTryCatch(elementId) {
+
+            let x = document.getElementById("inputTryCatch").value;
+            try {
+                if (x.trim() == "") {
+                    throw new Error("Provided Input is Empty");
+                }
+                else if (isNaN(x)) {
+                    throw new Error("Provided Input is not a Number");
+                }
+                else if (x < 5) {
+                    throw new Error("Provided Input is less than 5");
+                }
+                else if (x > 10) {
+                    throw new Error("Provided Input is greater than 10");
+                }
+                else {
+                    throw new Error("");
+                }
+            }
+            catch (error) {
+                console.log(error);
+                document.getElementById(elementId).innerHTML = error.message;
+            }
+
+        }
+
+        function myFunctionThrow(elementId) {
+
+            let x = document.getElementById("inputThrow").value.trim();
+            console.log("--" + x + "--");
+            try {
+                if (x.trim() == "") throw "Provided Input is Empty";
+                if (isNaN(x)) throw "Provided Input is not a Number";
+                if (x < 5) throw "Provided Input is less than 5";
+                if (x > 10) throw "Provided Input is greater than 10";
+            }
+            catch (error) {
+                console.log(error);
+                document.getElementById(elementId).innerHTML = "Error Message: " + error;
+            }
+
+        }
+
+    </script>
+
+
+
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
