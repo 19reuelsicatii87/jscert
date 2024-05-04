@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Certification</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
+    <!-- JavaScript: Location Header -->
+    <script>
+
+        // Code Here
+
+    </script>
+
+</head>
+
+<body>
+
+
+    <!-- Header Section -->
+    <section id="header">
+        <a href="/jscert/index.html" style="text-decoration: none;">
+            <div class="container-fluid bg-success py-4">
+                <div class="row">
+                    <div class="d-flex justify-content-center">
+                        <h1 class="text-white">Javascript Certification</h1>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </section>
+
+    <!-- Main Content: Table of Contents Section -->
+    <section id="script-location">
+        <div class="container my-5">
+            <div class="row">
+                <div class="col-lg min-vh-100">
+                    <div class="row mb-5">
+                        <h3 class="">Lesson: Prototype Inheritance</h3>
+                        <p>All JavaScript objects inherit properties and methods from a prototype:</p>
+                        <ul class="ms-5">
+                            <li><code>Date</code> objects inherit from <code>Date.prototype</code></li>
+                            <li><code>Array</code> objects inherit from <code>Array.prototype</code></li>
+                            <li><code>Person</code> objects inherit from <code>Person.prototype</code></li>
+                        </ul>
+                        <p><code>Date</code> objects, <code>Array</code>
+                            objects, and <code>Person</code> objects inherit from <code>Object.prototype</code>.</p>
+                        <p>The <code>Object.prototype</code> is on the top of the prototype
+                            inheritance chain:</p>
+
+                    </div>
+                    <div class="row mb-5">
+                        <div class="row">
+                            <h4 class="">Adding Property and Method to an Object</h4>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 d-flex justify-content-center mb-2">
+                                <div class="card" style="width: 50rem;">
+                                    <img src="/jscert/objProto/Property.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Property</h5>
+                                        <div class="mb-5">
+                                            <p>The JavaScript <codes>prototype</code> property allows
+                                                    you to add new properties to object
+                                                    constructors:</p>
+                                            <ul>
+                                                <li><b>Syntax: </b>ObjectName.prototype.PropertyName = "Value";</li>
+                                            </ul>
+                                        </div>
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal"
+                                            onclick="showModal('/jscert/objProto/Property.jpg')">
+                                            Code Snippet
+                                        </button>
+                                        <a onclick="myFunctionobjProtoProp('Jen', 42, 'Female', 'Tagalog')"
+                                            class="btn btn-primary">See Result</a>
+
+
+                                        <div class="input-group mt-1">
+                                            <span class="input-group-text">Object Result:</span>
+                                            <textarea id="valueObjProtoProp" type="text" class="form-control"
+                                                rows="6"></textarea>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 d-flex justify-content-center mb-2">
+                                <div class="card" style="width: 50rem;">
+                                    <img src="/jscert/objProto/Method.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Method</h5>
+                                        <div class="mb-5">
+                                            <p>The JavaScript <codes>prototype</code> property allows
+                                                    you to add new properties to object
+                                                    constructors:</p>
+                                            <ul>
+                                                <li><b>Syntax: </b>ObjectName.prototype.PropertyName = "function() {
+                                                    //code here }";</li>
+                                            </ul>
+                                        </div>
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal"
+                                            onclick="showModal('/jscert/objProto/Method.jpg')">
+                                            Code Snippet
+                                        </button>
+                                        <a onclick="myFunctionobjProtoMethod('Weng', 37, 'Male', 'Cebuano')"
+                                            class="btn btn-primary">See Result</a>
+
+
+                                        <div class="input-group mt-1">
+                                            <span class="input-group-text">Object Result:</span>
+                                            <textarea id="valueObjProtoMethod" type="text" class="form-control"
+                                                rows="6"></textarea>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Footer Section -->
+    <section id="footer">
+        <div class="container-fluid bg-success py-4">
+            <div class="row ">
+                <div class="d-flex justify-content-center">
+                    <h4 class="text-white mb-0">Created and Prepared By</h4>
+                </div>
+            </div>
+            <div class="row ">
+                <div class="d-flex justify-content-center">
+                    <p class="text-white">Reuel Sicat II</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Code Snippet</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div id="modalBody" class="modal-body">
+                    <img id="modalBodyImage" src="" class="img-fluid mx-auto d-block" alt="Responsive image">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- JavaScript: Location Body -->
+    <script>
+
+        function showModal(imgSrc) {
+
+            // update image source
+            document.getElementById('modalBodyImage').src = imgSrc;
+
+        }
+
+        function myrenderer(elementId, content) {
+
+            console.log("myrenderer: " + content + " -- " + new Date());
+            document.getElementById(elementId).value = content;
+
+
+        }
+
+        function myFunctionobjProtoProp(name, age, sex, language) {
+
+            function Person() {
+                this.name = name;
+                this.age = age;
+                this.sex = sex;
+                this.message1 = function () { return person.name + ' is ' + person.age + 'years old.'; };
+                this.message2 = () => { return person.name + ' is ' + person.age + 'years old whose gender is ' + person.sex; };
+            }
+
+            const person = new Person()
+            console.log(" === Object Inheritance: Property === ");
+            console.log("Name:  " + person.name)
+            console.log("Age: " + person.age)
+            setTimeout(() => { document.getElementById("valueObjProtoProp").value = person.message1() }, 3000);
+            setTimeout(() => { document.getElementById("valueObjProtoProp").value = person.message2() }, 9000);
+
+            Person.prototype.language = language;
+            console.log("Language: " + person.language)
+            setTimeout(() => { document.getElementById("valueObjProtoProp").value = person.message2() + " and speaks " + person.language }, 15000);
+
+        }
+
+        function myFunctionobjProtoMethod(name, age, sex, language) {
+
+            function Person() {
+                this.name = name;
+                this.age = age;
+                this.sex = sex;
+                this.message1 = function () { return person.name + ' is ' + person.age + 'years old.'; };
+                this.message2 = () => { return person.name + ' is ' + person.age + 'years old whose gender is ' + person.sex; };
+            }
+
+            const person = new Person()
+            console.log(" === Object Inheritance: Property === ");
+            console.log("Name:  " + person.name)
+            console.log("Age: " + person.age)
+            setTimeout(() => { document.getElementById("valueObjProtoMethod").value = person.message1() }, 3000);
+            setTimeout(() => { document.getElementById("valueObjProtoMethod").value = person.message2() }, 9000);
+
+            Person.prototype.language = language;
+            Person.prototype.message3 = () => {
+                return person.name + ' is ' + person.age + 'years old whose gender is ' + person.sex
+                    + " and speaks " + person.language
+            };
+            console.log("Message 3: " + person.message3())
+            setTimeout(() => { document.getElementById("valueObjProtoMethod").value = person.message3() }, 9000);
+
+        }
+
+
+    </script>
+
+    <!-- <script src="objProto.js"></script> -->
+
+
+
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
