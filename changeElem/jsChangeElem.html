@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Certification</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
+    <!-- JavaScript: Location Header -->
+    <script>
+
+        // Code Here
+
+    </script>
+
+</head>
+
+<body>
+
+
+    <!-- Header Section -->
+    <section id="header">
+        <a href="/jscert/index.html" style="text-decoration: none;">
+            <div class="container-fluid bg-success py-4">
+                <div class="row">
+                    <div class="d-flex justify-content-center">
+                        <h1 class="text-white">Javascript Certification</h1>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </section>
+
+    <!-- Main Content: Table of Contents Section -->
+    <section id="script-location">
+        <div class="container my-5">
+            <div class="row">
+                <div class="col-lg min-vh-100">
+                    <div class="row mb-5">
+                        <h3 class="">Lesson: Changing Element's Attribute</h3>
+                    </div>
+                    <div class="row mb-5">
+                        <div class="row">
+                            <h4 class="">Changing Attribute</h4>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 d-flex justify-content-center mb-2">
+                                <div class="card" style="width: 50rem;">
+                                    <img src="/jscert/changeElem/src.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Image: The src Attribute</h5>
+                                        <div class="mb-5">
+                                            <p id="js-content-header" class="card-text">
+                                                The required src attribute specifies the path (URL) to the image.
+                                            </p>
+                                        </div>
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal"
+                                            onclick="showModal('/jscert/changeElem/src.jpg')">
+                                            Code Snippet
+                                        </button>
+                                        <a id="myFunctionChangeSrc" class="btn btn-primary">Change Image</a>
+                                        <div class="input-group mt-1">
+                                            <img id="myImageChangeSrc" src="/jscert/changeElem/DOTA1.jpg"
+                                                class="img-thumbnail" alt="...">
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 d-flex justify-content-center mb-2">
+                                <div class="card" style="width: 50rem;">
+                                    <img src="/jscert/changeElem/class.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Element.classList</h5>
+                                        <div class="mb-5">
+                                            <p id="js-content-header" class="card-text">
+                                                The Element.classList is a read-only property that returns a live
+                                                DOMTokenList collection of the class attributes of the element. This can
+                                                then be used to manipulate the class list.
+                                            </p>
+                                        </div>
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal"
+                                            onclick="showModal('/jscert/changeElem/class.jpg')">
+                                            Code Snippet
+                                        </button>
+                                        <a id="myFunctionChangeClass" class="btn btn-primary">Change BackGround</a>
+                                        <div id="myInputChangeClass" class="input-group mt-1 p-3 bg-success">
+                                            <span class="input-group-text">Result:</span>
+                                            <input type="text" class="form-control " value="Default Value"></input>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Footer Section -->
+    <section id="footer">
+        <div class="container-fluid bg-success py-4">
+            <div class="row ">
+                <div class="d-flex justify-content-center">
+                    <h4 class="text-white mb-0">Created and Prepared By</h4>
+                </div>
+            </div>
+            <div class="row ">
+                <div class="d-flex justify-content-center">
+                    <p class="text-white">Reuel Sicat II</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Code Snippet</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div id="modalBody" class="modal-body">
+                    <img id="modalBodyImage" src="" class="img-fluid mx-auto d-block" alt="Responsive image">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- JavaScript: Location Body -->
+    <script>
+
+        function showModal(imgSrc) {
+
+            // update image source
+            document.getElementById('modalBodyImage').src = imgSrc;
+
+        }
+
+        function myrenderer(elementId, content) {
+
+            console.log("myrenderer: " + content + " -- " + new Date());
+            document.getElementById(elementId).value = content;
+
+
+        }
+
+        document.getElementById('myFunctionChangeSrc').onclick = function () {
+
+            var imageSrc = document.getElementById('myImageChangeSrc').src;
+            if (imageSrc.includes('DOTA1')) {
+                document.getElementById('myImageChangeSrc').src = '/jscert/changeElem/DOTA2.jpg'
+            }
+
+            else if (imageSrc.includes('DOTA2')) {
+                document.getElementById('myImageChangeSrc').src = '/jscert/changeElem/DOTA1.jpg'
+            }
+        }
+
+
+        document.getElementById('myFunctionChangeClass').onclick = function () {
+
+            var txtBckGround = document.getElementById('myInputChangeClass').classList.value;
+            console.log("ClassName: " + txtBckGround);
+
+
+            if (!txtBckGround.includes('bg-success') && !txtBckGround.includes('bg-danger')) {
+                document.getElementById('myInputChangeClass').classList.remove('bg-danger');
+                document.getElementById('myInputChangeClass').classList.add('bg-success');
+            }
+
+            else if (txtBckGround.includes('bg-success') && !txtBckGround.includes('bg-danger')) {
+                document.getElementById('myInputChangeClass').classList.remove('bg-success');
+                document.getElementById('myInputChangeClass').classList.add('bg-danger');
+            }
+
+            else if (!txtBckGround.includes('bg-success') && txtBckGround.includes('bg-danger')) {
+                document.getElementById('myInputChangeClass').classList.remove('bg-success');
+                document.getElementById('myInputChangeClass').classList.remove('bg-danger');
+            }
+        }
+
+    </script>
+
+
+
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

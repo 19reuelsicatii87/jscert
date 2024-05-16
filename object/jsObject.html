@@ -509,6 +509,13 @@
             // access through bracket notation
             document.getElementById("valueObjectInsertElem2").value = x["country"];
 
+            // overwriting object property
+            console.log(x.fullNameRegular());
+            console.log(x.fullNameArrow());
+            x.setFullName("Reuel", "Sicat");
+            console.log(x.fullNameRegular());
+            console.log(x.fullNameArrow());
+
         }
 
         function myFunctionObjectRemoveElem() {

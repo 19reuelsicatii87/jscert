@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Certification</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
+    <!-- JavaScript: Location Header -->
+    <script>
+
+        // Code Here
+
+    </script>
+
+</head>
+
+<body>
+
+
+    <!-- Header Section -->
+    <section id="header">
+        <a href="/jscert/index.html" style="text-decoration: none;">
+            <div class="container-fluid bg-success py-4">
+                <div class="row">
+                    <div class="d-flex justify-content-center">
+                        <h1 class="text-white">Javascript Certification</h1>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </section>
+
+    <!-- Main Content: Table of Contents Section -->
+    <section id="script-location">
+        <div class="container my-5">
+            <div class="row">
+                <div class="col-lg min-vh-100">
+                    <div class="row mb-5">
+                        <h3 class="">Lesson: Validation Forms</h3>
+                    </div>
+                    <div class="row mb-5">
+                        <div class="row">
+                            <h4 class="">Javascript Form Validation</h4>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 d-flex justify-content-center mb-2">
+                                <div class="card" style="width: 50rem;">
+                                    <img src="/jscert/valForm/EmptyInput.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal"
+                                                data-bs-target="#exampleModal"
+                                                onclick="showModal('/jscert/valForm/EmptyInput.jpg')">
+                                                See Code Snippet
+                                            </button>
+                                            <h5 class="card-title">Empty Input</h5>
+                                            <p>Validate that input fields are not EMPTY</p>
+                                        </div>
+
+                                        <div class="p-3 border mt-1">
+                                            <form name="formEmptyString">
+                                                <div class="form-group">
+                                                    <label>Email address</label>
+                                                    <input type="email" class="form-control" name="inputEmail"
+                                                        aria-describedby="emailHelp" placeholder="Enter email">
+                                                </div>
+                                                <div class="form-group mb-3">
+                                                    <label>Password</label>
+                                                    <input type="password" class="form-control" name="inputPassword"
+                                                        placeholder="Password">
+                                                </div>
+                                                <a id="myFunctionEmptyString" class="btn btn-primary">Submit</a>
+                                            </form>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 d-flex justify-content-center mb-2">
+                                <div class="card" style="width: 50rem;">
+                                    <img src="/jscert/valForm/MaxMin.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal"
+                                                data-bs-target="#exampleModal"
+                                                onclick="showModal('/jscert/valForm/MaxMin.jpg')">
+                                                See Code Snippet
+                                            </button>
+                                            <h5 class="card-title">Max | Min Character</h5>
+                                            <p>Validate that password field have MIN=8 and MAX=20 characters</p>
+                                        </div>
+
+                                        <div class="p-3 border mt-1">
+                                            <form name="formMaxMin">
+                                                <div class="form-group">
+                                                    <label>Email address</label>
+                                                    <input type="email" class="form-control" name="inputEmail"
+                                                        aria-describedby="emailHelp" placeholder="Enter email">
+                                                </div>
+                                                <div class="form-group mb-3">
+                                                    <label>Password</label>
+                                                    <input type="password" class="form-control" name="inputPassword"
+                                                        placeholder="Password">
+                                                </div>
+                                                <a id="myFunctionMaxMin" class="btn btn-primary">Submit</a>
+                                            </form>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 d-flex justify-content-center mb-2">
+                                <div class="card" style="width: 50rem;">
+                                    <img src="/jscert/valForm/MaxMinDate.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal"
+                                                data-bs-target="#exampleModal"
+                                                onclick="showModal('/jscert/valForm/MaxMinDate.jpg')">
+                                                See Code Snippet
+                                            </button>
+                                            <h5 class="card-title">MaxMin on Date</h5>
+                                            <p>The min and max attributes work with the following input types: number,
+                                                range, date, datetime-local, month, time and week.</p>
+                                        </div>
+
+                                        <div class="p-3 border mt-1">
+                                            <form name="formMaxMinDate">
+                                                <div class="form-group">
+                                                    <label>Date Range</label>
+                                                    <div class="row">
+                                                        <div class="col-lg-6">
+                                                            <input class="form-control" type="date" id="dateMaxFrom"
+                                                                name="datemax" min="2000-01-01" max="2002-12-31"
+                                                                value="2000-01-01">
+                                                        </div>
+                                                        <div class="col-lg-6">
+                                                            <input class="form-control" type="date" id="dateMaxTo"
+                                                                name="datemax" min="2000-01-01" max="2002-12-31"
+                                                                value="2002-12-31">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 d-flex justify-content-center mb-2">
+                                <div class="card" style="width: 50rem;">
+                                    <img src="/jscert/valForm/Multiple.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal"
+                                                data-bs-target="#exampleModal"
+                                                onclick="showModal('/jscert/valForm/Multiple.jpg')">
+                                                See Code Snippet
+                                            </button>
+                                            <h5 class="card-title">Multiple</h5>
+                                            <p>The input multiple attribute specifies that the user is allowed to enter
+                                                more than one value in an input field.The multiple attribute works with
+                                                the following input types: email, and file.</p>
+                                        </div>
+
+                                        <div class="p-3 border mt-1">
+                                            <form name="formMaxMin">
+                                                <div class="form-group">
+                                                    <label>Select files to upload</label>
+                                                    <input class="form-control" type="file" id="files" name="files"
+                                                        multiple>
+                                                </div>
+                                            </form>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 d-flex justify-content-center mb-2">
+                                <div class="card" style="width: 50rem;">
+                                    <img src="/jscert/valForm/Pattern.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal"
+                                                data-bs-target="#exampleModal"
+                                                onclick="showModal('/jscert/valForm/Pattern.jpg')">
+                                                See Code Snippet
+                                            </button>
+                                            <h5 class="card-title">Pattern</h5>
+                                            <p>The input pattern attribute specifies a regular expression that the input
+                                                field's value is checked against, when the form is submitted.
+                                                The pattern attribute works with the following input types: text, date,
+                                                search, url, tel, email, and password.</p>
+                                        </div>
+                                        <div class="p-3 border mt-1">
+                                            <form name="formPattern">
+                                                <div class="form-group mb-3">
+                                                    <label>Country Code</label>
+                                                    <input type="text" class="form-control" pattern="[A-Za-z]{3}"
+                                                        title="Three letter country code">
+                                                </div>
+                                                <button class="btn btn-primary" type="submit">Submit</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 d-flex justify-content-center mb-2">
+                                <div class="card" style="width: 50rem;">
+                                    <img src="/jscert/valForm/Multiple.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal"
+                                                data-bs-target="#exampleModal"
+                                                onclick="showModal('/jscert/valForm/Multiple.jpg')">
+                                                See Code Snippet
+                                            </button>
+                                            <h5 class="card-title">Multiple</h5>
+                                            <p>The input multiple attribute specifies that the user is allowed to enter
+                                                more than one value in an input field.The multiple attribute works with
+                                                the following input types: email, and file.</p>
+                                        </div>
+
+                                        <div class="p-3 border mt-1">
+                                            <form name="formMaxMin">
+                                                <div class="form-group">
+                                                    <label>Select files to upload</label>
+                                                    <input class="form-control" type="file" id="files2" name="files"
+                                                        multiple>
+                                                </div>
+                                            </form>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Footer Section -->
+    <section id="footer">
+        <div class="container-fluid bg-success py-4">
+            <div class="row ">
+                <div class="d-flex justify-content-center">
+                    <h4 class="text-white mb-0">Created and Prepared By</h4>
+                </div>
+            </div>
+            <div class="row ">
+                <div class="d-flex justify-content-center">
+                    <p class="text-white">Reuel Sicat II</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal: Code Snippet -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Code Snippet</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div id="modalBody" class="modal-body">
+                    <img id="modalBodyImage" src="" class="img-fluid mx-auto d-block" alt="Responsive image">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal: Error Message -->
+    <div class="modal fade" id="notifModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Notification Message</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div id="modalBody" class="modal-body">
+                    <p id="modalBodytext"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- JavaScript: Location Body -->
+    <script>
+
+        function showModal(imgSrc) {
+
+            // update image source
+            document.getElementById('modalBodyImage').src = imgSrc;
+
+        }
+
+        function myrenderer(elementId, content) {
+
+            console.log("myrenderer: " + content + " -- " + new Date());
+            document.getElementById(elementId).value = content;
+
+
+        }
+
+        document.getElementById('myFunctionEmptyString').onclick = function () {
+
+            console.log("Empty String");
+
+            let inputName = document.forms["formEmptyString"]["inputEmail"].value;
+            let inputPassword = document.forms["formEmptyString"]["inputPassword"].value;
+            let myModal = new bootstrap.Modal(document.getElementById('notifModal'));
+
+
+            if (inputName == "" && inputPassword == "") {
+                document.getElementById("modalBodytext").innerHTML = "Please provide Emaill and Password";
+                myModal.show();
+            }
+
+            else if (!inputName == "" && inputPassword == "") {
+                document.getElementById("modalBodytext").innerHTML = "Please provide Password";
+                myModal.show();
+            }
+
+            else if (inputName == "" && !inputPassword == "") {
+                document.getElementById("modalBodytext").innerHTML = "Please provide Emaill";
+                myModal.show();
+            }
+
+            else {
+                document.getElementById("modalBodytext").innerHTML = "Successfully submitted";
+                myModal.show();
+            }
+
+        }
+
+        document.getElementById('myFunctionMaxMin').onclick = function () {
+
+            console.log("Max | Min Characters - Password");
+
+            let inputPassword = document.forms["formMaxMin"]["inputPassword"].value;
+            let myModal = new bootstrap.Modal(document.getElementById('notifModal'));
+
+
+            if (inputPassword.length <= 8) {
+                document.getElementById("modalBodytext").innerHTML = "Password must have atlease 8 chracters";
+                document.getElementById("modalBodytext").classList.add("text-danger");
+                myModal.show();
+            }
+
+            else if (inputPassword.length >= 20) {
+                document.getElementById("modalBodytext").innerHTML = "Password must not exceed 20 chracters";
+                document.getElementById("modalBodytext").classList.add("text-danger");
+                myModal.show();
+            }
+
+            else {
+                document.getElementById("modalBodytext").innerHTML = "Successfully submitted";
+                myModal.show();
+            }
+
+        }
+
+
+
+
+    </script>
+
+
+
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap JS (including Popper.js) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

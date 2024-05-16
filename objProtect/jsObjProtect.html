@@ -42,118 +42,134 @@
             <div class="row">
                 <div class="col-lg min-vh-100">
                     <div class="row mb-5">
-                        <h3 class="">Lesson: Prototype Inheritance</h3>
-                        <p>All JavaScript objects inherit properties and methods from a prototype:</p>
-                        <ul class="ms-5">
-                            <li><code>Date</code> objects inherit from <code>Date.prototype</code></li>
-                            <li><code>Array</code> objects inherit from <code>Array.prototype</code></li>
-                            <li><code>Person</code> objects inherit from <code>Person.prototype</code></li>
-                        </ul>
-                        <p><code>Date</code> objects, <code>Array</code>
-                            objects, and <code>Person</code> objects inherit from <code>Object.prototype</code>.</p>
-                        <p>The <code>Object.prototype</code> is on the top of the prototype
-                            inheritance chain:</p>
-
+                        <h3 class="">Lesson: Object Protection</h3>
+                        <p>
+                            Object protection typically refers to techniques or mechanisms used to prevent unintentional
+                            or unauthorized modification of object properties. This can include preventing the addition,
+                            deletion, or modification of properties within an object
+                        </p>
                     </div>
                     <div class="row mb-5">
                         <div class="row">
-                            <h4 class="">Adding Property and Method to an Object</h4>
+                            <h4 class="">Object.preventExtensions() and Object.isExtensible()</h4>
                         </div>
                         <div class="row">
                             <div class="col-lg-6 d-flex justify-content-center mb-2">
                                 <div class="card" style="width: 50rem;">
-                                    <img src="/jscert/objProto/Property.jpg" class="card-img-top" alt="...">
+                                    <img src="/jscert/objProtect/PreventExtensionsArray.jpg" class="card-img-top"
+                                        alt="...">
                                     <div class="card-body">
-                                        <h5 class="card-title">Property</h5>
+                                        <h5 class="card-title">Object.preventExtensions(): Array </h5>
                                         <div class="mb-5">
-                                            <p>The JavaScript <codes>prototype</code> property allows
-                                                    you to add new properties to object
-                                                    constructors:</p>
+                                            <p>The Object.preventExtensions() method prevents adding properties to an
+                                                object.</p>
                                             <ul>
-                                                <li><b>Syntax: </b>ObjectName.prototype.PropertyName = "Value";</li>
+                                                <li><b>Syntax: </b>ObjectName.preventExtensions(ArrayName);</li>
                                             </ul>
                                         </div>
                                         <button type="button" class="btn btn-primary" data-bs-toggle="modal"
                                             data-bs-target="#exampleModal"
-                                            onclick="showModal('/jscert/objProto/Property.jpg')">
+                                            onclick="showModal('/jscert/objProtect/PreventExtensionsArray.jpg')">
                                             Code Snippet
                                         </button>
-                                        <a onclick="myFunctionObjProtoProp('Jen', 42, 'Female', 'Tagalog')"
-                                            class="btn btn-primary">See Result</a>
-
-
+                                        <a onclick="myFunctionPreventExtensionsArray()" class="btn btn-primary">See
+                                            Result</a>
                                         <div class="input-group mt-1">
                                             <span class="input-group-text">Object Result:</span>
-                                            <textarea id="valueObjProtoProp" type="text" class="form-control"
+                                            <textarea id="valuePreventExtensionsArray" type="text" class="form-control"
                                                 rows="6"></textarea>
                                         </div>
-
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-6 d-flex justify-content-center mb-2">
                                 <div class="card" style="width: 50rem;">
-                                    <img src="/jscert/objProto/Method.jpg" class="card-img-top" alt="...">
+                                    <img src="/jscert/objProtect/PreventExtensionsObject.jpg" class="card-img-top"
+                                        alt="...">
                                     <div class="card-body">
-                                        <h5 class="card-title">Method</h5>
+                                        <h5 class="card-title">Object.preventExtensions(): Object </h5>
                                         <div class="mb-5">
-                                            <p>The JavaScript <codes>prototype</code> property allows
-                                                    you to add new properties to object
-                                                    constructors:</p>
+                                            <p>The Object.preventExtensions() method prevents adding properties to an
+                                                object.</p>
                                             <ul>
-                                                <li><b>Syntax: </b>ObjectName.prototype.PropertyName = "function() {
-                                                    //code here }";</li>
+                                                <li><b>Syntax: </b>ObjectName.preventExtensions(ArrayName);</li>
                                             </ul>
                                         </div>
                                         <button type="button" class="btn btn-primary" data-bs-toggle="modal"
                                             data-bs-target="#exampleModal"
-                                            onclick="showModal('/jscert/objProto/Method.jpg')">
+                                            onclick="showModal('/jscert/objProtect/PreventExtensionsObject.jpg')">
                                             Code Snippet
                                         </button>
-                                        <a onclick="myFunctionObjProtoMethod('Weng', 37, 'Male', 'Cebuano')"
-                                            class="btn btn-primary">See Result</a>
-
-
+                                        <a onclick="myFunctionPreventExtensionsObject()" class="btn btn-primary">See
+                                            Result</a>
                                         <div class="input-group mt-1">
                                             <span class="input-group-text">Object Result:</span>
-                                            <textarea id="valueObjProtoMethod" type="text" class="form-control"
+                                            <textarea id="valuePreventExtensionsObject" type="text" class="form-control"
                                                 rows="6"></textarea>
                                         </div>
-
                                     </div>
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <div class="row mb-5">
+                        <div class="row">
+                            <h4 class="">Object.seal() and Object.isSeal()</h4>
+                        </div>
                         <div class="row">
                             <div class="col-lg-6 d-flex justify-content-center mb-2">
                                 <div class="card" style="width: 50rem;">
-                                    <img src="/jscert/objProto/PropMethod.jpg" class="card-img-top" alt="...">
+                                    <img src="/jscert/objProtect/SealArray.jpg" class="card-img-top" alt="...">
                                     <div class="card-body">
-                                        <h5 class="card-title">Property + Method</h5>
+                                        <h5 class="card-title">Object.seal(): Array </h5>
                                         <div class="mb-5">
-                                            <p>The JavaScript <codes>prototype</code> property allows
-                                                    you to add new properties to object
-                                                    constructors:</p>
+                                            <p>The Object.seal() method seals an object, preventing new
+                                                properties from being added and existing properties from being deleted.
+                                                However, existing properties can still be modified.</p>
                                             <ul>
-                                                <li><b>Syntax: </b>ObjectName.prototype.PropertyName = "function() {
-                                                    //code here }";</li>
+                                                <li><b>Syntax: </b>ObjectName.seal(ArrayName);</li>
                                             </ul>
                                         </div>
                                         <button type="button" class="btn btn-primary" data-bs-toggle="modal"
                                             data-bs-target="#exampleModal"
-                                            onclick="showModal('/jscert/objProto/PropMethod.jpg')">
+                                            onclick="showModal('/jscert/objProtect/SealArray.jpg')">
                                             Code Snippet
                                         </button>
-                                        <a onclick="myFunctionPropMethod('Weng', 37, 'Male', 'Cebuano')"
-                                            class="btn btn-primary">See Result</a>
-
-
+                                        <a onclick="myFunctionSealArray()" class="btn btn-primary">See
+                                            Result</a>
                                         <div class="input-group mt-1">
                                             <span class="input-group-text">Object Result:</span>
-                                            <textarea id="valuePropMethod" type="text" class="form-control"
+                                            <textarea id="valueSealArray" type="text" class="form-control"
                                                 rows="6"></textarea>
                                         </div>
-
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 d-flex justify-content-center mb-2">
+                                <div class="card" style="width: 50rem;">
+                                    <img src="/jscert/objProtect/SealObject.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Object.seal(): Array </h5>
+                                        <div class="mb-5">
+                                            <p>The Object.seal() method seals an object, preventing new
+                                                properties from being added and existing properties from being deleted.
+                                                However, existing properties can still be modified.</p>
+                                            <ul>
+                                                <li><b>Syntax: </b>ObjectName.seal(ObjectName);</li>
+                                            </ul>
+                                        </div>
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal"
+                                            onclick="showModal('/jscert/objProtect/SealObject.jpg')">
+                                            Code Snippet
+                                        </button>
+                                        <a onclick="myFunctionSealObject()" class="btn btn-primary">See
+                                            Result</a>
+                                        <div class="input-group mt-1">
+                                            <span class="input-group-text">Object Result:</span>
+                                            <textarea id="valueSealObject" type="text" class="form-control"
+                                                rows="6"></textarea>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -211,68 +227,10 @@
 
         }
 
-        function myrenderer(elementId, content) {
-
-            console.log("myrenderer: " + content + " -- " + new Date());
-            document.getElementById(elementId).value = content;
-
-
-        }
-
-        function myFunctionObjProtoProp(name, age, sex, language) {
-
-            function Person() {
-                this.name = name;
-                this.age = age;
-                this.sex = sex;
-                this.message1 = function () { return person.name + ' is ' + person.age + 'years old.'; };
-                this.message2 = () => { return person.name + ' is ' + person.age + 'years old whose gender is ' + person.sex; };
-            }
-
-            const person = new Person()
-            console.log(" === Object Inheritance: Property === ");
-            console.log("Name:  " + person.name)
-            console.log("Age: " + person.age)
-            setTimeout(() => { document.getElementById("valueObjProtoProp").value = person.message1() }, 3000);
-            setTimeout(() => { document.getElementById("valueObjProtoProp").value = person.message2() }, 9000);
-
-            Person.prototype.language = language;
-            console.log("Language: " + person.language)
-            setTimeout(() => { document.getElementById("valueObjProtoProp").value = person.message2() + " and speaks " + person.language }, 15000);
-
-        }
-
-        function myFunctionObjProtoMethod(name, age, sex, language) {
-
-            function Person() {
-                this.name = name;
-                this.age = age;
-                this.sex = sex;
-                this.message1 = function () { return person.name + ' is ' + person.age + 'years old.'; };
-                this.message2 = () => { return person.name + ' is ' + person.age + 'years old whose gender is ' + person.sex; };
-            }
-
-            const person = new Person()
-            console.log(" === Object Inheritance: Property === ");
-            console.log("Name:  " + person.name)
-            console.log("Age: " + person.age)
-            setTimeout(() => { document.getElementById("valueObjProtoMethod").value = person.message1() }, 3000);
-            setTimeout(() => { document.getElementById("valueObjProtoMethod").value = person.message2() }, 9000);
-
-            Person.prototype.language = language;
-            Person.prototype.message3 = () => {
-                return person.name + ' is ' + person.age + 'years old whose gender is ' + person.sex
-                    + " and speaks " + person.language
-            };
-            console.log("Message 3: " + person.message3())
-            setTimeout(() => { document.getElementById("valueObjProtoMethod").value = person.message3() }, 9000);
-
-        }
-
-
     </script>
 
-    <script src="propMethod.js"></script>
+    <script src="preventExtensions.js"></script>
+    <script src="seal.js"></script>
 
 
 

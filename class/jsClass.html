@@ -137,6 +137,84 @@
                             </div>
                         </div>
                     </div>
+                    <div class="row mb-5">
+                        <div class="row">
+                            <h4 class="">Inheritance</h4>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 d-flex justify-content-center mb-2">
+                                <div class="card" style="width: 50rem;">
+                                    <img src="/jscert/class/inheritance.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Inheritance</h5>
+                                        <div class="mb-5">
+                                            <p id="js-content-header" class="card-text">
+                                                To create a class inheritance, use the extends keyword.A class created
+                                                with a class inheritance inherits all the methods from another class
+                                            </p>
+                                            <p id="js-content-header" class="card-text">The super() method refers to the
+                                                parent class. By calling the super() method in the constructor method,
+                                                we call the parent's constructor method and gets access to the parent's
+                                                properties and methods.</p>
+
+                                        </div>
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal"
+                                            onclick="showModal('/jscert/class/inheritance.jpg')">
+                                            Code Snippet
+                                        </button>
+                                        <a onclick="myFunctionInheritance('valueInheritance', 'Toyota', '1995', 'Vios')"
+                                            class="btn btn-primary">Create Toyota 1995</a>
+                                        <a onclick="myFunctionInheritance('valueInheritance', 'Toyota', '2005', 'Camry')"
+                                            class="btn btn-primary">Create Honda 2005</a>
+
+                                        <div class="input-group mt-1">
+                                            <span class="input-group-text">Object Result:</span>
+                                            <textarea id="valueInheritance" type="text" class="form-control"
+                                                rows="3"></textarea>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-5">
+                        <div class="row">
+                            <h4 class="">Static</h4>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 d-flex justify-content-center mb-2">
+                                <div class="card" style="width: 50rem;">
+                                    <img src="/jscert/class/static.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Static Method</h5>
+                                        <div class="mb-5">
+                                            <p id="js-content-header" class="card-text">
+                                                You cannot call a static method on an object, only on an object class.
+                                            </p>
+                                        </div>
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal"
+                                            onclick="showModal('/jscert/class/static.jpg')">
+                                            Code Snippet
+                                        </button>
+                                        <a onclick="myFunctionStatic('valueStatic', 'Manual', 'Roxas', '1995')"
+                                            class="btn btn-primary">Manual Roxas</a>
+                                        <a onclick="myFunctionStatic('valueStatic', 'Diosdado', 'Macapagal', '2005')"
+                                            class="btn btn-primary">Disadado Macapagal</a>
+
+                                        <div class="input-group mt-1">
+                                            <span class="input-group-text">Object Result:</span>
+                                            <textarea id="valueStatic" type="text" class="form-control"
+                                                rows="3"></textarea>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -241,6 +319,103 @@
             myrenderer(elementId, "My Car is " + mycar.name
                 + " that is build last " + mycar.year
                 + " whose age is " + mycar.age());
+
+        }
+
+
+        function myFunctionInheritance(elementId, name, year, model) {
+
+            class Car {
+
+                constructor(name, year) {
+                    this.name = name;
+                    this.year = year;
+                }
+
+                age() {
+                    const date = new Date();
+                    return date.getFullYear() - this.year;
+                }
+
+            }
+
+            class Model extends Car {
+
+                constructor(name, year, model) {
+                    super(name, year);
+                    this.model = model;
+                }
+
+                // Properties and Methods from Car class is inherited
+                // access can be done through 'this' keyword
+                show() {
+                    return "My Car brand is " + this.name
+                        + " and the model is " + this.model
+                        + " that is build last " + this.year
+                        + " whose age is " + this.age();
+                }
+
+            }
+
+            const mycar = new Model(name, year, model);
+            myrenderer(elementId, mycar.show());
+        }
+
+        function myFunctionStatic(elementId, firstname, lastname, dob) {
+
+            class Person {
+
+                constructor(firstname, lastname) {
+                    this.firstname = firstname;
+                    this.lastname = lastname;
+                }
+
+                static display() {
+                    return "My name is " + firstname + " " + lastname;
+                }
+
+            }
+
+            class President extends Person {
+
+                constructor(firstname, lastname, dob) {
+                    super(firstname, lastname);
+                    this.dob = dob;
+                }
+
+                age() {
+                    const date = new Date();
+                    return date.getFullYear() - this.dob;
+                }
+
+                // Properties and Methods from Car class is inherited
+                // access can be done through 'this' keyword
+                show() {
+                    return "My name is " + this.firstname + " " + this.lastname
+                        + " whose age is " + this.age();
+                }
+
+            }
+
+            const myPresident = new President(firstname, lastname, dob);
+
+            try {
+
+                // regular method - this is render without error
+                myrenderer(elementId, myPresident.show());
+
+                // static method - this is NOT render with error
+                console.log(elementId, myPresident.display());
+
+
+            } catch (error) {
+
+                console.log("Error :" + error);
+
+                // static method - this is render without error
+                console.log(elementId, Person.display());
+
+            }
 
         }
 

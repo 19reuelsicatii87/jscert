@@ -1,11 +1,11 @@
 
-const person = {
-    name: "Jesse",
-    age: 50,
-    sex: "Male",
-    message1: function () { return person.name + ' is ' + person.age + 'years old.'; },
-    message2: () => { return person.name + ' is ' + person.age + 'years old whose gender is ' + person.sex; }
+function Person() {
+    this.name = "Jason";
+    this.age = 50;
+    this.sex = "Lesbian";
+    this.message1 = function () { return this.name + ' is ' + this.age + 'years old.'; };
+    this.message2 = () => { return this.name + ' is ' + this.age + 'years old whose gender is ' + this.sex; };
 }
 
 
-export { person };
+export { Person };
