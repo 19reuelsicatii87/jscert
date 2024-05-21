@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Certification</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="/JSCert/bootstrap-5.2.3-dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- JavaScript: Location Header -->
+    <script>
+
+        // Code Here
+
+    </script>
+
+</head>
+
+<body>
+
+
+    <!-- Header Section -->
+    <section id="header">
+        <a href="/jscert/index.html" style="text-decoration: none;">
+            <div class="container-fluid bg-success py-4">
+                <div class="row">
+                    <div class="d-flex justify-content-center">
+                        <h1 class="text-white">Javascript Certification</h1>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </section>
+
+    <!-- Main Content: Table of Contents Section -->
+    <section id="script-location">
+        <div class="container my-5">
+            <div class="row">
+                <div class="col-lg min-vh-100">
+                    <div class="row mb-5">
+                        <h3 class="">Lesson: Windows</h3>
+                    </div>
+                    <div class="row mb-5">
+                        <div class="row">
+                            <h4 class="">Window Property</h4>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 d-flex justify-content-center mb-2">
+                                <div class="card" style="width: 50rem;">
+                                    <img src="/jscert/window/HeightWidth.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Height vs Width</h5>
+                                        <div class="mb-5">
+                                            <p id="js-content-header" class="card-text">
+                                                The read-only innerHeight property of the Window interface returns the
+                                                interior height of the window in pixels, including the height of the
+                                                horizontal scroll bar, if present.
+                                                <br><br>
+                                                The read-only Window property innerWidth returns the interior width of
+                                                the window in pixels (that is, the width of the window's layout
+                                                viewport). That includes the width of the vertical scroll bar, if one is
+                                                present.
+                                            </p>
+                                        </div>
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal"
+                                            onclick="showModal('/jscert/window/HeightWidth.jpg')">
+                                            Code Snippet
+                                        </button>
+                                        <div class="input-group mt-1">
+                                            <span class="input-group-text">Inner Height:</span>
+                                            <input id="valueInnerHeight" type="text" class="form-control"
+                                                value="Default"></input>
+                                        </div>
+                                        <div class="input-group mt-1">
+                                            <span class="input-group-text">Inner Width:</span>
+                                            <input id="valueInnerWidth" type="text" class="form-control"
+                                                value="Default"></input>
+                                        </div>
+                                        <div class="input-group mt-1">
+                                            <span class="input-group-text">Outer Height:</span>
+                                            <input id="valueOuterHeight" type="text" class="form-control"
+                                                value="Default"></input>
+                                        </div>
+                                        <div class="input-group mt-1">
+                                            <span class="input-group-text">Outer Width:</span>
+                                            <input id="valueOuterWidth" type="text" class="form-control"
+                                                value="Default"></input>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 d-flex justify-content-center mb-2">
+                                <div class="card" style="width: 50rem;">
+                                    <img src="/jscert/window/ScrollXY.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">ScrollX vs ScrollY</h5>
+                                        <div class="mb-5">
+                                            <p id="js-content-header" class="card-text">
+                                                The read-only scrollX property of the Window interface returns the
+                                                number of pixels that the document is currently scrolled horizontally.
+                                                This value is subpixel precise in modern browsers, meaning that it isn't
+                                                necessarily a whole number. You can get the number of pixels the
+                                                document is scrolled vertically from the scrollY property.
+                                                <br><br>
+                                                The read-only scrollY property of the Window interface returns the
+                                                number of pixels that the document is currently scrolled vertically.
+                                                This value is subpixel precise in modern browsers, meaning that it isn't
+                                                necessarily a whole number. You can get the number of pixels the
+                                                document is scrolled horizontally from the scrollX property.
+                                            </p>
+                                        </div>
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal"
+                                            onclick="showModal('/jscert/window/ScrollXY.jpg')">
+                                            Code Snippet
+                                        </button>
+                                        <div class="input-group mt-1">
+                                            <span class="input-group-text">ScrollX:</span>
+                                            <input id="valueScrollX" type="text" class="form-control"
+                                                value="Default"></input>
+                                        </div>
+                                        <div class="input-group mt-1">
+                                            <span class="input-group-text">ScrollY:</span>
+                                            <input id="valueScrollY" type="text" class="form-control"
+                                                value="Default"></input>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-5">
+                        <div class="row">
+                            <h4 class="">Window Methods</h4>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 d-flex justify-content-center mb-2">
+                                <div class="card" style="width: 50rem;">
+                                    <img src="/jscert/window/Open.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">open()</h5>
+                                        <div class="mb-5">
+                                            <p id="js-content-header" class="card-text">
+                                                The open() method of the Window interface loads a specified resource
+                                                into a new or existing browsing context (that is, a tab, a window, or an
+                                                iframe) under a specified name.
+                                                <br><br>
+                                                <b>url</b> - A string indicating the URL or path of the resource to be
+                                                loaded. If an
+                                                empty string ("") is specified or this parameter is omitted, a blank
+                                                page is opened into the targeted browsing context.
+                                                <br><br>
+                                                <b>target</b> - A string, without whitespace, specifying the name of the
+                                                browsing context the resource is being loaded into. If the name doesn't
+                                                identify an existing context, a new context is created and given the
+                                                specified name. The special target keywords, _self, _blank, _parent,
+                                                _top, and _unfencedTop can also be used. _unfencedTop is only relevant
+                                                to fenced frames.
+                                                <br><br>
+                                            <ol>
+                                                <li>
+                                                    <p><strong><code>_blank</code></strong>:</p>
+                                                    <ul>
+                                                        <li>Opens the URL in a new window or tab.</li>
+                                                        <li>Example:
+                                                            <code>window.open('https://example.com', '_blank');</code>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <p><strong><code>_self</code></strong>:</p>
+                                                    <ul>
+                                                        <li>Opens the URL in the same frame as the one that called
+                                                            <code>window.open()</code>.
+                                                        </li>
+                                                        <li>This is the default value if the <code>target</code>
+                                                            parameter is not specified.</li>
+                                                        <li>Example:
+                                                            <code>window.open('https://example.com', '_self');</code>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <p><strong><code>_parent</code></strong>:</p>
+                                                    <ul>
+                                                        <li>Opens the URL in the parent frame of the current frame.</li>
+                                                        <li>If the current frame has no parent, this behaves the same as
+                                                            <code>_self</code>.
+                                                        </li>
+                                                        <li>Example:
+                                                            <code>window.open('https://example.com', '_parent');</code>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <p><strong><code>_top</code></strong>:</p>
+                                                    <ul>
+                                                        <li>Opens the URL in the full body of the window, effectively
+                                                            removing all frames.</li>
+                                                        <li>Example:
+                                                            <code>window.open('https://example.com', '_top');</code>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <p><strong><code>framename</code></strong>:</p>
+                                                    <ul>
+                                                        <li>Opens the URL in a named frame or tab. If a frame or tab
+                                                            with the specified name does not exist, a new one is
+                                                            created.</li>
+                                                        <li>Example:
+                                                            <code>window.open('https://example.com', 'myFrame');</code>
+                                                        </li>
+                                                        <li>If you have a frame named <code>myFrame</code> in your HTML,
+                                                            the URL will load in that frame. If not, a new window or tab
+                                                            named <code>myFrame</code> will be created.</li>
+                                                    </ul>
+                                                </li>
+                                            </ol>
+
+                                            <br><br>
+                                            <b>windowFeatures</b> - A string containing a comma-separated list of
+                                            window features in the form name=value — or for boolean features, just
+                                            name. These features include options such as the window's default size
+                                            and position, whether or not to open a minimal popup window, and so
+                                            forth. The following options are supported:
+                                            </p>
+
+                                            <ul>
+                                                <li><b>Syntax: </b> open()</li>
+                                                <li><b>Syntax: </b> open(url)</li>
+                                                <li><b>Syntax: </b> open(url, target)</li>
+                                                <li><b>Syntax: </b> open(url,target, windowFeatures)</li>
+                                            </ul>
+                                        </div>
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal"
+                                            onclick="showModal('/jscert/window/Open.jpg')">
+                                            Code Snippet
+                                        </button>
+                                        <div class="my-1">
+                                            <button type="button" class="btn btn-primary"
+                                                onclick="myfunctionOpen('1')">open()</button>
+                                            <button type="button" class="btn btn-primary"
+                                                onclick="myfunctionOpen('2')">open(url)</button>
+                                            <button type="button" class="btn btn-primary"
+                                                onclick="myfunctionOpen('3')">open(url, target)</button>
+                                            <button type="button" class="btn btn-primary mt-1"
+                                                onclick="myfunctionOpen('4')">open(url, target,
+                                                windowFeaturesSmall)</button>
+                                            <button type="button" class="btn btn-primary mt-1"
+                                                onclick="myfunctionOpen('5')">open(url, target,
+                                                windowFeaturesBig)</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 d-flex justify-content-center mb-2">
+                                <div class="card" style="width: 50rem;">
+                                    <img src="/jscert/window/ScrollByTo.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">ScrollX vs ScrollY</h5>
+                                        <div class="mb-5">
+                                            <p id="js-content-header" class="card-text">
+                                                TThe Window.scrollBy() method scrolls the document in the window by the
+                                                given amount.
+                                                <br><br>
+                                                Window.scrollTo() scrolls to a particular set of coordinates in the
+                                                document.
+                                            </p>
+                                        </div>
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal"
+                                            onclick="showModal('/jscert/window/ScrollByTo.jpg')">
+                                            Code Snippet
+                                        </button>
+
+                                        <div class="my-1">
+                                            <button type="button" class="btn btn-primary"
+                                                onclick="myfunctionScroll('scrollBy')">scrollBy()</button>
+                                            <button type="button" class="btn btn-primary"
+                                                onclick="myfunctionScroll('scrollTo')">scrollTo()</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Footer Section -->
+    <section id="footer">
+        <div class="container-fluid bg-success py-4">
+            <div class="row ">
+                <div class="d-flex justify-content-center">
+                    <h4 class="text-white mb-0">Created and Prepared By</h4>
+                </div>
+            </div>
+            <div class="row ">
+                <div class="d-flex justify-content-center">
+                    <p class="text-white">Reuel Sicat II</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Code Snippet</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div id="modalBody" class="modal-body">
+                    <img id="modalBodyImage" src="" class="img-fluid mx-auto d-block" alt="Responsive image">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- JavaScript: Location Body -->
+    <script>
+
+        function showModal(imgSrc) {
+
+            // update image source
+            document.getElementById('modalBodyImage').src = imgSrc;
+
+        }
+
+        function myrenderer(elementId, content) {
+
+            console.log("myrenderer: " + content + " -- " + new Date());
+            document.getElementById(elementId).value = content;
+
+
+        }
+
+        window.onload = function () {
+            document.getElementById('valueInnerHeight').value = window.innerHeight + " px";
+            document.getElementById('valueInnerWidth').value = window.innerWidth + " px";
+            document.getElementById('valueOuterHeight').value = window.outerHeight + " px";
+            document.getElementById('valueOuterWidth').value = window.outerWidth + " px";
+        }
+
+        window.onscroll = function () {
+            document.getElementById('valueScrollX').value = window.scrollX + " px";
+            document.getElementById('valueScrollY').value = window.scrollY + " px";
+        }
+
+
+        function myfunctionOpen(choice) {
+
+            switch (choice) {
+
+                case '1':
+                    window.open();
+                    break;
+                case '2':
+                    window.open('https://reuelsicatii.github.io/jscert/');
+                    break;
+                case '3':
+                    window.open('https://reuelsicatii.github.io/jscert/', '_blank');
+                    break;
+                case '4':
+                    const windowFeatures4 = "left=100,top=100,width=320,height=320";
+                    window.open('https://reuelsicatii.github.io/jscert/', '_blank', windowFeatures4);
+                    break;
+                case '5':
+                    const windowFeatures5 = "popup=true";
+                    window.open('https://reuelsicatii.github.io/jscert/', '_blank', windowFeatures5);
+                    break;
+
+            }
+
+        }
+
+        function myfunctionScroll(choice) {
+
+            switch (choice) {
+
+                case 'scrollBy':
+                    window.scrollBy(0, window.innerHeight);
+                    break;
+                case 'scrollTo':
+                    window.scrollBy({
+                        top: -window.outerHeight,
+                        behavior: "smooth",
+                    });
+                    break;
+
+            }
+
+        }
+
+
+
+
+
+
+
+    </script>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="/JSCert/bootstrap-5.2.3-dist/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+
+</html>
