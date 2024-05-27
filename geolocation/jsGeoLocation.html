@@ -63,7 +63,7 @@
                                             Code Snippet
                                         </button>
                                         <a id="getCurrentPosition" class="btn btn-primary">See Map</a>
-                                        <div class="row">
+                                        <div class="row my-2">
                                             <div id="map" style="height: 400px; width: 100%;"></div>
                                         </div>
 
@@ -144,12 +144,10 @@
 
             // Initialize the map with a valid Map ID
             map = new google.maps.Map(mapContainer, {
-                center: { lat: 0, lng: 0 },
-                zoom: 15,
+                center: { lat: 14.563278900229713, lng: 121.02274830609183 },
+                zoom: 18,
                 mapId: '74f1c2aa86aadb0c'
             });
-
-
 
             document.getElementById('getCurrentPosition').onclick = function () {
 
@@ -164,8 +162,6 @@
                     handleLocationError(false, map.getCenter());
                 }
             };
-
-
 
         }
 
