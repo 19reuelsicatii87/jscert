@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Certification</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="/jscert/bootstrap-5.2.3-dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- JavaScript: Location Header -->
+    <script>
+
+        // Code Here
+
+    </script>
+
+</head>
+
+<body>
+
+
+    <!-- Header Section -->
+    <section id="header">
+        <a href="/jscert/index.html" style="text-decoration: none;">
+            <div class="container-fluid bg-success py-4">
+                <div class="row">
+                    <div class="d-flex justify-content-center">
+                        <h1 class="text-white">Javascript Certification</h1>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </section>
+
+    <!-- Main Content: Table of Contents Section -->
+    <section id="script-location">
+        <div class="container my-5">
+            <div class="row">
+                <div class="col-lg min-vh-100">
+                    <div class="row mb-5">
+                        <h3 class="">Lesson: Web Worker</h3>
+                    </div>
+                    <div class="row mb-5">
+                        <div class="row">
+                            <h4 class="">Web Worker</h4>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 d-flex justify-content-center mb-2">
+                                <div class="card" style="width: 50rem;">
+                                    <img src="/jscert/webWorker/WebWorker.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Async</h5>
+                                        <div class="mb-5">
+                                            <p id="js-content-header" class="card-text">
+                                                Web Workers makes it possible to run a script operation in a background
+                                                thread separate from the main execution thread of a web application. The
+                                                advantage of this is that laborious processing can be performed in a
+                                                separate thread, allowing the main (usually the UI) thread to run
+                                                without being blocked/slowed down.
+                                                <br><br>
+                                                A worker is an object created using a constructor (e.g. Worker()) that
+                                                runs a named JavaScript file — this file contains the code that will run
+                                                in the worker thread.
+                                                <br><br>
+                                                In addition to the standard JavaScript set of functions (such as String,
+                                                Array, Object, JSON, etc.), you can run almost any code you like inside
+                                                a worker thread. There are some exceptions: for example, you can't
+                                                directly manipulate the DOM from inside a worker, or use some default
+                                                methods and properties of the Window object. For information about the
+                                                code that you can run see worker global context and functions, and
+                                                supported web APIs below.
+                                                <br><br>
+                                                Data is sent between workers and the main thread via a system of
+                                                messages — both sides send their messages using the postMessage()
+                                                method, and respond to messages via the onmessage event handler (the
+                                                message is contained within the message event's data property). The data
+                                                is copied rather than shared.
+                                                <br><br>
+                                                Workers may in turn spawn new workers, as long as those workers are
+                                                hosted within the same origin as the parent page.
+                                                <br><br>
+                                                In addition, workers can make network requests using the fetch() or
+                                                XMLHttpRequest APIs (although note that the responseXML attribute of
+                                                XMLHttpRequest will always be null).
+                                            </p>
+                                        </div>
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal"
+                                            onclick="showModal('/jscert/webWorker/WebWorker.jpg')">
+                                            Code Snippet
+                                        </button>
+                                        <a onclick="myFunctionStartWorker()" class="btn btn-primary">Start Worker</a>
+                                        <a onclick="myFunctionStopWorker()" class="btn btn-primary">Stop Worker</a>
+
+                                        <div class="input-group mt-1">
+                                            <span class="input-group-text">Count numbers:</span>
+                                            <input id="valueCountNumber" type="text" class="form-control"></input>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 d-flex justify-content-center mb-2">
+                                <div class="card" style="width: 50rem;">
+                                    <img src="/jscert/webWorker/AsyncWebWorker.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Async</h5>
+
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal"
+                                            onclick="showModal('/jscert/webWorker/AsyncWebWorker.jpg')">
+                                            Code Snippet
+                                        </button>
+                                        <a onclick="myFunctionAsyncStartWorker()" class="btn btn-primary">Start Async
+                                            Worker</a>
+                                        <a onclick="myFunctionAsyncStopWorker()" class="btn btn-primary">Stop Async
+                                            Worker</a>
+
+                                        <div class="input-group mt-1">
+                                            <span class="input-group-text">Count numbers:</span>
+                                            <textarea id="valueAsyncWorker" type="text" class="form-control"
+                                                rows="10"></textarea>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Footer Section -->
+    <section id="footer">
+        <div class="container-fluid bg-success py-4">
+            <div class="row ">
+                <div class="d-flex justify-content-center">
+                    <h4 class="text-white mb-0">Created and Prepared By</h4>
+                </div>
+            </div>
+            <div class="row ">
+                <div class="d-flex justify-content-center">
+                    <p class="text-white">Reuel Sicat II</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Code Snippet</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div id="modalBody" class="modal-body">
+                    <img id="modalBodyImage" src="" class="img-fluid mx-auto d-block" alt="Responsive image">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- JavaScript: Location Body -->
+    <script>
+
+        var worker;
+        var workerAsync;
+
+        function showModal(imgSrc) {
+
+            // update image source
+            document.getElementById('modalBodyImage').src = imgSrc;
+
+        }
+
+        function myrenderer(elementId, content) {
+
+            console.log("myrenderer: " + content + " -- " + new Date());
+            document.getElementById(elementId).value = content;
+
+
+        }
+
+        function myFunctionStartWorker() {
+
+            if (typeof (worker) == "undefined") {
+                worker = new Worker("demo_workers.js");
+            }
+
+            worker.onmessage = function (event) {
+                document.getElementById("valueCountNumber").value = event.data;
+            };
+        }
+
+        function myFunctionStopWorker() {
+            worker.terminate();
+            worker = undefined;
+        }
+
+        function myFunctionAsyncStartWorker() {
+
+            if (typeof (workerAsync) == "undefined") {
+                workerAsync = new Worker("async_workers.js");
+            }
+
+            workerAsync.onmessage = function (event) {
+                document.getElementById("valueAsyncWorker").value = event.data;
+            };
+        }
+
+        function myFunctionAsyncStopWorker() {
+            workerAsync.terminate();
+            workerAsync = undefined;
+        }
+
+
+
+    </script>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="/jscert/bootstrap-5.2.3-dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

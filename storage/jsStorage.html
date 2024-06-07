@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Certification</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="/jscert/bootstrap-5.2.3-dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- JavaScript: Location Header -->
+    <script>
+
+        // Code Here
+
+    </script>
+
+</head>
+
+<body>
+
+
+    <!-- Header Section -->
+    <section id="header">
+        <a href="/jscert/index.html" style="text-decoration: none;">
+            <div class="container-fluid bg-success py-4">
+                <div class="row">
+                    <div class="d-flex justify-content-center">
+                        <h1 class="text-white">Javascript Certification</h1>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </section>
+
+    <!-- Main Content: Table of Contents Section -->
+    <section id="script-location">
+        <div class="container my-5">
+            <div class="row">
+                <div class="col-lg min-vh-100">
+                    <div class="row mb-5">
+                        <h3 class="">Lesson: Storage</h3>
+                    </div>
+                    <div class="row mb-5">
+                        <div class="row">
+                            <h4 class="">Window Storage</h4>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 d-flex justify-content-center mb-2">
+                                <div class="card" style="width: 50rem;">
+                                    <img src="/jscert/storage/LocalStorage.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Local Storage</h5>
+                                        <div class="mb-5">
+                                            <p id="js-content-header" class="card-text">
+                                                The localStorage read-only property of the window interface allows you
+                                                to access a Storage object for the Document's origin; the stored data is
+                                                saved across browser sessions.
+                                                <br><br>
+                                                localStorage is similar to sessionStorage, except that while
+                                                localStorage data has no expiration time, sessionStorage data gets
+                                                cleared when the page session ends — that is, when the page is closed.
+                                                (localStorage data for a document loaded in a "private browsing" or
+                                                "incognito" session is cleared when the last "private" tab is closed.)
+                                            </p>
+                                        </div>
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal"
+                                            onclick="showModal('/jscert/storage/LocalStorage.jpg')">
+                                            Code Snippet
+                                        </button>
+                                        <button class="btn btn-primary" onclick="myFunctionLocalStorage()">See
+                                            Result</button>
+                                        <div class="input-group mt-1">
+                                            <span class="input-group-text">Local Storage:</span>
+                                            <textarea id="valueLocalStorage" type="text" class="form-control"
+                                                value="Default" rows="6"></textarea>
+                                        </div>
+                                        <div class="input-group mt-1">
+                                            <span class="input-group-text">Type Here</span>
+                                            <input id="autoSavesLocalStorage" type="text"
+                                                placeholder="see value over DevTools > Application > Local Storage"
+                                                class="form-control"></input>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 d-flex justify-content-center mb-2">
+                                <div class="card" style="width: 50rem;">
+                                    <img src="/jscert/storage/SessionStorage.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Session Storage</h5>
+                                        <div>
+                                            <p>
+                                                The read-only <strong><code>sessionStorage</code></strong>
+                                                property accesses a session <a
+                                                    href="/en-US/docs/Web/API/Storage"><code>Storage</code></a> object
+                                                for the current
+                                                <a href="/en-US/docs/Glossary/Origin">origin</a>.
+                                                <code>sessionStorage</code> is similar to
+                                                <a href="/en-US/docs/Web/API/Window/localStorage"
+                                                    title="localStorage"><code>localStorage</code></a>; the difference
+                                                is that while data
+                                                in <code>localStorage</code> doesn't expire, data in
+                                                <code>sessionStorage</code> is
+                                                cleared when the <em>page session</em> ends.
+                                            </p>
+                                            <ul>
+                                                <li>
+                                                    Whenever a document is loaded in a particular tab in the browser, a
+                                                    unique page
+                                                    session gets created and assigned to that particular tab. That page
+                                                    session is valid
+                                                    only for that particular tab.
+                                                </li>
+                                                <li>
+                                                    A page session lasts as long as the tab or the browser is open, and
+                                                    survives over
+                                                    page reloads and restores.
+                                                </li>
+                                                <li>Opening a page in a new tab or window creates a new session
+                                                    with the value
+                                                    of the top-level browsing context, which differs from how
+                                                    session cookies
+                                                    work.</li>
+                                                <li>
+                                                    Opening multiple tabs/windows with the same URL creates
+                                                    <code>sessionStorage</code>
+                                                    for each tab/window.
+                                                </li>
+                                                <li>
+                                                    Duplicating a tab copies the tab's <code>sessionStorage</code> into
+                                                    the new
+                                                    tab.
+                                                </li>
+                                                <li>
+                                                    Closing a tab/window ends the session and clears objects in
+                                                    <code>sessionStorage</code>.
+                                                </li>
+                                            </ul>
+                                            <p>
+                                                Data stored in <code>sessionStorage</code> <strong>is specific to the
+                                                    protocol of the
+                                                    page</strong>. In particular, data stored by a script on a site
+                                                accessed with HTTP
+                                                (e.g., <a href="https://example.com"
+                                                    target="_blank">http://example.com</a>) is
+                                                put in a different <code>sessionStorage</code> object from the same site
+                                                accessed with
+                                                HTTPS (e.g., <a href="https://example.com"
+                                                    target="_blank">https://example.com</a>).
+                                            </p>
+                                            <p>
+                                                The keys and the values are <em>always</em> in the UTF-16 string
+                                                format, which uses two bytes per character. As with objects, integer
+                                                keys are
+                                                automatically converted to strings.
+                                            </p>
+                                        </div>
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal"
+                                            onclick="showModal('/jscert/storage/SessionStorage.jpg')">
+                                            Code Snippet
+                                        </button>
+
+                                        <button class="btn btn-primary" onclick="myFunctionSessionStorage()">See
+                                            Result</button>
+                                        <div class="input-group mt-1">
+                                            <span class="input-group-text">Result</span>
+                                            <textarea id="valueSessionStorage" type="text" class="form-control"
+                                                value="Default" rows="6"></textarea>
+                                        </div>
+
+                                        <div class="input-group mt-1">
+                                            <span class="input-group-text">Type Here</span>
+                                            <input id="autoSavesSessionStorage" type="text"
+                                                placeholder="see value over DevTools > Application > Session Storage"
+                                                class="form-control"></input>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 d-flex justify-content-center mb-2">
+                                <div class="card" style="width: 50rem;">
+                                    <img src="/jscert/storage/Cookies.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Cookies</h5>
+                                        <div class="mb-5">
+                                            <p id="js-content-header" class="card-text">
+                                                The Document property cookie lets you read and write cookies associated
+                                                with the document. It serves as a getter and setter for the actual
+                                                values of the cookies.
+                                            </p>
+                                        </div>
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal"
+                                            onclick="showModal('/jscert/storage/Cookies.jpg')">
+                                            Code Snippet
+                                        </button>
+                                        <button class="btn btn-primary" onclick="myFunctionCookies()">See
+                                            Result</button>
+                                        <div class="input-group mt-1">
+                                            <span class="input-group-text">Local Storage:</span>
+                                            <textarea id="valueCookies" type="text" class="form-control" value="Default"
+                                                rows="6"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 d-flex justify-content-center mb-2">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Footer Section -->
+    <section id="footer">
+        <div class="container-fluid bg-success py-4">
+            <div class="row ">
+                <div class="d-flex justify-content-center">
+                    <h4 class="text-white mb-0">Created and Prepared By</h4>
+                </div>
+            </div>
+            <div class="row ">
+                <div class="d-flex justify-content-center">
+                    <p class="text-white">Reuel Sicat II</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Code Snippet</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div id="modalBody" class="modal-body">
+                    <img id="modalBodyImage" src="" class="img-fluid mx-auto d-block" alt="Responsive image">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- JavaScript: Location Body -->
+    <script>
+
+        function showModal(imgSrc) {
+
+            // update image source
+            document.getElementById('modalBodyImage').src = imgSrc;
+
+        }
+
+        function myrenderer(elementId, content) {
+
+            console.log("myrenderer: " + content + " -- " + new Date());
+            document.getElementById(elementId).value = content;
+
+
+        }
+
+        // Set Local Storage
+        function myFunctionLocalStorage() {
+
+            const person = {
+                firstName: "John",
+                lastName: "Doe",
+                id: 5566
+            };
+
+            // Define functions separately
+            function fullNameRegular() {
+                return person.firstName + " " + person.lastName;
+            }
+
+            fullNameArrow = () => {
+                return person.firstName + " " + person.lastName;
+            }
+
+            // Local storage only supports storing strings
+            window.localStorage.setItem("person", JSON.stringify(person));
+            console.log(JSON.parse(window.localStorage.getItem("person")));
+
+            // Convert Local storage string back to Object
+            const me = JSON.parse(window.localStorage.getItem("person"));
+
+            // Assign functions to the object properties
+            me.fullNameRegular = fullNameRegular;
+            me.fullNameArrow = fullNameArrow;
+
+            console.log(me);
+            console.log(me.firstName);
+            console.log(me.fullNameRegular());
+            console.log(me.fullNameArrow());
+
+            setTimeout(myrenderer, 1000, "valueLocalStorage", me.firstName);
+            setTimeout(myrenderer, 5000, "valueLocalStorage", me.fullNameRegular());
+            setTimeout(myrenderer, 10000, "valueLocalStorage", me.fullNameArrow());
+            setTimeout(myrenderer, 15000, "valueLocalStorage", JSON.stringify(me));
+
+        }
+
+        // AutoSave Local Storage
+        document.getElementById("autoSavesLocalStorage").onchange = function () {
+            localStorage.setItem("autosave", document.getElementById("autoSavesLocalStorage").value);
+        }
+
+        // Set Session Storage
+        function myFunctionSessionStorage() {
+
+            const person = {
+                firstName: "Jane",
+                lastName: "Smith",
+                id: 112233,
+                date: new Date()
+            };
+
+            // Define functions separately
+            function fullNameRegular() {
+                return person.firstName + " " + person.lastName;
+            }
+
+            fullNameArrow = () => {
+                return person.firstName + " " + person.lastName;
+            }
+
+            // Local storage only supports storing strings
+            window.sessionStorage.setItem("person", JSON.stringify(person));
+            console.log(JSON.parse(window.sessionStorage.getItem("person")));
+
+            // Convert Local storage string back to Object
+            const me = JSON.parse(window.sessionStorage.getItem("person"));
+
+            // Assign functions to the object properties
+            me.fullNameRegular = fullNameRegular;
+            me.fullNameArrow = fullNameArrow;
+
+            console.log(me);
+            console.log(me.firstName);
+            console.log(me.fullNameRegular());
+            console.log(me.fullNameArrow());
+
+            setTimeout(myrenderer, 1000, "valueSessionStorage", me.firstName);
+            setTimeout(myrenderer, 5000, "valueSessionStorage", me.fullNameRegular());
+            setTimeout(myrenderer, 10000, "valueSessionStorage", me.fullNameArrow());
+            setTimeout(myrenderer, 15000, "valueSessionStorage", JSON.stringify(me));
+
+        }
+
+        // AutoSave Session Storage
+        document.getElementById("autoSavesSessionStorage").onchange = function () {
+            sessionStorage.setItem("autosave", document.getElementById("autoSavesSessionStorage").value);
+        }
+
+        // 'onstorage' event listener is triggered only when a change occurs
+        // in the storage of another document in the same origin
+        window.onstorage = () => {
+
+            for (let i = 0; i < localStorage.length; i++) {
+                console.log("Local Storage Key: " + localStorage.key(i) + " -- " + new Date());
+            }
+        };
+
+        // Set Cookies
+        function myFunctionCookies() {
+
+            // Set Cookies
+            document.cookie = "firstName=Cookie; lastName=Monster;";
+            document.cookie = "street=Poblacion";
+            document.cookie = "city=Makati";
+            document.cookie = "language=english";
+            document.cookie = "age=42";
+            document.cookie = `date=${new Date()}`;
+
+            // Retrieve Cookies from Function
+            console.log(getCookieValue("firstName"));
+            console.log(getCookieValue("lastName"));
+            console.log(document.cookie);
+
+            setTimeout(myrenderer, 1000, "valueCookies", getCookieValue("firstName"));
+            setTimeout(myrenderer, 5000, "valueCookies", getCookieValue("lastName"));
+            setTimeout(myrenderer, 15000, "valueCookies", document.cookie);
+
+            // Retrieve Cookies from Document Method
+            const cookieValue = document.cookie
+                .split("; ")
+                .find((row) => row.startsWith("language="))
+                ?.split("=")[1];
+
+            // ?.: This is called the optional chaining operator. It allows you to access properties 
+            // (or call methods) of an object which might be null or undefined without causing an error. 
+            // In this case, it's used after the find() method to ensure that if find() returns undefined 
+            // (i.e., if there's no cookie with the name "test2"), the subsequent .split("=")[1] won't throw an error.
+
+            console.log(document.cookie);
+            console.log(cookieValue);
+            setTimeout(myrenderer, 20000, "valueCookies", cookieValue);
+
+        }
+
+        // Function to retrieve a cookie value by name
+        function getCookieValue(key) {
+
+            const cookies = document.cookie.split(';');
+            console.log("Cookies Length: " + cookies.length);
+
+            for (let i = 0; i < cookies.length; i++) {
+
+                const cookie = cookies[i].trim();
+                console.log("Cookies KeyValue: " + cookies[i].trim());
+
+                // Check if this cookie has the name we are looking for
+                if (cookie.startsWith(key + '=')) {
+
+                    // Return the value of the cookie
+                    console.log("Cookies Value: " + cookie.substring(key.length + 1));
+                    return cookie.substring(key.length + 1);
+                }
+            }
+            // If the cookie with the given name doesn't exist, return null
+            return null;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="/jscert/bootstrap-5.2.3-dist/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+
+</html>

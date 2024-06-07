@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Certification</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="/jscert/bootstrap-5.2.3-dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+
+    <!-- Header Section -->
+    <section id="header">
+        <a href="/jscert/index.html" style="text-decoration: none;">
+            <div class="container-fluid bg-success py-4">
+                <div class="row">
+                    <div class="d-flex justify-content-center">
+                        <h1 class="text-white">Javascript Certification</h1>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </section>
+
+    <!-- Main Content: Table of Contents Section -->
+    <section id="script-location">
+        <div class="container my-5">
+            <div class="row">
+                <div class="col-lg min-vh-100">
+                    <div class="row mb-5">
+                        <h3 class="">Lesson: Javascript Fetch</h3>
+                        <p>Use <b>fetch</b> for Asynchronous Requests: The fetch API should be your default choice for
+                            making asynchronous HTTP requests. It is modern, supports promises, and provides a cleaner
+                            syntax
+                            compared to XMLHttpRequest.</p>
+                        <p>Avoid <b>Synchronous</b> Requests: Synchronous HTTP requests on the main thread can block the
+                            user interface and are generally considered bad practice. If you must use a synchronous
+                            request,
+                            you can use XMLHttpRequest with the async parameter set to false, but this should be done
+                            sparingly and with caution.</p>
+                    </div>
+                    <div class="row mb-5">
+                        <div class="row">
+                            <h4 class="">Fetch</h4>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 d-flex justify-content-center mb-2">
+                                <div class="card" style="width: 50rem;">
+                                    <img src="/jscert/fetch/FetchWOOption.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Fetch w/o Options</h5>
+                                        <p class="card-text">The Fetch API provides a JavaScript
+                                            interface for accessing and manipulating parts of the protocol, such as
+                                            requests and responses. It also provides a global fetch() method that
+                                            provides an easy, logical way to fetch resources asynchronously across the
+                                            network.
+                                        </p>
+                                        <p class="card-text">
+                                            Unlike XMLHttpRequest that is a callback-based API, Fetch is promise-based
+                                            and provides a better alternative that can be easily used in service
+                                            workers. Fetch also integrates advanced HTTP concepts such as CORS and other
+                                            extensions to HTTP.
+                                        </p>
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal"
+                                            onclick="showModal('/jscert/fetch/FetchWOOption.jpg')">
+                                            Code Snippet
+                                        </button>
+
+                                        <a onclick="myFunctionFetchWithOutOption('valueFetchWithOutOption', 'This is from ASYNC 200')"
+                                            class="btn btn-primary">Async 200</a>
+                                        <div class="input-group mt-1">
+                                            <span class="input-group-text">Endpoint Here</span>
+                                            <input type="text" id="valueFetchWithOutOptionURL" type="text"
+                                                class="form-control"
+                                                value="https://reqres.in/api/users/2?delay=10"></input>
+                                        </div>
+                                        <div class="input-group mt-1">
+                                            <span class="input-group-text">Object Result:</span>
+                                            <textarea id="valueFetchWithOutOption" type="text" class="form-control"
+                                                rows="8"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 d-flex justify-content-center mb-2">
+                                <div class="card" style="width: 50rem;">
+                                    <img src="/jscert/fetch/FetchWOption.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Fetch w/ Options</h5>
+                                        <p class="card-text">The Fetch API provides a JavaScript
+                                            interface for accessing and manipulating parts of the protocol, such as
+                                            requests and responses. It also provides a global fetch() method that
+                                            provides an easy, logical way to fetch resources asynchronously across the
+                                            network.
+                                        </p>
+                                        <p class="card-text">
+                                            Unlike XMLHttpRequest that is a callback-based API, Fetch is promise-based
+                                            and provides a better alternative that can be easily used in service
+                                            workers. Fetch also integrates advanced HTTP concepts such as CORS and other
+                                            extensions to HTTP.
+                                        </p>
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal"
+                                            onclick="showModal('/jscert/fetch/FetchWOption.jpg')">
+                                            Code Snippet
+                                        </button>
+
+                                        <a onclick="myFunctionFetchWithOption('valueFetchWithOption', 'This is from ASYNC 200')"
+                                            class="btn btn-primary">Async 200</a>
+                                        <div class="input-group mt-1">
+                                            <span class="input-group-text">Endpoint Here</span>
+                                            <input type="text" id="valueFetchWithOptionURL" type="text"
+                                                class="form-control" value="https://reqres.in/api/users"></input>
+                                        </div>
+                                        <div class="input-group mt-1">
+                                            <span class="input-group-text">Object Result:</span>
+                                            <textarea id="valueFetchWithOption" type="text" class="form-control"
+                                                rows="8"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 d-flex justify-content-center mb-2">
+                                <div class="card" style="width: 50rem;">
+                                    <img src="/jscert/fetch/FetchWOOption.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Fetch w/o Options</h5>
+                                        <p class="card-text">The Fetch API provides a JavaScript
+                                            interface for accessing and manipulating parts of the protocol, such as
+                                            requests and responses. It also provides a global fetch() method that
+                                            provides an easy, logical way to fetch resources asynchronously across the
+                                            network.
+                                        </p>
+                                        <p class="card-text">
+                                            Unlike XMLHttpRequest that is a callback-based API, Fetch is promise-based
+                                            and provides a better alternative that can be easily used in service
+                                            workers. Fetch also integrates advanced HTTP concepts such as CORS and other
+                                            extensions to HTTP.
+                                        </p>
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal"
+                                            onclick="showModal('/jscert/fetch/FetchWOOption.jpg')">
+                                            Code Snippet
+                                        </button>
+
+                                        <a onclick="myFunctionFetchWithOutOption('valueFetchWithOutOption', 'This is from ASYNC 200')"
+                                            class="btn btn-primary">Async 200</a>
+                                        <div class="input-group mt-1">
+                                            <span class="input-group-text">Endpoint Here</span>
+                                            <input type="text" id="valueFetchWithOutOptionURL" type="text"
+                                                class="form-control"
+                                                value="https://reqres.in/api/users/2?delay=10"></input>
+                                        </div>
+                                        <div class="input-group mt-1">
+                                            <span class="input-group-text">Object Result:</span>
+                                            <textarea id="valueFetchWithOutOption" type="text" class="form-control"
+                                                rows="8"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 d-flex justify-content-center mb-2">
+                                <div class="card" style="width: 50rem;">
+                                    <img src="/jscert/fetch/FetchWOption.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Fetch w/ Options</h5>
+                                        <p class="card-text">The Fetch API provides a JavaScript
+                                            interface for accessing and manipulating parts of the protocol, such as
+                                            requests and responses. It also provides a global fetch() method that
+                                            provides an easy, logical way to fetch resources asynchronously across the
+                                            network.
+                                        </p>
+                                        <p class="card-text">
+                                            Unlike XMLHttpRequest that is a callback-based API, Fetch is promise-based
+                                            and provides a better alternative that can be easily used in service
+                                            workers. Fetch also integrates advanced HTTP concepts such as CORS and other
+                                            extensions to HTTP.
+                                        </p>
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal"
+                                            onclick="showModal('/jscert/fetch/FetchWOption.jpg')">
+                                            Code Snippet
+                                        </button>
+
+                                        <a onclick="myFunctionFetchWithOption('valueFetchWithOption', 'This is from ASYNC 200')"
+                                            class="btn btn-primary">Async 200</a>
+                                        <div class="input-group mt-1">
+                                            <span class="input-group-text">Endpoint Here</span>
+                                            <input type="text" id="valueFetchWithOptionURL" type="text"
+                                                class="form-control" value="https://reqres.in/api/users"></input>
+                                        </div>
+                                        <div class="input-group mt-1">
+                                            <span class="input-group-text">Object Result:</span>
+                                            <textarea id="valueFetchWithOption" type="text" class="form-control"
+                                                rows="8"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Footer Section -->
+    <section id="footer">
+        <div class="container-fluid bg-success py-4">
+            <div class="row ">
+                <div class="d-flex justify-content-center">
+                    <h4 class="text-white mb-0">Created and Prepared By</h4>
+                </div>
+            </div>
+            <div class="row ">
+                <div class="d-flex justify-content-center">
+                    <p class="text-white">Reuel Sicat II</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Code Snippet</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div id="modalBody" class="modal-body">
+                    <img id="modalBodyImage" src="" class="img-fluid mx-auto d-block" alt="Responsive image">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- JavaScript: Location Body -->
+    <script>
+
+        function showModal(imgSrc) {
+
+            // update image source
+            document.getElementById('modalBodyImage').src = imgSrc;
+
+        }
+
+        function myFunctionFetchWithOutOption(elementId, content) {
+
+            fetch(document.getElementById("valueFetchWithOutOptionURL").value)
+                .then(response => {
+
+                    if (!response.ok) {
+                        console.log('Response :' + JSON.stringify(response));
+                        throw new Error('Network response was NOT okay ' + response.statusText);
+                    }
+
+                    response.blob
+                    console.log('Response :' + JSON.stringify(response));
+                    // depending on the response type
+                    return response.text();
+                    //return response.json();
+                })
+                .then(responseBody => {
+                    // Handle the response data
+                    console.log(responseBody);
+                    document.getElementById(elementId).value = content + '\n\n' + responseBody;
+                })
+                .catch(error => {
+                    // Handle any errors that occurred during the fetch
+                    console.log(error);
+                    document.getElementById(elementId).value = content + " -- Error: " + error.message;
+                })
+                .finally(() => {
+
+                    console.log('Fetch operation completed.');
+                });
+        }
+
+        function myFunctionFetchWithOption(elementId, content) {
+
+            const options = {
+
+                // Specify the HTTP method (GET, POST, PUT, DELETE, etc.)
+                method: 'POST',
+                headers: {
+                    // Set the content type
+                    'Content-Type': 'application/json',
+                    // Include an authorization token, if needed
+                    'Authorization': 'Bearer your-token-here'
+                },
+                body: JSON.stringify({
+                    "name": "morpheus",
+                    "job": "leader"
+                })
+            };
+
+            fetch(document.getElementById("valueFetchWithOptionURL").value, options)
+                .then(response => {
+
+                    if (!response.ok) {
+                        console.log('Response :' + JSON.stringify(response));
+                        throw new Error('Network response was NOT okay ' + response.statusText);
+                    }
+
+                    response.blob
+                    console.log('Response :' + JSON.stringify(response));
+                    // depending on the response type
+                    //return response.text();
+                    return response.json();
+                })
+                .then(responseBody => {
+                    // Handle the response data
+                    console.log(responseBody);
+                    document.getElementById(elementId).value = content + '\n\n' + JSON.stringify(responseBody);
+                })
+                .catch(error => {
+                    // Handle any errors that occurred during the fetch
+                    console.log(error);
+                    document.getElementById(elementId).value = content + " -- Error: " + error.message;
+                })
+                .finally(() => {
+
+                    console.log('Fetch operation completed.');
+                });
+        }
+
+
+    </script>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="/jscert/bootstrap-5.2.3-dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
